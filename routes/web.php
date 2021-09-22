@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('mahmoud');
+    return view('pages.login_page');
 });
+
+// Route::get('/aaa', function () {
+//     return view('pages.mahmoud');
+// });

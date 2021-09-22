@@ -10,6 +10,10 @@
 </head>
 
 <body>
+<h1>Hi All
+<i class="fas fa-user"></i>
+<i class="fab fa-facebook"></i>
+</h1>
 
     <!-- React root DOM -->
     <div id="user">
