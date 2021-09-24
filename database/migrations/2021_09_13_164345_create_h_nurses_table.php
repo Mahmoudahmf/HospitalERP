@@ -15,16 +15,16 @@ class CreateHNursesTable extends Migration
     {
         Schema::create('h_nurses', function (Blueprint $table) {
             $table->id();
-            $table->string('UserName')->unique();
-            $table->string('Password',8);
-            $table->string('Name');
-            $table->string('Role');
-            $table->string('Phone');
-            $table->string('Attachment')->nullable();
-            $table->string('Title');
-            $table->string('Salary');
-            $table->foreignId('Dept_id')->references('id')->on('h_departments')->onDelete('cascade');
-            $table->boolean('Status')->default(1);
+            $table->string('username')->unique();
+            $table->string('password');
+            $table->string('name');
+            $table->string('role');
+            $table->string('phone');
+            $table->string('attachment')->nullable();
+            $table->string('title');
+            $table->string('salary');
+            $table->foreignId('dept_id')->references('id')->on('h_departments')->onDelete('cascade');
+            $table->boolean('status')->default(1);
             $table->timestamps();
             $table->softDeletes();
 

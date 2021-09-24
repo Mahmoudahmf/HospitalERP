@@ -15,15 +15,15 @@ class CreateHPatientsTable extends Migration
     {
         Schema::create('h_patients', function (Blueprint $table) {
             $table->id();
-            $table->string('Name');
-            $table->string('Nationality_Id',14);
-            $table->string('Phone');
-            $table->string('Attachment');
-            $table->string('Title');
-            $table->boolean('Status')->default(1);
-            $table->string('Address');
-            $table->string('BloodType');
-            $table->string('Description');
+            $table->string('name');
+            $table->string('nationality_id',14);
+            $table->string('phone');
+            $table->string('attachment');
+            $table->string('title');
+            $table->boolean('status')->default(1);
+            $table->string('address');
+            $table->string('bloodtype');
+            $table->string('description');
             $table->timestamps();
             $table->softDeletes();
 

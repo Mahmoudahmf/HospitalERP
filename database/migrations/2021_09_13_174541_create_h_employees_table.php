@@ -15,16 +15,16 @@ class CreateHEmployeesTable extends Migration
     {
         Schema::create('h_employees', function (Blueprint $table) {
             $table->id();
-            $table->string('UserName')->unique();
-            $table->string('Password',8);
-            $table->string('Name');
-            $table->string('Role');
-            $table->string('Phone');
-            $table->string('Attachment')->nullable();
-            $table->string('Title');
+            $table->string('username')->unique();
+            $table->string('password');
+            $table->string('name');
+            $table->string('role');
+            $table->string('phone');
+            $table->string('attachment')->nullable();
+            $table->string('title');
             //status means active or disactive
-            $table->boolean('Status')->default(1);
-            $table->string('Salary');
+            $table->boolean('status')->default(1);
+            $table->string('salary');
             $table->timestamps();
             $table->softDeletes();
         });

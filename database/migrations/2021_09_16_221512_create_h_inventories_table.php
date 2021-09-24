@@ -15,9 +15,9 @@ class CreateHInventoriesTable extends Migration
     {
         Schema::create('h_inventories', function (Blueprint $table) {
             $table->id();
-            $table->string('Name');
-            $table->integer('Quantity');
-            $table->integer('Needed');
+            $table->string('name');
+            $table->integer('quantity');
+            $table->integer('needed');
             $table->timestamps();
             $table->softDeletes();
         });

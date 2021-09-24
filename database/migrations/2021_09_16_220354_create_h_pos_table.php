@@ -15,8 +15,8 @@ class CreateHPosTable extends Migration
     {
         Schema::create('h_pos', function (Blueprint $table) {
             $table->id();
-            $table->string('Name');
-            $table->string('Type');
+            $table->string('name');
+            $table->string('type');
             $table->integer('cost');
             $table->timestamps();
         });

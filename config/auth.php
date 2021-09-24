@@ -40,6 +40,21 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'doctors' => [
+            'driver' => 'session',
+            'provider' => 'h_doctors',
+        ],
+
+        'nurses' => [
+            'driver' => 'session',
+            'provider' => 'h_nurses',
+        ],
+
+        'employes' => [
+            'driver' => 'session',
+            'provider' => 'h_employees',
+        ],
     ],
 
     /*
@@ -65,6 +80,21 @@ return [
             'model' => App\Models\User::class,
         ],
 
+        'h_doctors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\H_doctors::class,
+        ],
+
+        'h_nurses' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\H_nurse::class,
+        ],
+
+        'h_employees' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\H_employees::class,
+        ],
+        
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

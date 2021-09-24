@@ -15,10 +15,10 @@ class CreateHBillsTable extends Migration
     {
         Schema::create('h_bills', function (Blueprint $table) {
             $table->id();
-            $table->string('BillNumber');
-            $table->integer('TotalCost');
-            $table->foreignId('Patien_id')->references('id')->on('h_patients')->onDelete('cascade');
-            $table->foreignId('Operation_id')->references('id')->on('h_operations')->onDelete('cascade');
+            $table->string('bill_number');
+            $table->integer('totalcost');
+            $table->foreignId('patien_id')->references('id')->on('h_patients')->onDelete('cascade');
+            $table->foreignId('operation_id')->references('id')->on('h_operations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

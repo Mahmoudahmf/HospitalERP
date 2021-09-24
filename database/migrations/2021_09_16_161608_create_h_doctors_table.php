@@ -15,18 +15,18 @@ class CreateHDoctorsTable extends Migration
     {
         Schema::create('h_doctors', function (Blueprint $table) {
             $table->id();
-            $table->string('UserName')->unique();
-            $table->string('Password',8);
-            $table->string('Title');
-            $table->string('Name');
-            $table->string('Role');
-            $table->string('Phone');
-            $table->string('Attachment')->nullable();
-            $table->string('Salary');
-            $table->foreignId('Dept_id')->references('id')->on('h_departments')->onDelete('cascade');
-            $table->foreignId('Room_id')->references('id')->on('h_rooms')->onDelete('cascade');
+            $table->string('username')->unique();
+            $table->string('password');
+            $table->string('title')->nullable();
+            $table->string('name');
+            $table->string('role');
+            $table->string('phone');
+            $table->string('attachment')->nullable();
+            $table->string('salary');
+            $table->foreignId('dept_id')->references('id')->on('h_departments')->onDelete('cascade');
+            $table->foreignId('room_id')->references('id')->on('h_rooms')->onDelete('cascade');
           //status means active or disactive
-            $table->boolean('Status')->default(1);
+            $table->boolean('status')->default(1);
             $table->timestamps();
             $table->softDeletes();
 

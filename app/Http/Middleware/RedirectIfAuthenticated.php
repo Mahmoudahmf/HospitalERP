@@ -19,14 +19,32 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
-        $guards = empty($guards) ? [null] : $guards;
+        
+       if (auth('web')->check()){
+     
+        return redirect(RouteServiceProvider::HOME);
+   
+       }
+ 
+  
+        if (auth('doctors')->check()){
+     
+         return redirect(RouteServiceProvider::H_doctors);
+    
+      }
 
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
-            }
-        }
-
+      if (auth('nurses')->check()){
+     
+        return redirect(RouteServiceProvider::H_nurses);
+   
+     }
+ 
+     if (auth('employes')->check()){
+     
+      return redirect(RouteServiceProvider::H_employes);
+ 
+   }
         return $next($request);
+  
     }
 }
