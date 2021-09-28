@@ -37,6 +37,8 @@
         "@fortawesome/free-solid-svg-icons": "^5.15.4",
         "@fortawesome/react-fontawesome": "^0.1.15",
         "font-awesome": "^4.7.0",
-        "react-fontawesome": "^1.7.1"
+        "moment": "^2.29.1",
+        "react-fontawesome": "^1.7.1",
+        "react-live-clock": "^5.2.0"
     }
 }

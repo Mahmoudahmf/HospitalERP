@@ -1,0 +1,112 @@
+@import "variables";
+nav {
+    width: 95%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FBFCFC;
+
+
+    .nav_left {
+        display: flex;
+        width: 25%;
+
+        .doctor_info {
+
+            .doctor-name{
+                font-size: 18px;
+                margin-bottom: 0 !important;
+            }
+            .department{
+                font-size: 15px;
+                letter-spacing: 1px;
+                margin-bottom: 0 !important;
+            }
+
+
+
+        }
+    }
+
+
+    .doctor_status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15px;
+
+        .line {
+            background-color: #C5C9CC;
+            width: 2px;
+            height: 45px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .circle {
+            background-color: #7bed9f;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            margin-right: 15px;
+        }
+        .Work_status{
+            margin-bottom: 0;
+        }
+    }
+
+
+    .clock {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-size: 40px;
+            margin-top: 10px;
+
+            span {
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    .nav_icons {
+        margin-right: 25px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 25%;
+        color: #20d573;
+
+        a {
+            font-size: 20px;
+            margin-right: 25px;
+        }
+
+        .fa-cog {
+            color: #1e90ff;
+        }
+
+    }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+
+@import "variables";
+.compile {
+    display: flex;
+
+    .side_menu {
+        background-color: #FBFCFC;
+        height: 100vh;
+        width: 5%;
+        display: block;
+
+
+        .img-container {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            margin-bottom: 30px;
+            margin-top: 10px;
+
+            .img {
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .icons-container{
+                margin-top: 10px;
+            }
+
+
+            li {
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+}
+
