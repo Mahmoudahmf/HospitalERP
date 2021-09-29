@@ -21,7 +21,7 @@
                  </div>
              </div>
              <!-- Center Part includes "Clock" -->
-             <div class="clock">
+             <div id="dclock">
                  <p> 5:03 <span>AM</span></p>
              </div>
              <!-- Right Part includes 3 icons -->

@@ -16,6 +16,7 @@
                      <li><i class="fas fa-radiation fa-2x"></i></li>
                      <li><i class="fas fa-sign-out-alt fa-2x"></i></li>
                      <li><i class="fas fa-angle-double-right fa-2x"></i></li>
+
         </ul>
  </aside>
 @show

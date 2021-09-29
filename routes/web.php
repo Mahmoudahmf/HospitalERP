@@ -22,3 +22,6 @@ Route::get('/', function () {
 // });
 
 Route::view('/doctor', 'pages.master');
+
+
+Route::view('/clock', 'pages.digitalclock');

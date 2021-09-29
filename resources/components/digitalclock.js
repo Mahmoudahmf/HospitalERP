@@ -1,21 +1,27 @@
-// import React,{Component} from 'react';
-// import ReactDOM from 'react-dom';
-// import Clock from 'react-live-clock'
-//
-//
-//
-// class Dclock extends Component{
-// render() {
-//     return(
-//
-//
-//         <Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} />
-//
-//     )
-// }
-// }
-//
-// export default Dclock ;
-// if(document.getElementById('digital')){
-//     ReactDOM.render(<Dclock/>,document.getElementById('digital'));
-// }
+import React , {useState} from 'react';
+import ReactDOM from "react-dom";
+import moment from 'moment';
+
+
+function Digital () {
+    let time ;
+    const [setCtime] = useState(time);
+    const updateTime =() =>{
+        time =  moment.format('LT')
+        setCtime(time);
+    }
+    setInterval(updateTime,1000)
+    return(
+        <>
+            {time}
+        </>
+    )
+}
+
+
+
+export default Digital;
+
+if(document.getElementById('dclock')) {
+    ReactDOM.render(<Digital/>, document.getElementById('dclock'));
+}
