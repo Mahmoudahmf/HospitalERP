@@ -62,5 +62,12 @@ Route::group(
 		})->name('dashboard.employes');
 		Route::resource('employes',EmployesController::class);
 
+<<<<<<< HEAD
 	});
 require __DIR__.'/auth.php';
+=======
+Route::view('/doctor', 'pages.master');
+
+
+Route::view('/clock', 'pages.digitalclock');
+>>>>>>> b7a67d814b219eb369eb07cc06f284123e5005e6

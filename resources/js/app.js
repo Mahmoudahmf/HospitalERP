@@ -16,3 +16,5 @@ require('./bootstrap');
 require('../components/login_page')
 
 require('../components/master')
+
+require('../components/digitalclock')

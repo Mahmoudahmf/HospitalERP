@@ -1,24 +1,41 @@
-// fontawesome
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
 
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/regular";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/brands";
+
+// Font-Awesome
+
+
+// FONT COLORS
+$font-dark-color: #5e5e5e;
+//$background: #FBF7EA;
+//$icon-back: #70a1ff;
+$city-light: #dfe4ea;
+//$anchor-color: #1e90ff;
 
 
 // fonts
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
+
 $font-size-large: 25px;
-$font-size-medium: 15px;
+//$font-size-medium: 15px;
 $font-size-small :12px;
+$font-size-medium: 11px;
 
 // Colors
 $background: #FBF7EA;
 $icon-back: #70a1ff;
 $city-light: #dfe4ea;
+$dark-green : #2ed573;
+$lighter-green : #7bed9f;
+$lightest-green : #f0faf8;
+$dark-gray : #5e5e5e;
+$lighter-gray : #c5c9cc;
+$lightest-gray: #fcfcfc;
+$dark-blue: #1e90ff;
+$lighter-blue: #70a1ff;
+$lightest-blue : #d5e4ff;
+$dark-red : #D24646;
+$lighter-pink : #FFDFDF;
+$dark-orange : #FBC576;
+$lighter-orange : #FEE3BB;
+$lightest-orange : #FBF7EA;
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
