@@ -4,23 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\H_Doctors\DoctorController;
 use App\Http\Controllers\H_Nurses\NursersController;
 use App\Http\Controllers\H_Employes\EmployesController;
+use App\Http\Controllers\Admins\AdminsController;
+use App\Http\Controllers\H_Departments\DepartmentsController;
 
-
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -62,12 +48,32 @@ Route::group(
 		})->name('dashboard.employes');
 		Route::resource('employes',EmployesController::class);
 
-<<<<<<< HEAD
+	});
+	
+###############################AdminsRoute##############################
+Route::group(
+	[
+		'middleware' => ['auth:admins']
+	], function(){
+
+		Route::get('/dashboard/admins', function () {
+			return view('pages.backend.admins.dashboard');
+		})->name('dashboard.admins');
+        Route::resource('admins',AdminsController::class);
+		
+		###################################Depatments################################
+		Route::group(['namespace'=>'H_Departments'],function(){
+			Route::get('showdepartments',[DepartmentsController::class,'index'])->name('showdepartments');
+			Route::post('storedepartments',[DepartmentsController::class,'store'])->name('storedepartments');
+			Route::get('editdepatment/{id}',[DepartmentsController::class,'edit'])->name('editdepatment');
+			Route::patch('updatedepatment',[DepartmentsController::class,'update'])->name('updatedepatment');
+			Route::get('deletedepatment/{id}',[DepartmentsController::class,'destroy'])->name('deletedepatment');
+
+			
+		});
+		###################################Depatments################################
+
+
+		// Route::resource('departments/{$id ??}',DepartmentsController::class);
 	});
 require __DIR__.'/auth.php';
-=======
-Route::view('/doctor', 'pages.master');
-
-
-Route::view('/clock', 'pages.digitalclock');
->>>>>>> b7a67d814b219eb369eb07cc06f284123e5005e6

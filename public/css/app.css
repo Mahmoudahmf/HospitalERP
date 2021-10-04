@@ -20110,7 +20110,9 @@ input:focus {
   font-size: 15px;
   text-align: center;
   box-shadow: 0 3px 6px rgba(67, 67, 67, 0.1);
-  padding-left: 10px;
+  padding-left: 3px !important;
+  transition:all 0.3s linear;
+  letter-spacing: 1px;
 }
 
 .login-icon-btn {
@@ -20186,7 +20188,7 @@ select {
   position: absolute;
   bottom: -2px;
   left: 0;
-  transition: all 0.3s linear;
+  transition: all 0.1s ease-in-out;
   margin-bottom: 10px;
 }
 .login-headSelect:hover:before {

@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
         $this->call(RoomTableSeeder::class);
         $this->call(H_doctorsTableSeeder::class);
         $this->call(H_EmployesTableSeeder::class);
-
+        $this->call(AdminsTableSeeder::class);
+        
         
     }
 }

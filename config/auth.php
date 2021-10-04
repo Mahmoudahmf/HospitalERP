@@ -55,6 +55,12 @@ return [
             'driver' => 'session',
             'provider' => 'h_employees',
         ],
+
+        'admins' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+
     ],
 
     /*
@@ -93,6 +99,11 @@ return [
         'h_employees' => [
             'driver' => 'eloquent',
             'model' => App\Models\H_employees::class,
+        ],
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\admins::class,
         ],
         
         // 'users' => [

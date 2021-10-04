@@ -17,7 +17,7 @@ class H_doctorsTableSeeder extends Seeder
     {
         DB::table('h_doctors')->delete();
         H_doctors::create([
-           'username'=>'samehsalah',
+           'username'=>'dr_samehsalah',
            'password'=>Hash::make('11111111'),
            'title'=>'دكتور اخصائي',
            'name'=>'samehsalah',

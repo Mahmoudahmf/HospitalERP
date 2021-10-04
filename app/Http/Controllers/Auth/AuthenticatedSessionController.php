@@ -10,37 +10,101 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthenticatedSessionController extends Controller
 {
-    /**
-     * Display the login view.
-     *
-     * @return \Illuminate\View\View
-     */
+    
     public function create()
     {
-        return view('pages.login');
+       
+        if (Auth::guard('admins')->check()) {
+            // return redirect()->route('dashboard.doctors');
+            return redirect(RouteServiceProvider::admins);
+
+        } 
+        else if (Auth::guard('doctors')->check()) {
+            // return redirect()->route('dashboard.doctors');
+            return redirect(RouteServiceProvider::H_doctors);
+
+        } 
+        else if(Auth::guard('nurses')->check()){
+            return redirect(RouteServiceProvider::H_nurses);
+
+        }
+        else if(Auth::guard('employes')->check()){
+            return redirect(RouteServiceProvider::H_employes);
+        }
+        else {
+            return view('pages.login');
+        }
     }
 
-    /**
-     * Handle an incoming authentication request.
-     *
-     * @param  \App\Http\Requests\Auth\LoginRequest  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function store(LoginRequest $request)
+  
+    public function store(Request $request)
     {
-        $request->authenticate();
+       
+        $logAccess=substr($request->username,0,3);
+        // return $logAccess;
+        $this->validate($request, [
+           
+            'username' => 'required|string',
+            'password' => 'required|string',
+        ]);
 
-        $request->session()->regenerate();
+       // //   for admins guard
+       if($logAccess=='ad_')
+       {
+               if(auth()->guard('admins')->attempt([
+                   'username' => $request->username,
+                   'password' => $request->password,
+               ])) 
+               {
+                   return redirect()->intended(url('/dashboard/admins'));
+               } 
+              
+       }
+        // //   for docotr guard
+            if($logAccess=='dr_')
+            {
+                    if(auth()->guard('doctors')->attempt([
+                        'username' => $request->username,
+                        'password' => $request->password,
+                    ])) 
+                    {
+                        return redirect()->intended(url('/dashboard/doctors'));
+                    } 
+                   
+            }
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+                // //   for nurse guard
+                    if($logAccess=='nr_')
+                    {
+                            if(auth()->guard('nurses')->attempt([
+                                'username' => $request->username,
+                                'password' => $request->password,
+                            ])) 
+                            {
+                                return redirect()->intended(url('/dashboard/nurses'));
+                            } 
+                    }
+                    // //   for employes guard
+                    if($logAccess=='em_')
+                    {
+                            if(auth()->guard('employes')->attempt([
+                                'username' => $request->username,
+                                'password' => $request->password,
+                            ])) 
+                            {
+                                return redirect(RouteServiceProvider::H_employes);
+                            } 
+                           
+                    }
+
+                    if($logAccess !==('emp_' || 'nur_' || 'doc_'))
+                      {
+                        return redirect('/');
+                      }
+
     }
 
-    /**
-     * Destroy an authenticated session.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
+   
     public function destroy(Request $request)
     {
         Auth::guard('web')->logout();

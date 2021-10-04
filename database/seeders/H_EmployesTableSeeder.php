@@ -17,7 +17,7 @@ class H_EmployesTableSeeder extends Seeder
     {
         DB::table('h_employees')->delete();
         H_employees::create([
-           'username'=>'ahmedali',
+           'username'=>'em_ahmedali',
            'password'=>Hash::make('11111111'),
            'name'=>'ahmedali',
            'role'=>'1',

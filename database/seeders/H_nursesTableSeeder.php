@@ -18,7 +18,7 @@ class H_nursesTableSeeder extends Seeder
     {
         DB::table('h_nurses')->delete();
         H_nurse::create([
-           'username'=>'Ayasss',
+           'username'=>'nr_ahmed',
            'password'=>Hash::make('11111111'),
            'title'=>'ممرضة ',
            'name'=>'Aya',

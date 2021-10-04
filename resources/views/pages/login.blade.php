@@ -1,162 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <script src="{{ URL::asset('js/jquery-3.3.1.min.js') }}"></script>
-
-    <style>
-      body{
-    margin: 0;
-    padding: 0;
-    background: url(../img/about_banner.jpg);
-    background-size: cover;
-    font-family: sans-serif;
-}
-
-.Loginbox{
-    width: 320px;
-    height: 420px;
-    background: #034;
-    color:#fff;
-
-    position: absolute;
-    top:50%;
-    left: 50%;
-
-    transform: translate(-50%,-50%);
-    box-sizing: border-box;
-    padding: 70px 30px;
-    display: none;
+@include('pages.header')
    
-}
 
+<div class="login">
 
-
-h1{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
-}
-
-.Loginbox p{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-}
-
-.Loginbox input{
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.Loginbox input[type="text"],input[type="password"]
-{
-    border:none;
-    border-bottom: 1px solid #fff;
-    background: transparent;
-    outline: none;
-    height: 40px;
-    color: yellow;
-    font-size: 15px;
-}
-
-.Loginbox input[type="submit"]
-{
-    border: none;
-    outline: none;
-    height: 40px;
-    background: #fb2525;
-    color:#fff;
-    font-size:18px;
-    border-radius: 20px;
-}
-
-.Loginbox input[type="submit"]:hover
-{
-cursor: pointer;
-background: #ffc107;
-color: #000;
-}
-
-.Loginbox a{
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
-    color: darkgrey;
-}
-
-.Loginbox a:hover{
-    color:#ffc107;
-}
-
-    </style>
-</head>
-<body>
-       <div>
-             <select id="sectionChooser">
-                  <option value="" selected disabled>اختار من القائمة</option>
-                   <option value="doctors">Login Doctor </option>
-                    <option value="nurses">Login Nurse </option>
-                     <option value="employes">Login Employe </option>
-              </select>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path class="login-wave" fill-opacity="0.77"
+                d="M0,320L80,266.7C160,213,320,107,480,96C640,85,800,171,960,186.7C1120,203,1280,149,1360,122.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+            </path>
+        </svg>
+        <div class="login-left">
+            <div class="image">
+                <img src="{{asset('storage/images/login_background.jpg')}}">
+            </div>
         </div>
-   
-    <div class="Loginbox" id="nurses">
-      
-        <h1>Login Nurse</h1>
-        <hr>
-        <form method="POST" action="{{ route('login.nurses') }}">
-                    @csrf
-            <p>UserName</p>
-            <input type="text" name="userName" placeholder="Enter UserName" required>
-            <p>Password</p>
-            <input type="text" name="password" placeholder="Enter Password" required>
-            <input type="submit" name="LoginButton" value="submit">
-        </form>
-    </div>
 
-    <div class="Loginbox" id="doctors">
-      
-        <h1>Login Doctor</h1>
-        <hr>
-        <form method="POST" action="{{ route('login.doctors') }}">
-                    @csrf
-            <p>UserName</p>
-            <input type="text" name="username" placeholder="Enter UserName" required>
-            <p>Password</p>
-            <input type="text" name="password" placeholder="Enter Password" required>
-            <input type="submit" name="LoginButton" value="submit">
-        </form>
-    </div>
+        <div class="login-right">
 
-    <div class="Loginbox" id="employes">
-      
-      <h1>Login Employes</h1>
-      <hr>
-      <form method="POST" action="{{ route('login.employes') }}">
-                  @csrf
-          <p>UserName</p>
-          <input type="text" name="username" placeholder="Enter UserName" required>
-          <p>Password</p>
-          <input type="text" name="password" placeholder="Enter Password" required>
-          <input type="submit" name="LoginButton" value="submit">
-      </form>
-  </div>
+            <div class="login_text">
+                <h1>Login Now For A Real Control </h1>
+                <p>Try the real powerful of management as first modern ERP medical system</p>
+            </div>
+            <form action="{{ route('login') }}" method="POST" class="login-form">
+                @csrf
+                <div class="login-form-group">
 
-    <script type="text/javascript"></script>
-    <script>
-    $(document).ready(function() {
+                <div class="login-form-input">
+                    <div class="login-icon">
+                        <i class="fal fa-user-md"></i>
+                    </div>
+                    <div class="login-input">
+                        <input type="text" name="username" placeholder="Enter UserName" required>
+                    </div>
+                </div>
 
-       $('#sectionChooser').change(function(){
-            var myID = $(this).val();
-            $('.Loginbox').each(function(){
-                myID === $(this).attr('id') ? $(this).show() : $(this).hide();
-            });
-        });
-    });
-    </script>
-</body>
-</html>
+                <div class="login-form-input">
+                    <div class="login-icon">
+                        <i class="fal fa-lock-alt"></i>
+                    </div>
+                    <div>
+                        <input type="text" name="password"  placeholder="Please Enter Your Password" required>
+                    </div>
+                </div>
+
+                <div class="login-pass-input-text ">
+                    <a href="#"> Forget Your credentials?</a>
+                </div>
+
+
+
+                <div class="login-dropdown">
+
+                        <div class="login-form-input-btn ">
+                            <div class="login-icon-btn  ">
+                                <i class="fal fa-sign-in"></i>
+                            </div>
+                            <div class="login-input-btn">
+                                <input type="submit" value="Login" class="login-input-btn">
+                            </div>
+                        </div>
+                        
+                       
+                   
+                </div>
+
+            </form>
+        </div>
+ </div>
+
+    @include('pages.footer')

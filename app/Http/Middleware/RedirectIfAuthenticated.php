@@ -26,24 +26,6 @@ class RedirectIfAuthenticated
    
        }
  
-  
-        if (auth('doctors')->check()){
-     
-         return redirect(RouteServiceProvider::H_doctors);
-    
-      }
-
-      if (auth('nurses')->check()){
-     
-        return redirect(RouteServiceProvider::H_nurses);
-   
-     }
- 
-     if (auth('employes')->check()){
-     
-      return redirect(RouteServiceProvider::H_employes);
- 
-   }
         return $next($request);
   
     }

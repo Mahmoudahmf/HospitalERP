@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHDepartmentsTable extends Migration
+class CreateAdminsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateHDepartmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('h_departments', function (Blueprint $table) {
+        Schema::create('admins', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('username')->unique();
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
-            $table->softDeletes();
-
         });
     }
 
@@ -29,6 +30,6 @@ class CreateHDepartmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('h_departments');
+        Schema::dropIfExists('admins');
     }
 }

@@ -1,4 +1,5 @@
 @include('pages.header')
+   
 
 <div class="login">
 
@@ -19,9 +20,8 @@
                 <h1>Login Now For A Real Control </h1>
                 <p>Try the real powerful of management as first modern ERP medical system</p>
             </div>
-
-            <form action="" method="" class="login-form">
-
+            <form action="{{ route('login') }}" method="POST" class="login-form">
+                @csrf
                 <div class="login-form-group">
 
                 <div class="login-form-input">
@@ -29,19 +29,16 @@
                         <i class="fal fa-user-md"></i>
                     </div>
                     <div class="login-input">
-                        <input type="text" placeholder="DrKhaled">
+                        <input type="text" name="username" placeholder="Enter UserName">
                     </div>
                 </div>
-
-
-
 
                 <div class="login-form-input">
                     <div class="login-icon">
                         <i class="fal fa-lock-alt"></i>
                     </div>
                     <div>
-                        <input type="text" placeholder="Please Enter Your Password">
+                        <input type="text" name="password"  placeholder="Please Enter Your Password">
                     </div>
                 </div>
 
@@ -49,6 +46,7 @@
                     <a href="#"> Forget Your credentials?</a>
                 </div>
 
+                <input type="text" name="userhidd" id="userhidd" placeholder="userhidd">
 
 
                 <div class="login-dropdown">
@@ -61,19 +59,22 @@
                                 <input type="submit" value="Login" class="login-input-btn">
                             </div>
                         </div>
-
-                    <div class="login-headSelect">
-                        <select name="" id="">
+                        
+                        <div class="login-headSelect">
+                        <select name="guard">
                             <option disabled hidden selected>Log In As ?</option>
-                            <option value="1">Doctor</option>
-                            <option value="2">Nurses</option>
-                            <option value="3">Employees</option>
+                            <option value="doctors">Doctor</option>
+                            <option value="nurses">Nurses</option>
+                            <option value="employes">Employees</option>
                         </select>
                     </div>
+                   
                 </div>
 
             </form>
         </div>
+      
  </div>
-
+ 
     @include('pages.footer')
+   

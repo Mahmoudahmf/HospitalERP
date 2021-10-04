@@ -9,9 +9,6 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\H_DoctorsController;
-use App\Http\Controllers\Auth\H_NursesController;
-use App\Http\Controllers\Auth\H_EmployesController;
 
 
 Route::get('/register', [RegisteredUserController::class, 'create'])
@@ -28,34 +25,11 @@ Route::get('/', [AuthenticatedSessionController::class, 'create'])
                 ->middleware('guest')
                 ->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])
-                ->middleware('guest');
-Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
-                ->middleware('auth')
+                ->middleware('guest')->name('login');
+Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])
+                ->middleware('auth:doctors,nurses,employes,admins')
                 ->name('logout');
 
-####################################DoctorLogin##############################
-
-Route::post('/login/doctors', [H_DoctorsController::class, 'store'])
-                ->middleware('guest')->name('login.doctors');
-Route::post('/logout/doctors', [H_DoctorsController::class, 'destroy'])
-                ->middleware('auth:doctors')
-                ->name('logout.doctors');
-
-####################################NurseLogin##############################
-
-Route::post('/login/nurses', [H_NursesController::class, 'store'])
-                ->middleware('guest')->name('login.nurses');
-Route::post('/logout/nurses', [H_NursesController::class, 'destroy'])
-                ->middleware('auth:nurses')
-                ->name('logout.nurses');
-###################################EmployesLogin##########################################
-Route::post('/login/employes', [H_EmployesController::class, 'store'])
-                ->middleware('guest')->name('login.employes');
-Route::post('/logout/employes', [H_EmployesController::class, 'destroy'])
-                ->middleware('auth:employes')
-                ->name('logout.employes');
- ##################################################################
-               
 Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
                 ->middleware('guest')
                 ->name('password.request');
