@@ -1,29 +1,34 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
 
-nav {
-    width: 95%;
+
+.navbar-component {
+    width: 100%;
     height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #FBFCFC;
+    box-shadow: 0 15px 25px rgba(67, 67, 67, 0.1);
+    position: relative;
 
 
     .nav_left {
         display: flex;
         width: 25%;
+        padding-left: 10px;
 
         .doctor_info {
 
-            .doctor-name{
+            .doctor-name {
                 font-size: 18px;
                 margin-bottom: 0 !important;
             }
-            .department{
-                font-size: 15px;
+
+            .department {
+                font-size: 13px;
                 letter-spacing: 1px;
                 margin-bottom: 0 !important;
             }
-
 
 
         }
@@ -51,13 +56,14 @@ nav {
             height: 15px;
             margin-right: 15px;
         }
-        .Work_status{
+
+        .Work_status {
             margin-bottom: 0;
         }
     }
 
 
-    .clock {
+    #dclock {
         width: 50%;
         display: flex;
         justify-content: center;
@@ -84,25 +90,70 @@ nav {
         width: 25%;
         color: #20d573;
 
+        //.p-notification::before {
+        //    content: "\f0f3";
+        //    font-family: "Font Awesome 5 Free";
+        //    font-weight: 900;
+        //
+        //
+        //}
+
+        .p-message::before {
+            //font-family: "Font Awesome 5 Free";
+            //content: "\f2b6";
+
+        }
+
         a {
             font-size: 20px;
             margin-right: 25px;
-        }
+            color: #7BED9F;
+            text-decoration-line: none;
 
-        .fa-cog {
-            color: #1e90ff;
-        }
 
+            .fa-cog {
+                color: #1e90ff;
+            }
+        }
     }
 
 
+    .nav-notification {
+        border-radius: 50%;
+        background-color: white;
+        color: red;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        text-align: center;
+        right: 9.2%;
+        top: 50%;
+        font-size: 8px;
+        box-shadow: 0 3px 3px gray;
+        display: none;
 
 
+    }
 
-
-
+    .nav-message {
+        border-radius: 50%;
+        background-color: white;
+        color: red;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        text-align: center;
+        right: 6%;
+        top: 50%;
+        font-size: 8px;
+        box-shadow: 0 3px 3px gray;
+        display: none;
+    }
 
 }
+
+
+
 
 
 

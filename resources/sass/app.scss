@@ -9,22 +9,15 @@
 
 @import "_variables";
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Cairo,sans-serif;
+    font-family: Cairo, sans-serif;
 }
 
 // login page
-@import "_loginpage.module";
 // login page
-@import "_side_menu.module";
-//
-@import "_navbar.module";
-
-//@import "_description.module";
-
-
-
+@import "_master.module";
+@import "_clock.module";
 

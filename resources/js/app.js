@@ -13,8 +13,11 @@ require('./bootstrap');
  */
 
 
-require('../components/login_page')
-
-require('../components/master')
-
 require('../components/digitalclock')
+
+require('../components/clock')
+
+require('../components/countdown')
+
+require('../components/history')
+

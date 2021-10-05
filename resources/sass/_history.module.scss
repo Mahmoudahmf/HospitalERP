@@ -1,0 +1,25 @@
+.history-box {
+    // height: 5vh;
+    grid-area: 3 / 2 / 4/ 4;
+    display: grid;
+    grid-template-columns: 7vw 1fr;
+    grid-template-rows: 5vh;
+    // box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+    //             0 1px 2px rgba(0,0,0,0.24);
+    align-items: flex-end;
+    justify-items: center;
+    padding-bottom: .4vh;
+
+    .activity {
+        display: grid;
+        grid-column: 1 / 2;
+        font-size: 18px;
+
+    }
+
+    .history {
+        display: grid;
+        grid-column: 2 / 3;
+        font-size: 10px;
+    }
+}

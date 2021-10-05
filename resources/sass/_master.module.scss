@@ -1,0 +1,26 @@
+
+.page-layout {
+    display: flex;
+    @import "_side_menu.module";
+
+    .page-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        @import "_navbar.module";
+
+        @import "_description.module";
+        //@import "_clock.module";
+        .table-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 60vh;
+            padding: 15px;
+            @import "_history.module";
+            @import "_tables.module";
+        }
+    }
+}
+
