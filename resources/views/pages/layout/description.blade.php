@@ -3,7 +3,7 @@
               <!--image profile for Doctor -->
               <div class="description-img">
                   <img  class="card-img" src="{{asset('storage/images/users/profile.jpg')}}">
-               </div>
+              </div>
 
                 <!--Doctor information-->
                 <div class="description-doctor">
@@ -12,7 +12,7 @@
                                       <h3 class=".card-doctor-h3">Welcome Dr.Fahmy Ahmed</h3>
                                       <p class="card-doctor-p">
                                          Welcome to my Hospital. I'm honored to be my physician, and I'm committed to providing
-                                         you with the best care I can. My hope is that we form a partnership to keep  as hospital
+                                         you with the best care I can. My hope is that we form a partnership to keep as hospital
                                           as possible.
                                       </p>
                                 </div>
@@ -34,8 +34,8 @@
                                    <!--Count down time-->
                                    <div class="hour" id="countdown">
                                             <p class="hour-p" id="countdown-hour"> </p>
-                                            <p class="minute-p" id="countdown-minute"><p>
-                                            <p id="countdown-second" class="second-p"></p>
+                                            <p class="minute-p" id="countdown-min"><p>
+                                            <p  class="second-p" id="countdown-sec"></p>
                                    </div>
 
                                    <!--Count Down Buttons -->
@@ -63,7 +63,8 @@
                             @include('pages.clock')
                             </div>
                </div>
-    </div>
+     </div>
+</div>
 
 
 

@@ -1,50 +1,47 @@
 .description-container {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    //0 1px 2px rgba(0, 0, 0, 0.24);
-    width: 100%;
-    //padding: 10px;
     justify-content: space-around;
     line-height: 1.5;
-    background-color: #FBFCFC;
-    margin-top: 25px;
-    flex-wrap: wrap;
+    //background-color: #FBFCFC;
     height: 20vh;
+    display: flex;
+    width: 100%;
+    margin : 15px  15px 15px 0 !important;
+
 
     .description-img {
-        display: flex;
         width: 100px;
         height: 100px;
-        align-items: center;
-        justify-content: center;
+        margin: auto;
+
+
+
+
         //margin-left: 15px;
         .card-img {
             width: 100%;
             height: 100%;
             border-radius: 50%;
             border: 10px solid #F0FAF8;
-            margin-left: 10px;
+            //margin-left: 10px;
         }
     }
 
 
     .description-doctor {
-        width: 50%;
-        height: 100%;
+        width: 55%;
         display: flex;
-        //padding: 10px;
         background: #fff;
         border-radius: 12px;
         align-items: center;
         justify-content: space-between;
-        position: relative;
-        padding-left: 25px;
+        margin-right: 25px;
+        //margin-left: 25px;
+        padding: 25px;
 
         .card-doctor-info {
-            width: 60%;
-
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             .card-doctor-h3 {
                 margin-bottom: 10px;
                 font-size: 1.5rem;
@@ -52,7 +49,7 @@
 
             .card-doctor-p {
                 color: #363636;
-                font-size: 15px;
+                font-size: 16px;
                 opacity: 0.6;
             }
         }
@@ -60,15 +57,19 @@
 
         .card-buttons {
             display: flex;
-            height: 40px;
-            position: absolute;
-            bottom: 20px;
-            right: 10px;
+            width: 40%;
+            height:100%;
+            align-items: end;
+            margin-top: 25px;
+
 
             .card-btn1, .card-btn2 {
-                padding: 10px;
+                padding-left: 0 !important;
+                margin: 10px;
                 width: 120px;
+
             }
+
 
             .card-btn1 {
 
@@ -76,7 +77,6 @@
                 border: none;
                 border-radius: 7px;
                 color: #fff;
-
             }
 
             .card-btn2 {
@@ -85,102 +85,111 @@
                 background: inherit;
 
             }
-
-
         }
-
-
     }
 
-
-    .description-clock {
-        display: flex;
-        width: 40%;
-        height: 100%;
-        align-items: center;
-        justify-content: space-between;
-        background: #fff;
-        border-radius: 10px;
-
-        .clock {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 50%;
-            margin: 15px;
-
-        }
-
-        .hour {
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-
-            .hour-p {
-                color: #1e90ff;
-                font-size: 45px;
-            }
-
-            .minute-p {
-                color: #C5C9CC;
-                font-size: 45px;
-            }
-
-            .second-p {
-                color: #7bed9f;
-                font-size: 45px;
-            }
-
-        }
-
-        .buttons-hour {
-            display: flex;
-            margin-bottom: 7px;
-            text-align: center;
-            color: #C5C9CC;
-
-            .button-work, .button-break {
-                border: none;
-                padding: 2px 7px;
-                border-radius: 5px;
-                width: 110px;
-            }
-
-            .button-work {
-                background: #1e90ff;
-                color: #fff;
-
-            }
-
-            .button-break {
+            .description-clock {
+                display: flex;
+                width: 35%;
+                //height: 100%;
+                align-items: center;
+                justify-content: space-between;
                 background: #fff;
-                border: 1px solid #C5C9CC;
+                border-radius: 10px;
+                margin-right: 15px;
 
-                .button-break-span {
-                    color: #7BED9F;
+                .clock {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 50%;
+                    margin: 15px;
+
                 }
 
+                .hour {
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-bottom: -5px;
+
+                    .hour-p {
+                        color: #1e90ff;
+                        font-size: 45px;
+                        display: flex;
+
+                    }
+
+                    .minute-p {
+                        color: #C5C9CC;
+                        font-size: 45px;
+                        display: flex;
+                    }
+
+                    .second-p {
+                        color: #7bed9f;
+                        font-size: 45px;
+                        display: flex;
+                    }
+
+                }
+
+                .buttons-hour {
+                    display: flex;
+                    text-align: center;
+                    color: #C5C9CC;
+
+                    .break p {
+                        margin-bottom: 0 !important;
+                        padding-right: 5px;
+                    }
+
+                    .button-work, .button-break {
+                        border: none;
+                        padding: 2px 7px;
+                        border-radius: 5px;
+                        width: 110px;
+                        margin-right:10px;
+
+                    }
+
+                    .button-work {
+                        background: #1e90ff;
+                        color: #fff;
+
+                    }
+
+                    .button-break {
+                        background: #fff;
+                        border: 1px solid #C5C9CC;
+
+                        .button-break-span {
+                            color: #7BED9F;
+                        }
+
+                    }
+                }
+
+                .analog-clock {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    //@import "_clock.module";
+
+
+                }
+
+
             }
-        }
-
-        .analog-clock {
-            width: 50%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            //@import "_clock.module";
-
-
-        }
-
-
-    }
-
 }
+
+
+
+
 
 
 

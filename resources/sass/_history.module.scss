@@ -1,9 +1,6 @@
 .history-box {
     // height: 5vh;
-    grid-area: 3 / 2 / 4/ 4;
-    display: grid;
-    grid-template-columns: 7vw 1fr;
-    grid-template-rows: 5vh;
+    display: flex;
     // box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
     //             0 1px 2px rgba(0,0,0,0.24);
     align-items: flex-end;
@@ -11,15 +8,15 @@
     padding-bottom: .4vh;
 
     .activity {
-        display: grid;
-        grid-column: 1 / 2;
+        display: flex;
         font-size: 18px;
+        width: 50%;
 
     }
 
     .history {
-        display: grid;
-        grid-column: 2 / 3;
+        display: flex;
         font-size: 10px;
+        width: 50%;
     }
 }

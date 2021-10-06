@@ -14,10 +14,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Cairo, sans-serif;
+    overflow: hidden;
 }
 
 // login page
 // login page
 @import "_master.module";
 @import "_clock.module";
+
+@import "_loginpage.module";
 

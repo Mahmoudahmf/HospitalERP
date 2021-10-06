@@ -7,18 +7,6 @@
             @include('pages.layout.history')
             @include('pages.layout.tables')
 
-
-
-
-
-
-
-
-            <!--   table    -->
-
-
-
-
     @include('pages.footer')
 
 

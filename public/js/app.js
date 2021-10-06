@@ -2184,6 +2184,43 @@ if (document.getElementById('dclock')) {
 
 /***/ }),
 
+/***/ "./resources/components/doctors/countdown.js":
+/*!***************************************************!*\
+  !*** ./resources/components/doctors/countdown.js ***!
+  \***************************************************/
+/***/ (() => {
+
+(function () {
+  var start = new Date();
+  start.setHours(16, 0, 0); // 11pm
+
+  function pad(num) {
+    return ("0" + parseInt(num)).substr(-2);
+  }
+
+  function tick() {
+    var now = new Date();
+
+    if (now > start) {
+      // too late, go to tomorrow
+      start.setDate(start.getDate() + 1);
+    }
+
+    var remain = (start - now) / 1000;
+    var hh = pad(remain / 60 / 60 % 60);
+    var mm = pad(remain / 60 % 60);
+    var ss = pad(remain % 60);
+    document.getElementById('countdown-hour').innerHTML = hh;
+    document.getElementById('countdown-min').innerHTML = ":" + mm;
+    document.getElementById('countdown-sec').innerHTML = ":" + ss;
+    setTimeout(tick, 1000);
+  }
+
+  document.addEventListener('DOMContentLoaded', tick);
+})();
+
+/***/ }),
+
 /***/ "./resources/components/history.js":
 /*!*****************************************!*\
   !*** ./resources/components/history.js ***!
@@ -2219,7 +2256,7 @@ __webpack_require__(/*! ../components/digitalclock */ "./resources/components/di
 
 __webpack_require__(/*! ../components/clock */ "./resources/components/clock.js");
 
-__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../components/countdown'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+__webpack_require__(/*! ../components/doctors/countdown */ "./resources/components/doctors/countdown.js");
 
 __webpack_require__(/*! ../components/history */ "./resources/components/history.js");
 

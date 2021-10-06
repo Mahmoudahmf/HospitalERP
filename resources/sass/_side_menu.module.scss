@@ -2,16 +2,14 @@
 .side_menu {
     background-color: #FBFCFC;
     height: 100vh;
-    width: 5%;
-    box-shadow: 0 15px 25px 0 rgba(67, 67, 67, 0.1);
 
     .side-menu-img-container {
         border-radius: 50%;
-        width: 50px;
-        height: 50px;
+        width: 3vw;
+        height: 3vw;
         background-color: black;
-        margin-bottom: 30px;
-        margin-top: 20px;
+        margin-top: 1vw;
+        margin-bottom: 1.5vw;
 
 
         .side-menu-img {
@@ -27,10 +25,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width:96px;
+
 
 
         .icons-container {
-            margin-top: 10px;
+            margin-bottom: 2vw;
             //&::after{
             //    content: "Dashboard";
             //    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
@@ -47,7 +47,7 @@
 
 
         .side-menu-icon {
-            margin-bottom: 20px;
+            //margin-bottom: 1.5vw;
 
             &:hover {
                 color: #7BED9F;
@@ -58,6 +58,8 @@
 
 
 }
+
+
 
 
 

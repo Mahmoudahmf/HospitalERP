@@ -17,7 +17,7 @@ require('../components/digitalclock')
 
 require('../components/clock')
 
-require('../components/countdown')
+require('../components/doctors/countdown')
 
 require('../components/history')
 
