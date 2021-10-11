@@ -1,34 +1,31 @@
-@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
 
-//
+
 .navbar-component {
-    height: 90px;
-    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: #FBFCFC;
+    //box-shadow: 0 15px 25px rgba(67, 67, 67, 0.1);
     position: relative;
 
 
-
-
-
     .nav_left {
-        padding-left: 0.5vw;
+        width: 25%;
         display: flex;
 
         .doctor_info {
-            display: flex;
-            flex-direction: column;
+
             .doctor-name {
-                font-size: 1vw;
-                margin-bottom: 0 !important;
+                font-size: 18px;
+                //margin-bottom: 0 !important;
             }
 
             .department {
-                font-size: 0.75vw;
+                font-size: 13px;
                 letter-spacing: 1px;
-                margin-bottom: 0 !important;
+                //margin-bottom: 0 !important;
             }
 
 
@@ -38,24 +35,24 @@
 
     .doctor_status {
         display: flex;
-        justify-content: left;
+        justify-content: center;
         align-items: center;
-        //margin-left: 15px;
+        margin-left: 15px;
 
         .line {
             background-color: #C5C9CC;
-            width:0.1vw;
-            height: 3vw;
-            margin-left: 1vw;
-            margin-right: 1vw;
+            width: 2px;
+            height: 45px;
+            margin-left: 15px;
+            margin-right: 15px;
         }
 
         .circle {
             background-color: #7bed9f;
             border-radius: 50%;
-            width: 1vw;
-            height: 1vw;
-            margin-right: 1vw;
+            width: 15px;
+            height: 15px;
+            margin-right: 15px;
         }
 
         .Work_status {
@@ -65,16 +62,18 @@
 
 
     #dclock {
+        width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: xx-large;
 
         p {
-            font-size: 2.5vw !important;
-            margin-top: 0.5vw;
+            font-size: 40px;
+            margin-top: 10px;
 
             span {
-                font-size: 2vw;
+                font-size: 30px;
                 font-weight: bold;
             }
         }
@@ -82,17 +81,30 @@
 
 
     .nav_icons {
-        //margin-right: 1.5vw;
-        //height: 100%;
+        height: 100%;
         display: flex;
-        justify-content: right;
         align-items: center;
+        justify-content: flex-end;
+        width: 25%;
         color: #20d573;
 
+        //.p-notification::before {
+        //    content: "\f0f3";
+        //    font-family: "Font Awesome 5 Free";
+        //    font-weight: 900;
+        //
+        //
+        //}
+
+        .p-message::before {
+            //font-family: "Font Awesome 5 Free";
+            //content: "\f2b6";
+
+        }
 
         a {
-            font-size: 1.3vw;
-            margin-right: 2vw;
+            font-size: 20px;
+            margin-right: 25px;
             color: #7BED9F;
             text-decoration-line: none;
 
@@ -137,13 +149,6 @@
     }
 
 }
-
-
-
-
-
-
-
 
 
 

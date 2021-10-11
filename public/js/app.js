@@ -2225,11 +2225,113 @@ if (document.getElementById('dclock')) {
 /*!*****************************************!*\
   !*** ./resources/components/history.js ***!
   \*****************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);
+ // let date ;
+// date = moment().format('dddd D ,MMMM YYYY');
+//
+// document.getElementById("history").innerHTML = date;
 
 var date = new Date();
-date = date.toDateString();
-document.getElementById("history").innerHTML = date;
+var dayInNom = date.getUTCDate();
+var month = date.getMonth().toString();
+var year = date.getFullYear().toString();
+var stringDay = date.getDay().toString();
+
+switch (stringDay) {
+  case "0":
+    stringDay = "Sunday";
+    break;
+
+  case "1":
+    stringDay = "Monday";
+    break;
+
+  case "2":
+    stringDay = "Tuseday";
+    break;
+
+  case "3":
+    stringDay = "Wednesday";
+    break;
+
+  case "4":
+    stringDay = "Thursday";
+    break;
+
+  case "5":
+    stringDay = "Friday";
+    break;
+
+  case "6":
+    stringDay = "Saterday";
+    break;
+
+  default:
+    "there is no day";
+}
+
+switch (month) {
+  case "0":
+    month = "January";
+    break;
+
+  case "1":
+    month = "February";
+    break;
+
+  case "2":
+    month = "March";
+    break;
+
+  case "3":
+    month = "April";
+    break;
+
+  case "4":
+    month = "May";
+    break;
+
+  case "5":
+    month = "June";
+    break;
+
+  case "6":
+    month = "July";
+    break;
+
+  case "7":
+    month = "August";
+    break;
+
+  case "8":
+    month = "September";
+    break;
+
+  case "9":
+    month = "October";
+    break;
+
+  case "10":
+    month = "November";
+    break;
+
+  case "11":
+    month = "December";
+    break;
+
+  default:
+    "there is no day";
+}
+
+var dayIn = "".concat(dayInNom, " ").concat(stringDay);
+var monthYear = " , ".concat(month, " ").concat(year);
+document.querySelector("#historyDay").innerHTML = dayIn;
+document.querySelector("#historyMonYear").innerHTML = monthYear;
 
 /***/ }),
 

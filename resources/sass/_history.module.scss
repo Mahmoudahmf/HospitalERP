@@ -1,22 +1,75 @@
-.history-box {
-    // height: 5vh;
-    display: flex;
-    // box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
-    //             0 1px 2px rgba(0,0,0,0.24);
-    align-items: flex-end;
-    justify-items: center;
-    padding-bottom: .4vh;
+//.history-box {
+//    height: 5vh;
+//    grid-area: 3 / 2 / 4/ 4;
+//    display: grid;
+//    grid-template-columns: 7vw 1fr;
+//    grid-template-rows: 5vh;
+//    // box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+//    //             0 1px 2px rgba(0,0,0,0.24);
+//    align-items: flex-end;
+//    justify-items: center;
+//    //padding-bottom: .4vh;
+//
+//    .activity {
+//        display: grid;
+//        grid-column: 1 / 2;
+//        font-size: 20px;
+//
+//    }
+//   #history{
+//       font-size: larger;
+//   }
+//
+//    .history {
+//        display: grid;
+//        grid-column: 2 / 3;
+//        font-size: 10px;
+//    }
+//}
 
-    .activity {
-        display: flex;
+
+.history-box
+{
+    grid-area: 3 / 2 / 4/ 4;
+    display: grid;
+    grid-template-columns: 7vw 1fr;
+    grid-template-rows: 5vh;
+    align-items:flex-end;
+    justify-items: center ;
+    //background-color: #f0faf841;
+    margin:.1vh 1vw;
+    z-index: 1000;
+    .activity
+    {
+        display: grid;
+        grid-column: 1 / 2;
         font-size: 18px;
-        width: 50%;
-
     }
-
-    .history {
-        display: flex;
-        font-size: 10px;
-        width: 50%;
+    .history
+    {
+        grid-column: 2 / 3;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 5vw 5vw 1fr;
+        justify-items: center;
+        &-day{
+            font-size:20px;
+            font-weight:600;
+            display: grid;
+            grid-area: 1 /2 /2 / 3;
+            align-content: end;
+            justify-self: end;
+        }
+        &-monYear{
+            font-size:15px;
+            font-weight:400;
+            display: grid;
+            align-content: end;
+            grid-area: 1 / 3 /2  / 4;
+            justify-self: start;
+        }
     }
 }
+
+
+

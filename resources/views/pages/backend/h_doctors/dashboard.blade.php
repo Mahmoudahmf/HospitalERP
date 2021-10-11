@@ -1,10 +1,12 @@
 
- <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-<br>
-<a href="{{route('doctors.index')}}">Click Here Test Route</a>
-<br/><br/>
+@extends('pages.layout.doctor_master')
 
-<a href="{{route('logout')}}">Click Here Logout</a>
+@section('title')
+   {{Auth::user()->name}}
+@endSection
 
+  <!--@section('description')
 
-   
+     heloow mahouddd  sfsffsfsffs
+
+ @endSection  -->

@@ -1,7 +1,8 @@
-@include('pages.header')
-   
+@include('pages.layout.header')
 
-<div class="login">
+
+
+ <div class="login">
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path class="login-wave" fill-opacity="0.77"
@@ -17,54 +18,49 @@
         <div class="login-right">
 
             <div class="login_text">
-                <h1>Login Now For A Real Control </h1>
-                <p>Try the real powerful of management as first modern ERP medical system</p>
+                <h1 class="login_text_h">Login Now For A Real Control </h1>
+                <p class="login_text_p">Try the real powerful of management as first modern ERP medical system</p>
             </div>
             <form action="{{ route('login') }}" method="POST" class="login-form">
                 @csrf
                 <div class="login-form-group">
 
-                <div class="login-form-input">
-                    <div class="login-icon">
-                        <i class="fal fa-user-md"></i>
-                    </div>
-                    <div class="login-input">
-                        <input type="text" name="username" placeholder="Enter UserName" required>
-                    </div>
-                </div>
-
-                <div class="login-form-input">
-                    <div class="login-icon">
-                        <i class="fal fa-lock-alt"></i>
-                    </div>
-                    <div>
-                        <input type="text" name="password"  placeholder="Please Enter Your Password" required>
-                    </div>
-                </div>
-
-                <div class="login-pass-input-text ">
-                    <a href="#"> Forget Your credentials?</a>
-                </div>
-
-
-
-                <div class="login-dropdown">
-
-                        <div class="login-form-input-btn ">
-                            <div class="login-icon-btn  ">
-                                <i class="fal fa-sign-in"></i>
-                            </div>
-                            <div class="login-input-btn">
-                                <input type="submit" value="Login" class="login-input-btn">
-                            </div>
+                    <div class="login-form-input">
+                        <div class="login-icon">
+                            <i class="fal fa-user-md"></i>
                         </div>
-                        
-                       
-                   
+                        <div class="login-input">
+                            <input type="text" name="username" placeholder="Enter UserName" required>
+                        </div>
+                    </div>
+
+                    <div class="login-form-input">
+                        <div class="login-icon">
+                            <i class="fal fa-lock-alt"></i>
+                        </div>
+                        <div>
+                            <input type="text" name="password" placeholder="Please Enter Your Password" required>
+                        </div>
+                    </div>
+
+                    <div class="login-pass-input-text ">
+                        <a href="#"> Forget Your credentials?</a>
+                    </div>
+
+                    <div class="login-form-input-btn ">
+                        <div class="login-icon-btn  ">
+                            <i class="fal fa-sign-in"></i>
+                        </div>
+                        <div class="login-input-btn">
+                            <input type="submit" value="Login" class="login-input-btn">
+                        </div>
+                    </div>
                 </div>
 
             </form>
         </div>
- </div>
+    </div>
 
-    @include('pages.footer')
+
+
+ @include('pages.layout.footer')

@@ -1,31 +1,31 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\H_Doctors\DoctorController;
-use App\Http\Controllers\H_Nurses\NursersController;
-use App\Http\Controllers\H_Employes\EmployesController;
+// use App\Http\Controllers\H_Nurses\NursersController;
+// use App\Http\Controllers\H_Employes\EmployesController;
 use App\Http\Controllers\Admins\AdminsController;
-use App\Http\Controllers\H_Departments\DepartmentsController;
+// use App\Http\Controllers\H_Departments\DepartmentsController;
 
-//
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
 
-Route::view('/', 'pages.master');
-Route::view('/log', 'pages.login');
 
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+// Route::view('/d', 'pages.master');
 ###############################DoctorsRoute##############################
-// Route::group(
-// 	[
-// 		'middleware' => ['auth:doctors']
-// 	], function(){
-// 		Route::get('/dashboard/doctors', function () {
-// 			return view('pages.backend.h_doctors.dashboard');
-// 		})->name('dashboard.doctors');
-//        Route::resource('doctors',DoctorController::class);
-//
-// 	});
+Route::group(
+	[
+		'middleware' => ['auth:doctors']
+	], function(){
+		Route::get('/dashboard/doctors', function () {
+			return view('pages.backend.h_doctors.dashboard');
+		})->name('dashboard.doctors');
+       Route::resource('doctors',DoctorController::class);
+
+	});
 
 ###############################NursesRoute##############################
 // Route::group(
@@ -40,7 +40,7 @@ Route::view('/log', 'pages.login');
 //
 // 	});
 //
-###############################EmployesRoute##############################
+// ###############################EmployesRoute##############################
 // Route::group(
 // 	[
 // 		'middleware' => ['auth:employes']
@@ -51,8 +51,8 @@ Route::view('/log', 'pages.login');
 // 		Route::resource('employes',EmployesController::class);
 //
 // 	});
-
-###############################AdminsRoute##############################
+//
+// ###############################AdminsRoute##############################
 // Route::group(
 // 	[
 // 		'middleware' => ['auth:admins']
@@ -62,20 +62,20 @@ Route::view('/log', 'pages.login');
 // 			return view('pages.backend.admins.dashboard');
 // 		})->name('dashboard.admins');
 //         Route::resource('admins',AdminsController::class);
-
-		###################################Depatments################################
+//
+// 		###################################Depatments################################
 // 		Route::group(['namespace'=>'H_Departments'],function(){
 // 			Route::get('showdepartments',[DepartmentsController::class,'index'])->name('showdepartments');
 // 			Route::post('storedepartments',[DepartmentsController::class,'store'])->name('storedepartments');
 // 			Route::get('editdepatment/{id}',[DepartmentsController::class,'edit'])->name('editdepatment');
 // 			Route::patch('updatedepatment',[DepartmentsController::class,'update'])->name('updatedepatment');
 // 			Route::get('deletedepatment/{id}',[DepartmentsController::class,'destroy'])->name('deletedepatment');
-
-
+//
+//
 // 		});
-		###################################Depatments################################
-
-
-		// Route::resource('departments/{$id ??}',DepartmentsController::class);
+// 		###################################Depatments################################
+//
+//
+// 		// Route::resource('departments/{$id ??}',DepartmentsController::class);
 // 	});
-// require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';

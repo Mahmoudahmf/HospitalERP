@@ -6,26 +6,35 @@
 <div class = "page-content">
         <nav class="navbar-component">
 
-                 <!-- Left Part includes "Paragraph(Patient Name - Doctor Department)" "Line" "circle (Working OR Break)" -->
-            <div class="nav_left">
 
-                 <!-- Paragraph(Patient Name - Doctor Department) -->
+                 <!-- Left Part includes "Paragraph(Patient Name - Doctor Department)" "Line" "circle (Working OR Break)" -->
+
+            <div class="nav_left">
+              <!--   Paragraph(Patient Name - Doctor Department)-->
+
                      <div class="doctor_info">
                          <p class="doctor-name"> Dr. Fahmy Ahmed</p>
                          <p class="department"> Ophthalmology Consultant </p>
                      </div>
+
                      <!-- circle (Working OR Break) -->
+
                      <div class="doctor_status">
+
                          <!-- Line -->
+
                          <div class="line"></div>
                          <div class="circle"></div>
                          <p class="Work_status">Working</p>
                      </div>
             </div>
+
                  <!-- Center Part includes "Clock" -->
+
             <div id="dclock">
 
             </div>
+
                  <!-- Right Part includes 3 icons -->
 
 
@@ -38,5 +47,4 @@
             <div class="nav-notification ">+3</div>
             <div class="nav-message">+3<div>
         </nav>
-
 @show

@@ -1,27 +1,35 @@
 
-.page-layout {
+.page-layout{
     display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width:100%;
     background-color: #FBFCFC;
+
+
+
     @import "_side_menu.module";
 
-    .page-content {
+    .page-content{
         display: flex;
         flex-direction: column;
-        width: 95%;
         height: 100vh;
+        width: 95%;
+        //margin-left: 25px;
+        margin-right: 25px;
+        position: relative;
         @import "_navbar.module";
-
         @import "_description.module";
-        //@import "_clock.module";
-        .table-container {
+        @import "_clock.module";
+        .table-container{
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding: 0 15px 15px 15px;
-            margin-bottom: 15px;
+            height: 68vh;
+            margin-top: 10px;
             @import "_history.module";
             @import "_tables.module";
         }
+
     }
 }
-

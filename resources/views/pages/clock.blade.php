@@ -56,5 +56,5 @@
                 </div>
             </div>
 
-           @include('pages.footer')
+           @include('pages.layout.footer')
 

@@ -1,21 +1,24 @@
 .description-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    //box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    //0 1px 2px rgba(0, 0, 0, 0.24);
+    width: 100%;
+    //padding: 10px;
     justify-content: space-around;
     line-height: 1.5;
-    //background-color: #FBFCFC;
+    background-color: #FBFCFC;
+    margin-top: 5px;
+    flex-wrap: wrap;
     height: 20vh;
-    display: flex;
-    width: 100%;
-    margin : 15px  15px 15px 0 !important;
-
 
     .description-img {
+        display: flex;
         width: 100px;
         height: 100px;
-        margin: auto;
-
-
-
-
+        align-items: center;
+        justify-content: center;
         //margin-left: 15px;
         .card-img {
             width: 100%;
@@ -28,20 +31,20 @@
 
 
     .description-doctor {
-        width: 55%;
+        width: 50%;
+        height: 100%;
         display: flex;
+        //padding: 10px;
         background: #fff;
         border-radius: 12px;
         align-items: center;
         justify-content: space-between;
-        margin-right: 25px;
-        //margin-left: 25px;
-        padding: 25px;
+        position: relative;
+        padding-left: 25px;
 
         .card-doctor-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            width: 60%;
+
             .card-doctor-h3 {
                 margin-bottom: 10px;
                 font-size: 1.5rem;
@@ -49,7 +52,7 @@
 
             .card-doctor-p {
                 color: #363636;
-                font-size: 16px;
+                font-size: 15px;
                 opacity: 0.6;
             }
         }
@@ -57,19 +60,15 @@
 
         .card-buttons {
             display: flex;
-            width: 40%;
-            height:100%;
-            align-items: end;
-            margin-top: 25px;
-
+            height: 40px;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
 
             .card-btn1, .card-btn2 {
-                padding-left: 0 !important;
-                margin: 10px;
+                padding: 10px;
                 width: 120px;
-
             }
-
 
             .card-btn1 {
 
@@ -77,6 +76,7 @@
                 border: none;
                 border-radius: 7px;
                 color: #fff;
+
             }
 
             .card-btn2 {
@@ -85,109 +85,131 @@
                 background: inherit;
 
             }
+
+
         }
+
+
     }
 
-            .description-clock {
-                display: flex;
-                width: 35%;
-                //height: 100%;
-                align-items: center;
-                justify-content: space-between;
-                background: #fff;
-                border-radius: 10px;
-                margin-right: 15px;
 
-                .clock {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    width: 50%;
-                    margin: 15px;
+    .description-clock {
+        display: flex;
+        width: 40%;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border-radius: 10px;
 
-                }
+        .clock {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            margin: 15px;
 
-                .hour {
-                    display: flex;
-                    text-align: center;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-                    margin-bottom: -5px;
+        }
 
-                    .hour-p {
-                        color: #1e90ff;
-                        font-size: 45px;
-                        display: flex;
+        .hour {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
 
-                    }
+            .hour-p {
+                color: #1e90ff;
+                font-size: 45px;
+            }
 
-                    .minute-p {
-                        color: #C5C9CC;
-                        font-size: 45px;
-                        display: flex;
-                    }
+            .minute-p {
+                color: #C5C9CC;
+                font-size: 45px;
+            }
 
-                    .second-p {
-                        color: #7bed9f;
-                        font-size: 45px;
-                        display: flex;
-                    }
+            .second-p {
+                color: #7bed9f;
+                font-size: 45px;
+            }
 
-                }
+        }
 
-                .buttons-hour {
-                    display: flex;
-                    text-align: center;
-                    color: #C5C9CC;
+        .buttons-hour {
+            display: flex;
+            margin-bottom: 7px;
+            text-align: center;
+            color: #C5C9CC;
 
-                    .break p {
-                        margin-bottom: 0 !important;
-                        padding-right: 5px;
-                    }
+            .button-work, .button-break {
+                border: none;
+                padding: 2px 7px;
+                border-radius: 5px;
+                width: 110px;
+                margin-right: 10px;
+            }
 
-                    .button-work, .button-break {
-                        border: none;
-                        padding: 2px 7px;
-                        border-radius: 5px;
-                        width: 110px;
-                        margin-right:10px;
-
-                    }
-
-                    .button-work {
-                        background: #1e90ff;
-                        color: #fff;
-
-                    }
-
-                    .button-break {
-                        background: #fff;
-                        border: 1px solid #C5C9CC;
-
-                        .button-break-span {
-                            color: #7BED9F;
-                        }
-
-                    }
-                }
-
-                .analog-clock {
-                    width: 50%;
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    //@import "_clock.module";
-
-
-                }
-
+            .button-work {
+                background: #1e90ff;
+                color: #fff;
 
             }
+
+            .button-break {
+                background: #fff;
+                border: 1px solid #C5C9CC;
+
+                .button-break-span {
+                    color: #7BED9F;
+                }
+
+            }
+            .break p {
+                font-size: 18px;
+                margin-right: 5px;
+                text-align: center;
+            }
+        }
+
+        .analog-clock {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //@import "_clock.module";
+
+
+        }
+
+
+    }
+
 }
 
 
+
+
+
+//.description-layout{
+//    background-color: #2a2a2a;
+//    display: flex;
+//    width: 100%;
+//    height: 20vh;
+//
+//    .image{
+//        background-color: #6cb2eb;
+//    }
+//
+//    .welcome{
+//        background-color: #6f42c1;
+//    }
+//
+//    .countdown{
+//        background-color: #48bb78;
+//    }
+//}
 
 
 

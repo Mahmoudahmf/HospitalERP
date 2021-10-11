@@ -1,24 +1,16 @@
-// Fonts
 
 
-// Fontawesome
-
-// Font-Awesome
-
-// Variables
-
-@import "_variables";
-
+html,body{
+    height: 100%;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Cairo, sans-serif;
-    overflow: hidden;
 }
 
-// login page
-// login page
+
 @import "_master.module";
 @import "_clock.module";
 

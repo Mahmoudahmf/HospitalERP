@@ -1,5 +1,7 @@
 
-    @include('pages.header')
+
+
+    @include('pages.layout.header')
 
             @include('pages.layout.side_menu')
             @include('pages.layout.navbar')
@@ -7,7 +9,7 @@
             @include('pages.layout.history')
             @include('pages.layout.tables')
 
-    @include('pages.footer')
+    @include('pages.layout.footer')
 
 
 

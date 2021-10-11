@@ -2,14 +2,16 @@
 .side_menu {
     background-color: #FBFCFC;
     height: 100vh;
+    width: 5%;
+    //box-shadow: 0 15px 25px 0 rgba(67, 67, 67, 0.1);
 
     .side-menu-img-container {
         border-radius: 50%;
-        width: 3vw;
-        height: 3vw;
+        width: 50px;
+        height: 50px;
         background-color: black;
-        margin-top: 1vw;
-        margin-bottom: 1.5vw;
+        margin-bottom: 30px;
+        margin-top: 20px;
 
 
         .side-menu-img {
@@ -25,12 +27,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width:96px;
-
 
 
         .icons-container {
-            margin-bottom: 2vw;
+            margin-top: 10px;
             //&::after{
             //    content: "Dashboard";
             //    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
@@ -43,11 +43,13 @@
             //
             //}
 
+
+
         }
 
 
         .side-menu-icon {
-            //margin-bottom: 1.5vw;
+            margin-bottom: 20px;
 
             &:hover {
                 color: #7BED9F;
@@ -59,6 +61,228 @@
 
 }
 
+
+.icons-container:hover + #talkbubble-dash{
+    display: block;
+    background-color: #856404;
+
+}
+#talkbubble-dash {
+    width: 110px;
+    height: 33px;
+    background: #707070;
+    //position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 11%;
+    left:5%;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    display: none;
+
+}
+#talkbubble-dash:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 9px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 19.1px solid #707070;
+    border-bottom: 8px solid transparent;
+}
+
+#talkbubble-room{
+    width: 110px;
+    height: 33px;
+    background: #707070;
+    //position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 18%;
+    left:5%;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    display: none;
+
+}
+
+#talkbubble-room:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 9px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 19.1px solid #707070;
+    border-bottom: 8px solid transparent;
+}
+
+#talkbubble-nurse{
+    width: 110px;
+    height: 33px;
+    background: #707070;
+    //position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 24%;
+    left:5%;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    display: none;
+
+}
+
+#talkbubble-nurse:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 9px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 19.1px solid #707070;
+    border-bottom: 8px solid transparent;
+}
+
+#talkbubble-patient{
+    width: 110px;
+    height: 33px;
+    background: #707070;
+    //position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 30.5%;
+    left:5%;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    display: none;
+
+}
+
+#talkbubble-patient:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 9px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 19.1px solid #707070;
+    border-bottom: 8px solid transparent;
+}
+
+#talkbubble-surgery{
+    width: 110px;
+    height: 33px;
+    background: #707070;
+    //position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 37%;
+    left:5%;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    display: none;
+
+}
+
+#talkbubble-surgery:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 9px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 19.1px solid #707070;
+    border-bottom: 8px solid transparent;
+}
+
+
+#talkbubble-signout{
+    width: 110px;
+    height: 33px;
+    background: #707070;
+    //position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 43%;
+    left:5%;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    display: none;
+
+}
+
+#talkbubble-signout:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 9px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 19.1px solid #707070;
+    border-bottom: 8px solid transparent;
+}
+
+#talkbubble{
+    width: 110px;
+    height: 33px;
+    background: #707070;
+    //position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 49%;
+    left:5%;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    display: none;
+
+}
+
+#talkbubble:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 9px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 19.1px solid #707070;
+    border-bottom: 8px solid transparent;
+}
 
 
 

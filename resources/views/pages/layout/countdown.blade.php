@@ -1,5 +1,6 @@
 
 
-<div id="countdown"> </div>
+<div id="countdown">
+ </div>
 
-@include('pages.footer')
+ @include('pages.layout.footer')
