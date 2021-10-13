@@ -11,7 +11,7 @@ use Laravel\Sanctum\HasApiTokens;
 class H_doctors extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
-    protected $guarded=[];
+    protected $fillable=[''];
    
 
     /**

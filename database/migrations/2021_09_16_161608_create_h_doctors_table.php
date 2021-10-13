@@ -17,9 +17,9 @@ class CreateHDoctorsTable extends Migration
             $table->id();
             $table->string('username')->unique();
             $table->string('password');
-            $table->string('title')->nullable();
             $table->string('name');
-            $table->string('role');
+            $table->string('title')->nullable();
+            $table->string('role')->default(2);
             $table->string('phone');
             $table->string('attachment')->nullable();
             $table->string('salary');

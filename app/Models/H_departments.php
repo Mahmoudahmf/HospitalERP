@@ -10,6 +10,6 @@ class H_departments extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    
-    protected $guarded=[];
+    protected $fillable=['name'];
+     
 }

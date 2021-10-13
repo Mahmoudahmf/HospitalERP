@@ -13,8 +13,8 @@
               <!--   Paragraph(Patient Name - Doctor Department)-->
 
                      <div class="doctor_info">
-                         <p class="doctor-name"> Dr. Fahmy Ahmed</p>
-                         <p class="department"> Ophthalmology Consultant </p>
+                         <p class="doctor-name"> {{Auth::user()->name}}</p>
+                         <p class="department"> {{Auth::user()->title}} </p>
                      </div>
 
                      <!-- circle (Working OR Break) -->

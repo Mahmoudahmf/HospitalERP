@@ -16,11 +16,10 @@ class CreateHRoomsTable extends Migration
         Schema::create('h_rooms', function (Blueprint $table) {
             $table->id();
             $table->string('room_number');
-            $table->string('floor_no');
+            $table->string('duration')->nullable();
+            //Status means here Room Avilable Or Not
             $table->boolean('status')->default(1);
-            $table->string('duration')->default(0);
-            $table->foreignId('m_nurseId')->references('id')->nullable()->on('h_nurses')->onDelete('cascade');
-            $table->foreignId('n_nurseId')->references('id')->nullable()->on('h_nurses')->onDelete('cascade');
+            $table->foreignId('nurse_Id')->references('id')->on('h_nurses')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

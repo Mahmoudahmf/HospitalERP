@@ -13,7 +13,7 @@
         height: 100%;
         &::after {
             content: "";
-           // background-image: url("../storage/images/login_background.jpg");
+            // background-image: url("../../public/images/login_background.jpg");
             background-position: center;
             background-size: cover;
             position: absolute;
@@ -30,8 +30,8 @@
     width: 79%;
     height: 100vh;
     background-size: cover;
-   // background-image: url("../storage/images/login_background.jpg");
-    background-color: #fbf7ea;
+    background-image: url("../../public/images/login_background.jpg");
+    background-color: #817d6d;
     background-position: right;
     background-blend-mode: overlay;
     @media (max-width: 767px) {

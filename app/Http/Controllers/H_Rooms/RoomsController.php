@@ -3,83 +3,58 @@
 namespace App\Http\Controllers\H_Rooms;
 
 use App\Http\Controllers\Controller;
+use App\Models\H_rooms;
+use App\Models\H_nurse;
 use Illuminate\Http\Request;
-
 class RoomsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
-        //
+        $h_rooms=H_rooms::all();
+        $h_nurses=H_nurse::all();
+        return view('pages.backend.h_rooms.index',compact('h_rooms','h_nurses'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        //return $request;
+        // $m_nurseId=implode(',',$request->m_nurseId);
+        //  return $m_nurseId;
+        H_rooms::create([
+            'room_number'=>$request->RoomId,
+            'floor_no'=>$request->FloorNumber,
+            // 'm_nurseId'=>implode(',',$request->m_nurseId),
+            // 'm_nurseId'=>attach($request->teacher_id),
+
+            'n_nurseId'=>$request->n_nurseId,
+        ]);
+
+        return redirect()->route('showerooms');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+
     }
 }

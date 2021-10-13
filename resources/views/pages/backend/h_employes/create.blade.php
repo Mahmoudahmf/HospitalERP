@@ -1,8 +1,7 @@
-
-<div id="nurses">
-        <form  method='POST' action="{{route('createdoctor')}}" autocomplete="off">
+<div id="employes">
+        <form  method='POST' action="{{route('createemployes')}}" autocomplete="off">
             @csrf
-             <table  border="1"  width="700px" height="auto">
+             <table border="1" width="600px" height="auto">
                <tr>
                  <td>
                  <label>إسم المستخدم</label>
@@ -15,20 +14,26 @@
                </tr>
                <tr>
                  <td>
-                 <label>إسم الطبيب</label>
+                 <label>إسم الموظف</label>
                   <input type="text" name="name" value="{{old('name')}}" required />
                  </td>
                  <td>
+                 <select name="jobtitle">
+                      <option value="" selected disabled>المسمى الوظيفي</option>
+                      <option value="موظف استقبال">موظف استقبال</option>
+                      <option value="امن">امن</option>
+                      <option value="نظافة">نظافة</option>
+                      <option value="سائق">سائق </option>
+                   </select>
+                 </td>
+                
+               </tr>
+               <tr>
+               <td>
                  <label>التليفون</label><br/>
                   <input type="text" name="phone" value="{{old('phone')}}" required 
                   oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');"
                   />
-                 </td>
-               </tr>
-               <tr>
-                 <td>
-                 <label>المسمي الوظيفي</label>
-                  <input type="text" name="title" value="{{old('title')}}"  required />
                  </td>
                  <td>
                  <label>الراتب</label><br/>
@@ -39,21 +44,12 @@
                </tr>
                <tr>
                  <td>
-                  <select name="dept_id" required>
-                    <option selected  disabled>اختر القسم</option>
-                      @foreach($departments as $departments)
-                          <option value="{{$departments->id}}">{{$departments->name}}</option>
-                      @endforeach;
-                  </select>
+                 <select name="role">
+                      <option value="" selected disabled>الصلاحيات</option>
+                      <option value="4">استقبال</option>
+                      <option value="5">امن</option>
+                   </select>                
                  </td>
-                 <td>
-                <select name="room_id">
-                   <option value="" selected disabled>أختر الغرفة</option>
-                   @foreach($rooms as $room)
-                    <option value="{{$room->id}}">{{$room->room_number}}/{{$room->floor_no}}</option>
-                   @endforeach;
-                </select>
-                </td>
                </tr>
              </table>
               <input type="submit" value="حفظ" >

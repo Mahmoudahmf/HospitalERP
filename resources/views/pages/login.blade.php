@@ -11,7 +11,7 @@
         </svg>
         <div class="login-left">
             <div class="image">
-                <img src="{{asset('storage/images/login_background.jpg')}}">
+                <img src="{{asset('images/login_background.jpg')}}">
             </div>
         </div>
 

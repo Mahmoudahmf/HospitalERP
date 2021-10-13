@@ -16,9 +16,11 @@ class RoomTableSeeder extends Seeder
         DB::table('h_rooms')->delete();
         H_rooms::create([
             'room_number'=>'1',
-            'druation'=>'20',
+            'floor_no'=>'1',
             'status'=>'1',
-            'nurse_id'=>'1'
+            'duration'=>'0',
+            'm_nurseId'=>'1',
+            'n_nurseId'=>'1',
         ]);
     }
 }

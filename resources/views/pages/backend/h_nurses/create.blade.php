@@ -1,6 +1,6 @@
 
 <div id="nurses">
-        <form  method='POST' action="{{route('createdoctor')}}" autocomplete="off">
+        <form  method='POST' action="{{route('createnurse')}}" autocomplete="off">
             @csrf
              <table  border="1"  width="700px" height="auto">
                <tr>
@@ -15,7 +15,7 @@
                </tr>
                <tr>
                  <td>
-                 <label>إسم الطبيب</label>
+                 <label>إسم الممرض</label>
                   <input type="text" name="name" value="{{old('name')}}" required />
                  </td>
                  <td>
@@ -39,21 +39,15 @@
                </tr>
                <tr>
                  <td>
-                  <select name="dept_id" required>
-                    <option selected  disabled>اختر القسم</option>
+                 <label>القسم التابع لها</label>
+                  <select name="department" required>
+                    <option selected  disabled>Choosed</option>
                       @foreach($departments as $departments)
                           <option value="{{$departments->id}}">{{$departments->name}}</option>
                       @endforeach;
                   </select>
                  </td>
-                 <td>
-                <select name="room_id">
-                   <option value="" selected disabled>أختر الغرفة</option>
-                   @foreach($rooms as $room)
-                    <option value="{{$room->id}}">{{$room->room_number}}/{{$room->floor_no}}</option>
-                   @endforeach;
-                </select>
-                </td>
+                
                </tr>
              </table>
               <input type="submit" value="حفظ" >
