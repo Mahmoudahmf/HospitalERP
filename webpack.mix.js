@@ -16,6 +16,8 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .copy(
         'node_modules/@fortawesome/fontawesome-free/webfonts',
-        'public/webfonts'
+        'public/webfonts',
+        'node_modules/chart.js/dist/chart.js\', \'public/chart.js/chart.js'
+
     );
 

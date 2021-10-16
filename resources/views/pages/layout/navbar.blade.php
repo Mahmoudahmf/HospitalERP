@@ -3,7 +3,6 @@
 
 @section('navbar')
 
-<div class = "page-content">
         <nav class="navbar-component">
 
 

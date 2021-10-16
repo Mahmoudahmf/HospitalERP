@@ -1,6 +1,4 @@
 @section('side_menu')
-<section class="page-layout">
-
         <aside class="side_menu">
                 <ul class="side-menu-icons">
                         <li class="side-menu-img-container">
