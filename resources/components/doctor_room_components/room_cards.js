@@ -1,11 +1,4 @@
-import {Chart} from "chart.js";
-// import Chart from 'chart.js/auto';
-import { getRelativePosition } from 'chart.js/helpers';
-
-
-// var Chart = require('chart.js');
-
-    let ctx = document.getElementById("myChart").getContext("2d");
+let ctx = document.getElementById("myChart").getContext("2d");
 
     const gradientBg = ctx.createLinearGradient(0, 0, 0, 200);
     gradientBg.addColorStop(0, "#2ED573");

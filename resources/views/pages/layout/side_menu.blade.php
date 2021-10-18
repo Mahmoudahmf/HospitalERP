@@ -1,4 +1,5 @@
 @section('side_menu')
+
         <aside class="side_menu">
                 <ul class="side-menu-icons">
                         <li class="side-menu-img-container">

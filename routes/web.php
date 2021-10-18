@@ -29,7 +29,14 @@ Route::group(
        		})->name('rooms');
 
 
+
+	       Route::get('/patient', function () {
+           			return view('pages.layout.doctor_patient_components.patient_master');
+           		})->name('patient');
+
 	});
+
+
 
 ###############################NursesRoute##############################
 Route::group(

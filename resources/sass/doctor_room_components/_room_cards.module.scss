@@ -2,13 +2,13 @@
 .rooms-cards-container
 {
     display: flex;
-    //width: 95%;
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
     height: 20vh;
     color: #040E28;
     background-color: #FCFCFC;
-    padding: 15px 0px 15px 0px;
+    //padding: 15px 0px 15px 0px;
 
     .rooms-card{
         width: 23%;

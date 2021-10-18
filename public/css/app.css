@@ -1,3 +1,4 @@
+@import url(https://use.fontawesome.com/releases/v5.13.0/css/all.css);
 html, body {
   height: 100%;
 }
@@ -162,11 +163,21 @@ html, body {
   margin-top: 6px;
 }
 
-.side_menu {
-  background-color: #FBFCFC;
+.page-layout {
+  display: flex;
+  flex-direction: row;
   height: 100vh;
+  width: 100%;
+  background-color: #FBFCFC;
+  justify-content: center;
+  align-items: center;
 }
-.side_menu .side-menu-img-container {
+.page-layout .side_menu {
+  background-color: white;
+  height: 100vh;
+  padding: 0 10px;
+}
+.page-layout .side_menu .side-menu-img-container {
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -174,33 +185,31 @@ html, body {
   margin-bottom: 30px;
   margin-top: 20px;
 }
-.side_menu .side-menu-img-container .side-menu-img {
+.page-layout .side_menu .side-menu-img-container .side-menu-img {
   width: 100%;
   border-radius: 50%;
 }
-.side_menu .side-menu-icons {
+.page-layout .side_menu .side-menu-icons {
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.side_menu .side-menu-icons .icons-container {
+.page-layout .side_menu .side-menu-icons .icons-container {
   margin-top: 10px;
 }
-.side_menu .side-menu-icons .side-menu-icon {
+.page-layout .side_menu .side-menu-icons .side-menu-icon {
   margin-bottom: 20px;
 }
-.side_menu .side-menu-icons .side-menu-icon:hover {
+.page-layout .side_menu .side-menu-icons .side-menu-icon:hover {
   color: #7BED9F;
 }
-
-.icons-container:hover + #talkbubble-dash {
+.page-layout .icons-container:hover + #talkbubble-dash {
   display: block;
   background-color: #856404;
 }
-
-#talkbubble-dash {
+.page-layout #talkbubble-dash {
   width: 110px;
   height: 33px;
   background: #707070;
@@ -214,8 +223,7 @@ html, body {
   padding-top: 5px;
   display: none;
 }
-
-#talkbubble-dash:before {
+.page-layout #talkbubble-dash:before {
   content: "";
   position: absolute;
   right: 100%;
@@ -226,8 +234,7 @@ html, body {
   border-right: 19.1px solid #707070;
   border-bottom: 8px solid transparent;
 }
-
-#talkbubble-room {
+.page-layout #talkbubble-room {
   width: 110px;
   height: 33px;
   background: #707070;
@@ -241,8 +248,7 @@ html, body {
   padding-top: 5px;
   display: none;
 }
-
-#talkbubble-room:before {
+.page-layout #talkbubble-room:before {
   content: "";
   position: absolute;
   right: 100%;
@@ -253,8 +259,7 @@ html, body {
   border-right: 19.1px solid #707070;
   border-bottom: 8px solid transparent;
 }
-
-#talkbubble-nurse {
+.page-layout #talkbubble-nurse {
   width: 110px;
   height: 33px;
   background: #707070;
@@ -268,8 +273,7 @@ html, body {
   padding-top: 5px;
   display: none;
 }
-
-#talkbubble-nurse:before {
+.page-layout #talkbubble-nurse:before {
   content: "";
   position: absolute;
   right: 100%;
@@ -280,8 +284,7 @@ html, body {
   border-right: 19.1px solid #707070;
   border-bottom: 8px solid transparent;
 }
-
-#talkbubble-patient {
+.page-layout #talkbubble-patient {
   width: 110px;
   height: 33px;
   background: #707070;
@@ -295,8 +298,7 @@ html, body {
   padding-top: 5px;
   display: none;
 }
-
-#talkbubble-patient:before {
+.page-layout #talkbubble-patient:before {
   content: "";
   position: absolute;
   right: 100%;
@@ -307,8 +309,7 @@ html, body {
   border-right: 19.1px solid #707070;
   border-bottom: 8px solid transparent;
 }
-
-#talkbubble-surgery {
+.page-layout #talkbubble-surgery {
   width: 110px;
   height: 33px;
   background: #707070;
@@ -322,8 +323,7 @@ html, body {
   padding-top: 5px;
   display: none;
 }
-
-#talkbubble-surgery:before {
+.page-layout #talkbubble-surgery:before {
   content: "";
   position: absolute;
   right: 100%;
@@ -334,8 +334,7 @@ html, body {
   border-right: 19.1px solid #707070;
   border-bottom: 8px solid transparent;
 }
-
-#talkbubble-signout {
+.page-layout #talkbubble-signout {
   width: 110px;
   height: 33px;
   background: #707070;
@@ -349,8 +348,7 @@ html, body {
   padding-top: 5px;
   display: none;
 }
-
-#talkbubble-signout:before {
+.page-layout #talkbubble-signout:before {
   content: "";
   position: absolute;
   right: 100%;
@@ -361,8 +359,7 @@ html, body {
   border-right: 19.1px solid #707070;
   border-bottom: 8px solid transparent;
 }
-
-#talkbubble {
+.page-layout #talkbubble {
   width: 110px;
   height: 33px;
   background: #707070;
@@ -376,8 +373,7 @@ html, body {
   padding-top: 5px;
   display: none;
 }
-
-#talkbubble:before {
+.page-layout #talkbubble:before {
   content: "";
   position: absolute;
   right: 100%;
@@ -388,64 +384,70 @@ html, body {
   border-right: 19.1px solid #707070;
   border-bottom: 8px solid transparent;
 }
-
-.navbar-component {
+.page-layout .page-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 95%;
+  position: relative;
+}
+.page-layout .page-content .navbar-component {
   height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #FBFCFC;
+  background-color: white;
 }
-.navbar-component .nav_left {
+.page-layout .page-content .navbar-component .nav_left {
   width: 25%;
   display: flex;
 }
-.navbar-component .nav_left .doctor_info .doctor-name {
+.page-layout .page-content .navbar-component .nav_left .doctor_info .doctor-name {
   font-size: 18px;
 }
-.navbar-component .nav_left .doctor_info .department {
+.page-layout .page-content .navbar-component .nav_left .doctor_info .department {
   font-size: 13px;
   letter-spacing: 1px;
 }
-.navbar-component .doctor_status {
+.page-layout .page-content .navbar-component .doctor_status {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 15px;
 }
-.navbar-component .doctor_status .line {
+.page-layout .page-content .navbar-component .doctor_status .line {
   background-color: #C5C9CC;
   width: 2px;
   height: 45px;
   margin-left: 15px;
   margin-right: 15px;
 }
-.navbar-component .doctor_status .circle {
+.page-layout .page-content .navbar-component .doctor_status .circle {
   background-color: #7bed9f;
   border-radius: 50%;
   width: 15px;
   height: 15px;
   margin-right: 15px;
 }
-.navbar-component .doctor_status .Work_status {
+.page-layout .page-content .navbar-component .doctor_status .Work_status {
   margin-bottom: 0;
 }
-.navbar-component #dclock {
+.page-layout .page-content .navbar-component #dclock {
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: xx-large;
+  font-size: x-large;
 }
-.navbar-component #dclock p {
+.page-layout .page-content .navbar-component #dclock p {
   font-size: 40px;
   margin-top: 10px;
 }
-.navbar-component #dclock p span {
+.page-layout .page-content .navbar-component #dclock p span {
   font-size: 30px;
   font-weight: bold;
 }
-.navbar-component .nav_icons {
+.page-layout .page-content .navbar-component .nav_icons {
   height: 100%;
   display: flex;
   align-items: center;
@@ -453,17 +455,17 @@ html, body {
   width: 25%;
   color: #20d573;
 }
-.navbar-component .nav_icons a {
+.page-layout .page-content .navbar-component .nav_icons a {
   font-size: 20px;
   margin-right: 25px;
   color: #7BED9F;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
-.navbar-component .nav_icons a .fa-cog {
+.page-layout .page-content .navbar-component .nav_icons a .fa-cog {
   color: #1e90ff;
 }
-.navbar-component .nav-notification {
+.page-layout .page-content .navbar-component .nav-notification {
   border-radius: 50%;
   background-color: white;
   color: red;
@@ -477,7 +479,7 @@ html, body {
   box-shadow: 0 3px 3px gray;
   display: none;
 }
-.navbar-component .nav-message {
+.page-layout .page-content .navbar-component .nav-message {
   border-radius: 50%;
   background-color: white;
   color: red;
@@ -491,150 +493,6 @@ html, body {
   box-shadow: 0 3px 3px gray;
   display: none;
 }
-
-.description-container {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  width: 100%;
-  justify-content: space-around;
-  line-height: 1.5;
-  background-color: #FBFCFC;
-  margin-top: 5px;
-  flex-wrap: wrap;
-  height: 20vh;
-}
-.description-container .description-img {
-  display: flex;
-  width: 100px;
-  height: 100px;
-  align-items: center;
-  justify-content: center;
-}
-.description-container .description-img .card-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 10px solid #F0FAF8;
-}
-.description-container .description-doctor {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  background: #fff;
-  border-radius: 12px;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  padding-left: 25px;
-}
-.description-container .description-doctor .card-doctor-info {
-  width: 60%;
-}
-.description-container .description-doctor .card-doctor-info .card-doctor-h3 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-}
-.description-container .description-doctor .card-doctor-info .card-doctor-p {
-  color: #363636;
-  font-size: 15px;
-  opacity: 0.6;
-}
-.description-container .description-doctor .card-buttons {
-  display: flex;
-  height: 40px;
-  position: absolute;
-  bottom: 20px;
-  right: 10px;
-}
-.description-container .description-doctor .card-buttons .card-btn1, .description-container .description-doctor .card-buttons .card-btn2 {
-  padding: 10px;
-  width: 120px;
-}
-.description-container .description-doctor .card-buttons .card-btn1 {
-  background: #7BED9F;
-  border: none;
-  border-radius: 7px;
-  color: #fff;
-}
-.description-container .description-doctor .card-buttons .card-btn2 {
-  border: none;
-  color: #1e90ff;
-  background: inherit;
-}
-.description-container .description-clock {
-  display: flex;
-  width: 40%;
-  height: 100%;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  border-radius: 10px;
-}
-.description-container .description-clock .clock {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  margin: 15px;
-}
-.description-container .description-clock .hour {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.description-container .description-clock .hour .hour-p {
-  color: #1e90ff;
-  font-size: 45px;
-}
-.description-container .description-clock .hour .minute-p {
-  color: #C5C9CC;
-  font-size: 45px;
-}
-.description-container .description-clock .hour .second-p {
-  color: #7bed9f;
-  font-size: 45px;
-}
-.description-container .description-clock .buttons-hour {
-  display: flex;
-  margin-bottom: 7px;
-  text-align: center;
-  color: #C5C9CC;
-}
-.description-container .description-clock .buttons-hour .button-work, .description-container .description-clock .buttons-hour .button-break {
-  border: none;
-  padding: 2px 7px;
-  border-radius: 5px;
-  width: 110px;
-  margin-right: 10px;
-}
-.description-container .description-clock .buttons-hour .button-work {
-  background: #1e90ff;
-  color: #fff;
-}
-.description-container .description-clock .buttons-hour .button-break {
-  background: #fff;
-  border: 1px solid #C5C9CC;
-}
-.description-container .description-clock .buttons-hour .button-break .button-break-span {
-  color: #7BED9F;
-}
-.description-container .description-clock .buttons-hour .break p {
-  font-size: 18px;
-  margin-right: 5px;
-  text-align: center;
-}
-.description-container .description-clock .analog-clock {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 @-webkit-keyframes clock-animation {
   0% {
     background: #3e5afb;
@@ -646,7 +504,6 @@ html, body {
     background: yellow;
   }
 }
-
 @keyframes clock-animation {
   0% {
     background: #3e5afb;
@@ -658,13 +515,13 @@ html, body {
     background: yellow;
   }
 }
-.clock-container {
+.page-layout .page-content .clock-container {
   width: 60%;
   height: 100%;
   border-radius: 50%;
   position: relative;
 }
-.clock-container::after {
+.page-layout .page-content .clock-container::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -675,117 +532,102 @@ html, body {
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
-
-.clock-number {
+.page-layout .page-content .clock-number {
   position: absolute;
   width: 100%;
   height: 100%;
   text-align: center;
 }
-
-.num1 {
+.page-layout .page-content .num1 {
   transform: rotate(30deg);
 }
-.num1 > div {
+.page-layout .page-content .num1 > div {
   transform: rotate(-30deg);
 }
-
-.num2 {
+.page-layout .page-content .num2 {
   transform: rotate(60deg);
 }
-.num2 > div {
+.page-layout .page-content .num2 > div {
   transform: rotate(-60deg);
 }
-
-.num3 {
+.page-layout .page-content .num3 {
   transform: rotate(90deg);
 }
-.num3 > div {
+.page-layout .page-content .num3 > div {
   transform: rotate(-90deg);
 }
-
-.num4 {
+.page-layout .page-content .num4 {
   transform: rotate(120deg);
 }
-.num4 > div {
+.page-layout .page-content .num4 > div {
   transform: rotate(-120deg);
 }
-
-.num5 {
+.page-layout .page-content .num5 {
   transform: rotate(150deg);
 }
-.num5 > div {
+.page-layout .page-content .num5 > div {
   transform: rotate(-150deg);
 }
-
-.num6 {
+.page-layout .page-content .num6 {
   transform: rotate(180deg);
 }
-.num6 > div {
+.page-layout .page-content .num6 > div {
   transform: rotate(-180deg);
 }
-
-.num7 {
+.page-layout .page-content .num7 {
   transform: rotate(210deg);
 }
-.num7 > div {
+.page-layout .page-content .num7 > div {
   transform: rotate(-210deg);
 }
-
-.num8 {
+.page-layout .page-content .num8 {
   transform: rotate(240deg);
 }
-.num8 > div {
+.page-layout .page-content .num8 > div {
   transform: rotate(-240deg);
 }
-
-.num9 {
+.page-layout .page-content .num9 {
   transform: rotate(270deg);
 }
-.num9 > div {
+.page-layout .page-content .num9 > div {
   transform: rotate(-270deg);
 }
-
-.num10 {
+.page-layout .page-content .num10 {
   transform: rotate(300deg);
 }
-.num10 > div {
+.page-layout .page-content .num10 > div {
   transform: rotate(-300deg);
 }
-
-.num11 {
+.page-layout .page-content .num11 {
   transform: rotate(330deg);
 }
-.num11 > div {
+.page-layout .page-content .num11 > div {
   transform: rotate(-330deg);
 }
-
-.num12 {
+.page-layout .page-content .num12 {
   transform: rotate(360deg);
 }
-.num12 > div {
+.page-layout .page-content .num12 > div {
   transform: rotate(-360deg);
 }
-
-.clock-hand {
+.page-layout .page-content .clock-hand {
   width: 100%;
   height: 100%;
   position: absolute;
 }
-.clock-hand > div {
+.page-layout .page-content .clock-hand > div {
   left: 50%;
   bottom: 50%;
   transform: translateX(-50%);
   position: absolute;
   border-radius: 12px;
 }
-
-.second-hand {
+.page-layout .page-content .second-hand {
   height: 32%;
   width: 1px;
   background: #7bed9f;
 }
-.second-hand::after {
+.page-layout .page-content .second-hand::after {
   position: absolute;
   content: "";
   border-style: solid;
@@ -795,20 +637,17 @@ html, body {
   transform: translateX(-50%);
   top: -6%;
 }
-
-.minute-hand {
+.page-layout .page-content .minute-hand {
   height: 30%;
   width: 2px;
   background: #C5C9CC;
 }
-
-.hour-hand {
+.page-layout .page-content .hour-hand {
   height: 25%;
   width: 3px;
   background: #1E90FF;
 }
-
-.current-day {
+.page-layout .page-content .current-day {
   position: absolute;
   font-size: 10px;
   opacity: 0.3;
@@ -816,8 +655,7 @@ html, body {
   transform: translateX(-50%);
   top: 25%;
 }
-
-.current-seconds {
+.page-layout .page-content .current-seconds {
   position: absolute;
   font-size: 12px;
   font-weight: bold;
@@ -828,8 +666,156 @@ html, body {
   opacity: 0.3;
   text-align: center;
 }
-
-.history-box {
+.page-layout .page-content .description-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  justify-content: space-around;
+  line-height: 1.5;
+  background-color: #FBFCFC;
+  margin-top: 5px;
+  flex-wrap: wrap;
+  height: 20vh;
+}
+.page-layout .page-content .description-container .description-img {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+.page-layout .page-content .description-container .description-img .card-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid #F0FAF8;
+}
+.page-layout .page-content .description-container .description-doctor {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-left: 25px;
+}
+.page-layout .page-content .description-container .description-doctor .card-doctor-info {
+  width: 60%;
+}
+.page-layout .page-content .description-container .description-doctor .card-doctor-info .card-doctor-h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+.page-layout .page-content .description-container .description-doctor .card-doctor-info .card-doctor-p {
+  color: #363636;
+  font-size: 15px;
+  opacity: 0.6;
+}
+.page-layout .page-content .description-container .description-doctor .card-buttons {
+  display: flex;
+  height: 40px;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+.page-layout .page-content .description-container .description-doctor .card-buttons .card-btn1, .page-layout .page-content .description-container .description-doctor .card-buttons .card-btn2 {
+  padding: 10px;
+  width: 120px;
+}
+.page-layout .page-content .description-container .description-doctor .card-buttons .card-btn1 {
+  background: #7BED9F;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+}
+.page-layout .page-content .description-container .description-doctor .card-buttons .card-btn2 {
+  border: none;
+  color: #1e90ff;
+  background: inherit;
+}
+.page-layout .page-content .description-container .description-clock {
+  display: flex;
+  width: 39%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 10px;
+}
+.page-layout .page-content .description-container .description-clock .clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 15px;
+}
+.page-layout .page-content .description-container .description-clock .hour {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.page-layout .page-content .description-container .description-clock .hour .hour-p {
+  color: #1e90ff;
+  font-size: 45px;
+}
+.page-layout .page-content .description-container .description-clock .hour .minute-p {
+  color: #C5C9CC;
+  font-size: 45px;
+}
+.page-layout .page-content .description-container .description-clock .hour .second-p {
+  color: #7bed9f;
+  font-size: 45px;
+}
+.page-layout .page-content .description-container .description-clock .buttons-hour {
+  display: flex;
+  margin-bottom: 7px;
+  text-align: center;
+  color: #C5C9CC;
+}
+.page-layout .page-content .description-container .description-clock .buttons-hour .button-work, .page-layout .page-content .description-container .description-clock .buttons-hour .button-break {
+  border: none;
+  padding: 2px 7px;
+  border-radius: 5px;
+  width: 110px;
+  margin-right: 10px;
+}
+.page-layout .page-content .description-container .description-clock .buttons-hour .button-work {
+  background: #1e90ff;
+  color: #fff;
+}
+.page-layout .page-content .description-container .description-clock .buttons-hour .button-break {
+  background: #fff;
+  border: 1px solid #C5C9CC;
+}
+.page-layout .page-content .description-container .description-clock .buttons-hour .button-break .button-break-span {
+  color: #7BED9F;
+}
+.page-layout .page-content .description-container .description-clock .buttons-hour .break p {
+  font-size: 18px;
+  margin-right: 5px;
+  text-align: center;
+}
+.page-layout .page-content .description-container .description-clock .analog-clock {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-layout .page-content .table-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 68vh;
+  margin-top: 10px;
+}
+.page-layout .page-content .table-container .history-box {
   grid-area: 3/2/4/4;
   display: grid;
   grid-template-columns: 7vw 1fr;
@@ -839,19 +825,18 @@ html, body {
   margin: 0.1vh 1vw;
   z-index: 1000;
 }
-.history-box .activity {
+.page-layout .page-content .table-container .history-box .activity {
   display: grid;
   grid-column: 1/2;
   font-size: 18px;
 }
-.history-box .history {
+.page-layout .page-content .table-container .history-box .history {
   grid-column: 2/3;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 5vw 5vw 1fr;
   justify-items: center;
 }
-.history-box .history-day {
+.page-layout .page-content .table-container .history-box .history-day {
   font-size: 20px;
   font-weight: 600;
   display: grid;
@@ -859,7 +844,7 @@ html, body {
   align-content: end;
   justify-self: end;
 }
-.history-box .history-monYear {
+.page-layout .page-content .table-container .history-box .history-monYear {
   font-size: 15px;
   font-weight: 400;
   display: grid;
@@ -867,8 +852,7 @@ html, body {
   grid-area: 1/3/2/4;
   justify-self: start;
 }
-
-.table-1 {
+.page-layout .page-content .table-container .table-1 {
   grid-area: 4/2/5/4;
   display: grid;
   grid-template-columns: 7vw auto auto auto auto;
@@ -878,7 +862,7 @@ html, body {
   height: 60vh;
   background-color: white;
 }
-.table-1::after {
+.page-layout .page-content .table-container .table-1::after {
   content: "";
   width: 0.15vw;
   height: 90%;
@@ -887,7 +871,7 @@ html, body {
   margin-left: 7vw;
   margin-top: 0;
 }
-.table-1 .item {
+.page-layout .page-content .table-container .table-1 .item {
   color: rgba(0, 0, 0, 0.6);
   display: grid;
   text-align: center;
@@ -897,13 +881,13 @@ html, body {
   padding-left: 1vh;
   height: 5vh;
 }
-.table-1 .item .item-in {
+.page-layout .page-content .table-container .table-1 .item .item-in {
   display: grid;
   grid-template-columns: auto auto auto;
   align-items: center;
   justify-content: space-between;
 }
-.table-1 .item .item-in .icon {
+.page-layout .page-content .table-container .table-1 .item .item-in .icon {
   width: 1.7rem;
   height: 1.7rem;
   display: grid;
@@ -912,327 +896,143 @@ html, body {
   border-radius: 50%;
   font-size: 1vw;
 }
-.table-1 .item-1 .fa-clock {
+.page-layout .page-content .table-container .table-1 .item-1 .fa-clock {
   font-size: 1.2vw;
 }
-.table-1 .item-7,
-.table-1 .item-9,
-.table-1 .item-11,
-.table-1 .item-12,
-.table-1 .item-13,
-.table-1 .item-15,
-.table-1 .item-16,
-.table-1 .item-18,
-.table-1 .item-19,
-.table-1 .item-22,
-.table-1 .item-21,
-.table-1 .item-23,
-.table-1 .item-25,
-.table-1 .item-26,
-.table-1 .item-27 {
+.page-layout .page-content .table-container .table-1 .item-7,
+.page-layout .page-content .table-container .table-1 .item-9,
+.page-layout .page-content .table-container .table-1 .item-11,
+.page-layout .page-content .table-container .table-1 .item-12,
+.page-layout .page-content .table-container .table-1 .item-13,
+.page-layout .page-content .table-container .table-1 .item-15,
+.page-layout .page-content .table-container .table-1 .item-16,
+.page-layout .page-content .table-container .table-1 .item-18,
+.page-layout .page-content .table-container .table-1 .item-19,
+.page-layout .page-content .table-container .table-1 .item-22,
+.page-layout .page-content .table-container .table-1 .item-21,
+.page-layout .page-content .table-container .table-1 .item-23,
+.page-layout .page-content .table-container .table-1 .item-25,
+.page-layout .page-content .table-container .table-1 .item-26,
+.page-layout .page-content .table-container .table-1 .item-27 {
   margin-left: 2vh;
   border-radius: 100px;
   padding-right: 2vh;
 }
-.table-1 .item-1,
-.table-1 .item-2,
-.table-1 .item-3,
-.table-1 .item-4,
-.table-1 .item-5 {
+.page-layout .page-content .table-container .table-1 .item-1,
+.page-layout .page-content .table-container .table-1 .item-2,
+.page-layout .page-content .table-container .table-1 .item-3,
+.page-layout .page-content .table-container .table-1 .item-4,
+.page-layout .page-content .table-container .table-1 .item-5 {
   box-shadow: 0px -2px 8px #f0faf8, 0.1px 7px 5px #f0faf8;
 }
-.table-1 .item-1,
-.table-1 .item-2,
-.table-1 .item-3,
-.table-1 .item-4,
-.table-1 .item-5,
-.table-1 .item-6,
-.table-1 .item-8,
-.table-1 .item-10,
-.table-1 .item-14,
-.table-1 .item-17,
-.table-1 .item-20,
-.table-1 .item-24 {
+.page-layout .page-content .table-container .table-1 .item-1,
+.page-layout .page-content .table-container .table-1 .item-2,
+.page-layout .page-content .table-container .table-1 .item-3,
+.page-layout .page-content .table-container .table-1 .item-4,
+.page-layout .page-content .table-container .table-1 .item-5,
+.page-layout .page-content .table-container .table-1 .item-6,
+.page-layout .page-content .table-container .table-1 .item-8,
+.page-layout .page-content .table-container .table-1 .item-10,
+.page-layout .page-content .table-container .table-1 .item-14,
+.page-layout .page-content .table-container .table-1 .item-17,
+.page-layout .page-content .table-container .table-1 .item-20,
+.page-layout .page-content .table-container .table-1 .item-24 {
   font-size: 0.8vw;
   align-content: center;
 }
-.table-1 .item-7,
-.table-1 .item-9 {
+.page-layout .page-content .table-container .table-1 .item-7,
+.page-layout .page-content .table-container .table-1 .item-9 {
   grid-column: 2/-1;
 }
-.table-1 .item-10,
-.table-1 .item-14,
-.table-1 .item-17,
-.table-1 .item-20,
-.table-1 .item-24 {
+.page-layout .page-content .table-container .table-1 .item-10,
+.page-layout .page-content .table-container .table-1 .item-14,
+.page-layout .page-content .table-container .table-1 .item-17,
+.page-layout .page-content .table-container .table-1 .item-20,
+.page-layout .page-content .table-container .table-1 .item-24 {
   grid-column: 1/2;
 }
-.table-1 .item-7,
-.table-1 .item-9 {
+.page-layout .page-content .table-container .table-1 .item-7,
+.page-layout .page-content .table-container .table-1 .item-9 {
   grid-column: 2/-1;
 }
-.table-1 .item-10,
-.table-1 .item-14,
-.table-1 .item-17,
-.table-1 .item-20,
-.table-1 .item-24 {
+.page-layout .page-content .table-container .table-1 .item-10,
+.page-layout .page-content .table-container .table-1 .item-14,
+.page-layout .page-content .table-container .table-1 .item-17,
+.page-layout .page-content .table-container .table-1 .item-20,
+.page-layout .page-content .table-container .table-1 .item-24 {
   grid-column: 1/2;
 }
-.table-1 .item-12 {
+.page-layout .page-content .table-container .table-1 .item-12 {
   grid-column: 3/5;
   margin-left: 17vw;
 }
-.table-1 .item-16 {
+.page-layout .page-content .table-container .table-1 .item-16 {
   grid-column: 3/-1;
 }
-.table-1 .item-18 {
+.page-layout .page-content .table-container .table-1 .item-18 {
   grid-column: 2/4;
 }
-.table-1 .item-19 {
+.page-layout .page-content .table-container .table-1 .item-19 {
   grid-column: 5/6;
 }
-.table-1 .item-22 {
+.page-layout .page-content .table-container .table-1 .item-22 {
   grid-column: 3/5;
   margin-left: 17vw;
 }
-.table-1 .item-27 {
+.page-layout .page-content .table-container .table-1 .item-27 {
   grid-column: 5/6;
 }
-.table-1 .item-6,
-.table-1 .item-8,
-.table-1 .item-10,
-.table-1 .item-14,
-.table-1 .item-17,
-.table-1 .item-20,
-.table-1 .item-24 {
+.page-layout .page-content .table-container .table-1 .item-6,
+.page-layout .page-content .table-container .table-1 .item-8,
+.page-layout .page-content .table-container .table-1 .item-10,
+.page-layout .page-content .table-container .table-1 .item-14,
+.page-layout .page-content .table-container .table-1 .item-17,
+.page-layout .page-content .table-container .table-1 .item-20,
+.page-layout .page-content .table-container .table-1 .item-24 {
   margin: 0;
 }
-.table-1 .Examination {
+.page-layout .page-content .table-container .table-1 .Examination {
   background-color: #f0faf8;
 }
-.table-1 .Examination .item-in .icon {
+.page-layout .page-content .table-container .table-1 .Examination .item-in .icon {
   background-color: #2ed573;
   border-radius: 50%;
   color: #fff;
 }
-.table-1 .Urgent {
+.page-layout .page-content .table-container .table-1 .Urgent {
   background-color: #ffdfdf;
 }
-.table-1 .Urgent .item-in .icon {
+.page-layout .page-content .table-container .table-1 .Urgent .item-in .icon {
   background-color: #ffdfdf;
   color: #d24646;
   font-size: 1.5vw;
 }
-.table-1 .Surgery {
+.page-layout .page-content .table-container .table-1 .Surgery {
   background-color: #d5e4ff;
 }
-.table-1 .Surgery .item-in .icon {
+.page-layout .page-content .table-container .table-1 .Surgery .item-in .icon {
   background-color: #70a1ff;
   color: #fff;
   font-size: 1.2vw;
 }
-.table-1 .Break {
+.page-layout .page-content .table-container .table-1 .Break {
   background-color: #fee3bb;
 }
-.table-1 .Break .item-in .icon {
+.page-layout .page-content .table-container .table-1 .Break .item-in .icon {
   background-color: #fbc576;
   color: #fff;
   font-size: 0.9vw;
 }
 
-@keyframes clock-animation {
-  0% {
-    background: #3e5afb;
-  }
-  50% {
-    background: #3e5;
-  }
-  100% {
-    background: yellow;
-  }
-}
-.clock-container {
-  width: 60%;
-  height: 100%;
-  border-radius: 50%;
-  position: relative;
-}
-.clock-container::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: #1e90ff;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-}
-
-.clock-number {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-
-.num1 {
-  transform: rotate(30deg);
-}
-.num1 > div {
-  transform: rotate(-30deg);
-}
-
-.num2 {
-  transform: rotate(60deg);
-}
-.num2 > div {
-  transform: rotate(-60deg);
-}
-
-.num3 {
-  transform: rotate(90deg);
-}
-.num3 > div {
-  transform: rotate(-90deg);
-}
-
-.num4 {
-  transform: rotate(120deg);
-}
-.num4 > div {
-  transform: rotate(-120deg);
-}
-
-.num5 {
-  transform: rotate(150deg);
-}
-.num5 > div {
-  transform: rotate(-150deg);
-}
-
-.num6 {
-  transform: rotate(180deg);
-}
-.num6 > div {
-  transform: rotate(-180deg);
-}
-
-.num7 {
-  transform: rotate(210deg);
-}
-.num7 > div {
-  transform: rotate(-210deg);
-}
-
-.num8 {
-  transform: rotate(240deg);
-}
-.num8 > div {
-  transform: rotate(-240deg);
-}
-
-.num9 {
-  transform: rotate(270deg);
-}
-.num9 > div {
-  transform: rotate(-270deg);
-}
-
-.num10 {
-  transform: rotate(300deg);
-}
-.num10 > div {
-  transform: rotate(-300deg);
-}
-
-.num11 {
-  transform: rotate(330deg);
-}
-.num11 > div {
-  transform: rotate(-330deg);
-}
-
-.num12 {
-  transform: rotate(360deg);
-}
-.num12 > div {
-  transform: rotate(-360deg);
-}
-
-.clock-hand {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.clock-hand > div {
-  left: 50%;
-  bottom: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  border-radius: 12px;
-}
-
-.second-hand {
-  height: 32%;
-  width: 1px;
-  background: #7bed9f;
-}
-.second-hand::after {
-  position: absolute;
-  content: "";
-  border-style: solid;
-  border-width: 4px;
-  border-color: transparent transparent #7bed9f transparent;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -6%;
-}
-
-.minute-hand {
-  height: 30%;
-  width: 2px;
-  background: #C5C9CC;
-}
-
-.hour-hand {
-  height: 25%;
-  width: 3px;
-  background: #1E90FF;
-}
-
-.current-day {
-  position: absolute;
-  font-size: 10px;
-  opacity: 0.3;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 25%;
-}
-
-.current-seconds {
-  position: absolute;
-  font-size: 12px;
-  font-weight: bold;
-  left: 46%;
-  width: 18px;
-  height: 18px;
-  bottom: 25%;
-  opacity: 0.3;
-  text-align: center;
-}
-
 .Rooms_layout {
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 2fr 7fr;
-  grid-template-columns: 0.5fr 7fr 3fr;
-  grid-gap: 1vw;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
   background-color: #FBFCFC;
 }
 .Rooms_layout-nav {
   grid-area: 1/2/2/4;
-  background-color: #fff;
   z-index: 50;
 }
 .Rooms_layout-nav .navbar-component {
@@ -1240,7 +1040,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #FBFCFC;
+  background-color: white;
 }
 .Rooms_layout-nav .navbar-component .nav_left {
   width: 25%;
@@ -1281,7 +1081,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: xx-large;
+  font-size: x-large;
 }
 .Rooms_layout-nav .navbar-component #dclock p {
   font-size: 40px;
@@ -1345,8 +1145,9 @@ html, body {
   z-index: 50;
 }
 .Rooms_layout-sideMenu .side_menu {
-  background-color: #FBFCFC;
+  background-color: white;
   height: 100vh;
+  padding: 0 10px;
 }
 .Rooms_layout-sideMenu .side_menu .side-menu-img-container {
   border-radius: 50%;
@@ -1559,16 +1360,16 @@ html, body {
   grid-area: 2/2/3/4;
   display: grid;
   grid-template-rows: 100%;
-  grid-gap: 1vw;
+  margin: 25px;
 }
 .Rooms_layout-types .rooms-cards-container {
   display: flex;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
   height: 20vh;
   color: #040E28;
   background-color: #FCFCFC;
-  padding: 15px 0px 15px 0px;
 }
 .Rooms_layout-types .rooms-cards-container .rooms-card {
   width: 23%;
@@ -1615,42 +1416,49 @@ html, body {
   opacity: 0.3;
   font-weight: bolder;
 }
-.Rooms_layout-progressAndMapping {
+.Rooms_layout .Rooms_layout-progressAndMapping {
   grid-area: 3/3/-1/4;
   display: grid;
   grid-template-rows: 1fr 1.1fr;
-  grid-gap: 2vh;
+  grid-gap: 1vh;
+  margin-left: 25px;
+  margin-right: 25px;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
 }
-.Rooms_layout-progressAndMapping-progress {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress {
   display: grid;
   align-items: center;
   justify-items: center;
+  border-radius: 0.5px;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 240px;
-  background-color: yellow;
+  background-color: white;
+  border-radius: 15px;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-chart-container-header {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-chart-container-header {
   font-size: 20px;
   padding: 15px 15px 15px 15px;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container {
   display: flex;
   justify-content: space-evenly;
   flex-flow: row nowrap;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-1 {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-1 {
   position: relative;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-1 .block-container-p-1 {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-1 .block-container-p-1 {
   text-align: center;
   font-size: 15px;
   padding-top: 14px;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-1 .block-container-p-1::before {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-1 .block-container-p-1::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -1660,21 +1468,21 @@ html, body {
   top: 18px;
   background-color: blue;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-1 .chartProgress-blue {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-1 .chartProgress-blue {
   padding-top: 16px;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-1 .chartProgress-blue #chartProgress-1 {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-1 .chartProgress-blue #chartProgress-1 {
   height: 100px !important;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-2 {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-2 {
   position: relative;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-2 .block-container-p-2 {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-2 .block-container-p-2 {
   text-align: center;
   font-size: 15px;
   padding-top: 14px;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-2 .block-container-p-2::before {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-2 .block-container-p-2::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -1684,22 +1492,22 @@ html, body {
   top: 18px;
   background-color: red;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-2 .chartProgress-red {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-2 .chartProgress-red {
   padding-top: 16px;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-2 .chartProgress-red #chartProgress-2 {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-2 .chartProgress-red #chartProgress-2 {
   height: 100px !important;
   width: 178px;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-3 {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-3 {
   position: relative;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-3 .block-container-p-3 {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-3 .block-container-p-3 {
   text-align: center;
   font-size: 15px;
   padding-top: 14px;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-3 .block-container-p-3::before {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-3 .block-container-p-3::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -1709,20 +1517,22 @@ html, body {
   top: 18px;
   background-color: green;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-3 .chartProgress-green {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-3 .chartProgress-green {
   padding-top: 16px;
 }
-.Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-3 .chartProgress-green #chartProgress-3 {
+.Rooms_layout .Rooms_layout-progressAndMapping-progress .progress-chart-container .progress-container .block-container-3 .chartProgress-green #chartProgress-3 {
   height: 100px !important;
   width: 178px;
 }
-.Rooms_layout-progressAndMapping-map {
+.Rooms_layout .Rooms_layout-progressAndMapping-map {
   display: grid;
   align-items: center;
   justify-items: center;
+  border-radius: 0.5px;
+  @import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
   /* ================ Timeline Media Queries ================ */
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1731,8 +1541,9 @@ html, body {
   position: relative;
   width: 400px;
   padding: 10px 0 0 0 !important;
+  border-radius: 15px;
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline:before {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline:before {
   position: absolute;
   left: 50%;
   top: 0;
@@ -1742,28 +1553,28 @@ html, body {
   z-index: 5;
   background-color: #D9DCE6;
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-content {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-content {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: flex-end;
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-content:after {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-content:after {
   content: "";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden;
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-content-left {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-content-left {
   justify-content: start;
   align-items: flex-start;
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r {
   width: 50%;
 }
-.Rooms_layout-progressAndMapping-map .timeline-flag {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .timeline-flag {
   position: relative;
   display: inline;
   background: #f8f8f8;
@@ -1775,17 +1586,17 @@ html, body {
   margin-left: 22px;
   /* margin-top: 5px; */
 }
-.Rooms_layout-progressAndMapping-map .boxshadow-blue {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .boxshadow-blue {
   box-shadow: 0 0 3px #4339F2 !important;
   margin-left: 0 !important;
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .timeline-flag {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .timeline-flag {
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .timeline-flag {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .timeline-flag {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .timeline-flag:before {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .timeline-flag:before {
   position: absolute;
   content: "\f12a";
   width: 28px;
@@ -1804,7 +1615,7 @@ html, body {
   justify-content: center;
   align-items: center;
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .after:before {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .after:before {
   position: absolute;
   content: "\f12a";
   width: 28px;
@@ -1823,7 +1634,7 @@ html, body {
   justify-content: center !important;
   align-items: center !important;
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .timeline-flag:before {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .timeline-flag:before {
   position: absolute;
   top: 3px;
   right: -40px;
@@ -1842,7 +1653,7 @@ html, body {
   align-items: center;
   font-size: 16px;
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .timeline-flag:after {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .timeline-flag:after {
   content: "";
   position: absolute;
   left: 100%;
@@ -1856,7 +1667,7 @@ html, body {
   pointer-events: none;
   z-index: -1;
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .timeline-flag:after {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .timeline-flag:after {
   content: "";
   position: absolute;
   right: 100%;
@@ -1870,17 +1681,17 @@ html, body {
   pointer-events: none;
   z-index: -1;
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l {
   width: 50%;
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-flag-wrapper {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-flag-wrapper {
   /* position: relative; */
   display: flex !important;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
-.Rooms_layout-progressAndMapping-map .timeline-room-wrapper {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .timeline-room-wrapper {
   display: inline;
   line-height: 1em;
   font-size: 0.7em;
@@ -1888,27 +1699,27 @@ html, body {
   vertical-align: middle;
   font-weight: bolder;
 }
-.Rooms_layout-progressAndMapping-map .timeline-room-wrapper .time {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .timeline-room-wrapper .time {
   display: inline-block;
   padding: 4px 6px;
   background: #f8f8f8;
 }
-.Rooms_layout-progressAndMapping-map .rooms-timeline-desc {
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-desc {
   margin: 0.3em 0 0 2em;
   font-size: 0.77777em;
   line-height: 1.5em;
   font-weight: lighter;
 }
 @media screen and (max-width: 660px) {
-  .Rooms_layout-progressAndMapping-map .rooms-timeline {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline {
     width: 100%;
     padding: 4em 0 1em 0;
   }
-  .Rooms_layout-progressAndMapping-map .rooms-timeline-content {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-content {
     padding: 2em 0;
   }
-  .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r,
-.Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r,
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l {
     float: none;
     width: 100%;
     display: flex;
@@ -1917,14 +1728,14 @@ html, body {
     align-items: center;
     text-align: center;
   }
-  .Rooms_layout-progressAndMapping-map .rooms-timeline-flag-wrapper {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-flag-wrapper {
     text-align: center;
   }
-  .Rooms_layout-progressAndMapping-map .timeline-flag {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .timeline-flag {
     background: white;
     z-index: 15;
   }
-  .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .timeline-flag:before {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .timeline-flag:before {
     content: "\f12a";
     position: absolute;
     top: -30px;
@@ -1945,7 +1756,7 @@ html, body {
     color: #D24646;
     box-shadow: 0 0 5px #D9DCE6 !important;
   }
-  .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .timeline-flag:before {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .timeline-flag:before {
     content: "\f12a";
     position: absolute;
     top: -30px;
@@ -1966,8 +1777,8 @@ html, body {
     color: #fff;
     box-shadow: 0 0 5px #D9DCE6 !important;
   }
-  .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .timeline-flag:after,
-.Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .timeline-flag:after {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .timeline-flag:after,
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .timeline-flag:after {
     content: "";
     position: absolute;
     left: 50%;
@@ -1980,7 +1791,7 @@ html, body {
     border-width: 8px;
     pointer-events: none;
   }
-  .Rooms_layout-progressAndMapping-map .rooms-timeline-flag-wrapper {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-flag-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1989,13 +1800,13 @@ html, body {
     margin: 4px 0 0 0;
     z-index: 14;
   }
-  .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .rooms-timeline-flag-wrapper {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .rooms-timeline-flag-wrapper {
     float: none;
   }
-  .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .rooms-timeline-flag-wrapper {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .rooms-timeline-flag-wrapper {
     float: none;
   }
-  .Rooms_layout-progressAndMapping-map .rooms-timeline-desc {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-desc {
     position: relative;
     margin: 1em 0 0 0;
     padding: 1em;
@@ -2003,8 +1814,8 @@ html, body {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
     z-index: 15;
   }
-  .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .rooms-timeline-desc,
-.Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .rooms-timeline-desc {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .rooms-timeline-desc,
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .rooms-timeline-desc {
     position: relative;
     margin: 1em 1em 0 1em;
     padding: 1em;
@@ -2012,147 +1823,148 @@ html, body {
   }
 }
 @media screen and (min-width: 400px) and (max-width: 660px) {
-  .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .rooms-timeline-desc,
-.Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .rooms-timeline-desc {
+  .Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-r .rooms-timeline-desc,
+.Rooms_layout .Rooms_layout-progressAndMapping-map .rooms-timeline-direction-l .rooms-timeline-desc {
     margin: 1em 4em 0 4em;
   }
 }
-.Rooms_layout-table {
-  display: flex;
-  justify-content: center;
-  background-color: yellow;
+.Rooms_layout .Rooms_layout-table {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  margin-left: 25px;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 {
   padding: 0.5vw;
   display: grid;
   align-items: center;
-  grid-template-columns: 1.5fr 3fr repeat(3, 4fr) 3fr 2fr;
+  grid-template-columns: auto auto repeat(4, auto) auto;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item {
   color: #757575;
   font-weight: 400;
   text-align: center;
   font-size: 0.7vw;
   display: grid;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--1 {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--1 {
   grid-column: 1/3;
   display: grid;
   justify-content: start;
   align-content: end;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--1 .RoomData {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--1 .RoomData {
   color: rgba(0, 0, 0, 0.6);
   font-size: 1.5vw;
   justify-content: start;
   align-content: end;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--2 {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--2 {
   grid-column: 3/4;
   grid-template-rows: auto;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--2 .search .search-input {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--2 .search .search-input {
   border-radius: 100px;
   position: relative;
   outline: none;
   border: 1px solid gray;
-  padding: 0.3vw;
+  padding: 3px 1.3vw;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--2 .search .search-input:focus {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--2 .search .search-input:focus {
   outline: none;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--2 .search .search-icon {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--2 .search .search-icon {
   position: absolute;
   align-items: center;
   margin-top: 0.5vw;
   margin-left: 0.5vw;
   z-index: 100;
-  font-size: 12px;
+  font-size: 18px;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 {
   grid-column: 4/-1;
   display: grid;
-  grid-template-columns: 5vw auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 .select {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 .select {
   background-color: #fff;
   margin-left: 0.4vw;
   padding: 0.2vw;
   border: 1px solid #757575;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 .patientName {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 .patientName {
   grid-area: 1/2/2/3;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 .nurseName {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 .nurseName {
   grid-area: 1/3/2/4;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 .type {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 .type {
   grid-area: 1/4/2/5;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 .Status {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 .Status {
   grid-area: 1/5/2/6;
 }
-.Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 .update {
+.Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 .item--3 .update {
   grid-area: 1/6/2/7;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 {
   width: 100%;
   border-collapse: collapse;
-  height: 88%;
-  background-color: green;
+  height: 90%;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 th, .Rooms_layout-table .table-roomPage .table-dashboard2 td {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 th, .Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 td {
   padding: 6px 0 3px 0;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 td {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 td {
   color: #646D82;
   font-size: 0.8em;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 .thead-table-dashboard2 {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 .thead-table-dashboard2 {
   border-bottom: 1px solid #C5C9CC;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 .thead-table-dashboard2 th {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 .thead-table-dashboard2 th {
   text-transform: capitalize;
   color: #C5C9CC;
   font-size: 1em;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 {
   text-align: center;
+  height: 100%;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr.row {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr.row {
   border-bottom: 1px solid #C5C9CC;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr > td > i {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr > td > i {
   font-size: 10px;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr > td > .examine-status {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr > td > .examine-status {
   color: #2ed573;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr > td > .urgent-status {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr > td > .urgent-status {
   color: #D24646;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr > td > .surgery-status {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr > td > .surgery-status {
   color: #1e90ff;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 .patient-name:hover p {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 .patient-name:hover p {
   display: none;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 .patient-name:hover:before {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 .patient-name:hover:before {
   content: "Dr.Lance Bogrol";
   color: #70a1ff;
 }
-.Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 .nurse-name:hover {
+.Rooms_layout .Rooms_layout-table .table-roomPage .table-dashboard2 .tbody-table-dashboard2 .nurse-name:hover {
   color: #70a1ff;
 }
 @media all and (max-width: 926px) {
-  .Rooms_layout-table .table-roomPage .header-table-dashboard2 > .item--1 > .RoomData {
+  .Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 > .item--1 > .RoomData {
     font-size: 2.5vw !important;
   }
-  .Rooms_layout-table .table-roomPage .header-table-dashboard2 > .item--2 > .search > .search-icon {
+  .Rooms_layout .Rooms_layout-table .table-roomPage .header-table-dashboard2 > .item--2 > .search > .search-icon {
     font-size: 10px !important;
     margin: 5px 0 0 5px !important;
   }
-  .Rooms_layout-table .table-roomPage .thead-table-dashboard2 th {
+  .Rooms_layout .Rooms_layout-table .table-roomPage .thead-table-dashboard2 th {
     font-size: 12px !important;
   }
 }
@@ -2232,6 +2044,98 @@ html, body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
   }
 }
+.progress-chart-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 240px;
+  background-color: white;
+  border-radius: 15px;
+}
+.progress-chart-container .progress-chart-container-header {
+  font-size: 20px;
+  padding: 15px 15px 15px 15px;
+}
+.progress-chart-container .progress-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row nowrap;
+}
+.progress-chart-container .progress-container .block-container-1 {
+  position: relative;
+}
+.progress-chart-container .progress-container .block-container-1 .block-container-p-1 {
+  text-align: center;
+  font-size: 15px;
+  padding-top: 14px;
+}
+.progress-chart-container .progress-container .block-container-1 .block-container-p-1::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 14%;
+  top: 18px;
+  background-color: blue;
+}
+.progress-chart-container .progress-container .block-container-1 .chartProgress-blue {
+  padding-top: 16px;
+}
+.progress-chart-container .progress-container .block-container-1 .chartProgress-blue #chartProgress-1 {
+  height: 100px !important;
+}
+.progress-chart-container .progress-container .block-container-2 {
+  position: relative;
+}
+.progress-chart-container .progress-container .block-container-2 .block-container-p-2 {
+  text-align: center;
+  font-size: 15px;
+  padding-top: 14px;
+}
+.progress-chart-container .progress-container .block-container-2 .block-container-p-2::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 30%;
+  top: 18px;
+  background-color: red;
+}
+.progress-chart-container .progress-container .block-container-2 .chartProgress-red {
+  padding-top: 16px;
+}
+.progress-chart-container .progress-container .block-container-2 .chartProgress-red #chartProgress-2 {
+  height: 100px !important;
+  width: 178px;
+}
+.progress-chart-container .progress-container .block-container-3 {
+  position: relative;
+}
+.progress-chart-container .progress-container .block-container-3 .block-container-p-3 {
+  text-align: center;
+  font-size: 15px;
+  padding-top: 14px;
+}
+.progress-chart-container .progress-container .block-container-3 .block-container-p-3::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 14%;
+  top: 18px;
+  background-color: green;
+}
+.progress-chart-container .progress-container .block-container-3 .chartProgress-green {
+  padding-top: 16px;
+}
+.progress-chart-container .progress-container .block-container-3 .chartProgress-green #chartProgress-3 {
+  height: 100px !important;
+  width: 178px;
+}
+
 .rooms-timeline {
   display: flex;
   flex-direction: column;
@@ -2241,6 +2145,7 @@ html, body {
   position: relative;
   width: 400px;
   padding: 10px 0 0 0 !important;
+  border-radius: 15px;
 }
 
 .rooms-timeline:before {
@@ -2560,284 +2465,788 @@ html, body {
     margin: 1em 4em 0 4em;
   }
 }
-.progress-chart-container {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 240px;
-  background-color: yellow;
+.Patient-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.7fr repeat(2, 1fr) 6fr 4fr;
+  grid-template-rows: 1fr 1.5fr 6fr;
+  background-color: #FBFCFC;
 }
-.progress-chart-container .progress-chart-container-header {
-  font-size: 20px;
-  padding: 15px 15px 15px 15px;
+.Patient-container .Patient-nav {
+  grid-area: 1/2/2/-1;
+  background-color: #fff;
+  z-index: 50;
 }
-.progress-chart-container .progress-container {
+.Patient-container .Patient-nav .navbar-component {
+  height: 10vh;
   display: flex;
-  justify-content: space-evenly;
-  flex-flow: row nowrap;
-}
-.progress-chart-container .progress-container .block-container-1 {
-  position: relative;
-}
-.progress-chart-container .progress-container .block-container-1 .block-container-p-1 {
-  text-align: center;
-  font-size: 15px;
-  padding-top: 14px;
-}
-.progress-chart-container .progress-container .block-container-1 .block-container-p-1::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  left: 14%;
-  top: 18px;
-  background-color: blue;
-}
-.progress-chart-container .progress-container .block-container-1 .chartProgress-blue {
-  padding-top: 16px;
-}
-.progress-chart-container .progress-container .block-container-1 .chartProgress-blue #chartProgress-1 {
-  height: 100px !important;
-}
-.progress-chart-container .progress-container .block-container-2 {
-  position: relative;
-}
-.progress-chart-container .progress-container .block-container-2 .block-container-p-2 {
-  text-align: center;
-  font-size: 15px;
-  padding-top: 14px;
-}
-.progress-chart-container .progress-container .block-container-2 .block-container-p-2::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  left: 30%;
-  top: 18px;
-  background-color: red;
-}
-.progress-chart-container .progress-container .block-container-2 .chartProgress-red {
-  padding-top: 16px;
-}
-.progress-chart-container .progress-container .block-container-2 .chartProgress-red #chartProgress-2 {
-  height: 100px !important;
-  width: 178px;
-}
-.progress-chart-container .progress-container .block-container-3 {
-  position: relative;
-}
-.progress-chart-container .progress-container .block-container-3 .block-container-p-3 {
-  text-align: center;
-  font-size: 15px;
-  padding-top: 14px;
-}
-.progress-chart-container .progress-container .block-container-3 .block-container-p-3::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  left: 14%;
-  top: 18px;
-  background-color: green;
-}
-.progress-chart-container .progress-container .block-container-3 .chartProgress-green {
-  padding-top: 16px;
-}
-.progress-chart-container .progress-container .block-container-3 .chartProgress-green #chartProgress-3 {
-  height: 100px !important;
-  width: 178px;
-}
-
-.rooms-cards-container {
-  display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  height: 20vh;
-  color: #040E28;
-  background-color: #FCFCFC;
-  padding: 15px 0px 15px 0px;
-}
-.rooms-cards-container .rooms-card {
-  width: 23%;
-  display: flex;
-  border-radius: 10px;
-  height: 100% !important;
-  box-sizing: border-box;
   background-color: white;
 }
-.rooms-cards-container .rooms-card .rooms-card-row {
+.Patient-container .Patient-nav .navbar-component .nav_left {
+  width: 25%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  width: 85%;
 }
-.rooms-cards-container .rooms-card .rooms-card-row .room-card-title {
-  font-size: 20px;
-  margin: 10px 0px 0px 30px !important;
-}
-.rooms-cards-container .rooms-card .rooms-card-row .rooms-card-chart {
-  width: 90%;
-  padding: 15px !important;
-  margin-bottom: 35px;
-  margin-left: 30px !important;
-}
-.rooms-cards-container .room-card-number {
+.Patient-container .Patient-nav .navbar-component .nav_left .doctor_info .doctor-name {
   font-size: 18px;
+}
+.Patient-container .Patient-nav .navbar-component .nav_left .doctor_info .department {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.Patient-container .Patient-nav .navbar-component .doctor_status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+.Patient-container .Patient-nav .navbar-component .doctor_status .line {
+  background-color: #C5C9CC;
+  width: 2px;
+  height: 45px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.Patient-container .Patient-nav .navbar-component .doctor_status .circle {
+  background-color: #7bed9f;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+}
+.Patient-container .Patient-nav .navbar-component .doctor_status .Work_status {
+  margin-bottom: 0;
+}
+.Patient-container .Patient-nav .navbar-component #dclock {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+}
+.Patient-container .Patient-nav .navbar-component #dclock p {
+  font-size: 40px;
+  margin-top: 10px;
+}
+.Patient-container .Patient-nav .navbar-component #dclock p span {
+  font-size: 30px;
+  font-weight: bold;
+}
+.Patient-container .Patient-nav .navbar-component .nav_icons {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 25%;
+  color: #20d573;
+}
+.Patient-container .Patient-nav .navbar-component .nav_icons a {
+  font-size: 20px;
+  margin-right: 25px;
+  color: #7BED9F;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+.Patient-container .Patient-nav .navbar-component .nav_icons a .fa-cog {
+  color: #1e90ff;
+}
+.Patient-container .Patient-nav .navbar-component .nav-notification {
+  border-radius: 50%;
+  background-color: white;
+  color: red;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  right: 9.2%;
+  top: 50%;
+  font-size: 8px;
+  box-shadow: 0 3px 3px gray;
+  display: none;
+}
+.Patient-container .Patient-nav .navbar-component .nav-message {
+  border-radius: 50%;
+  background-color: white;
+  color: red;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  right: 6%;
+  top: 50%;
+  font-size: 8px;
+  box-shadow: 0 3px 3px gray;
+  display: none;
+}
+.Patient-container .Patient-nav #showMyMenu {
+  display: none;
+}
+.Patient-container .Patient-side {
+  display: grid;
+  grid-area: 1/1/-1/2;
+}
+.Patient-container .Patient-side .side_menu {
+  background-color: white;
+  height: 100vh;
+  padding: 0 10px;
+}
+.Patient-container .Patient-side .side_menu .side-menu-img-container {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.Patient-container .Patient-side .side_menu .side-menu-img-container .side-menu-img {
+  width: 100%;
+  border-radius: 50%;
+}
+.Patient-container .Patient-side .side_menu .side-menu-icons {
+  list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 15px !important;
-  line-height: 25px;
 }
-.rooms-cards-container .room-card-number .number {
-  font-weight: bolder;
-  font-size: 36px;
-  margin: 0px !important;
+.Patient-container .Patient-side .side_menu .side-menu-icons .icons-container {
+  margin-top: 10px;
 }
-.rooms-cards-container .room-card-number .today {
-  font-size: 14px;
-  margin: 0px 0px 0px 5px !important;
-  opacity: 0.3;
-  font-weight: bolder;
+.Patient-container .Patient-side .side_menu .side-menu-icons .side-menu-icon {
+  margin-bottom: 20px;
 }
-
-.table-roomPage .header-table-dashboard2 {
-  padding: 0.5vw;
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1.5fr 3fr repeat(3, 4fr) 3fr 2fr;
+.Patient-container .Patient-side .side_menu .side-menu-icons .side-menu-icon:hover {
+  color: #7BED9F;
 }
-.table-roomPage .header-table-dashboard2 .item {
-  color: #757575;
-  font-weight: 400;
-  text-align: center;
-  font-size: 0.7vw;
-  display: grid;
+.Patient-container .Patient-side .icons-container:hover + #talkbubble-dash {
+  display: block;
+  background-color: #856404;
 }
-.table-roomPage .header-table-dashboard2 .item--1 {
-  grid-column: 1/3;
-  display: grid;
-  justify-content: start;
-  align-content: end;
-}
-.table-roomPage .header-table-dashboard2 .item--1 .RoomData {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 1.5vw;
-  justify-content: start;
-  align-content: end;
-}
-.table-roomPage .header-table-dashboard2 .item--2 {
-  grid-column: 3/4;
-  grid-template-rows: auto;
-}
-.table-roomPage .header-table-dashboard2 .item--2 .search .search-input {
-  border-radius: 100px;
-  position: relative;
-  outline: none;
-  border: 1px solid gray;
-  padding: 0.3vw;
-}
-.table-roomPage .header-table-dashboard2 .item--2 .search .search-input:focus {
-  outline: none;
-}
-.table-roomPage .header-table-dashboard2 .item--2 .search .search-icon {
+.Patient-container .Patient-side #talkbubble-dash {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
   position: absolute;
-  align-items: center;
-  margin-top: 0.5vw;
-  margin-left: 0.5vw;
-  z-index: 100;
-  font-size: 12px;
-}
-.table-roomPage .header-table-dashboard2 .item--3 {
-  grid-column: 4/-1;
-  display: grid;
-  grid-template-columns: 5vw auto auto auto auto auto;
-}
-.table-roomPage .header-table-dashboard2 .item--3 .select {
-  background-color: #fff;
-  margin-left: 0.4vw;
-  padding: 0.2vw;
-  border: 1px solid #757575;
-}
-.table-roomPage .header-table-dashboard2 .item--3 .patientName {
-  grid-area: 1/2/2/3;
-}
-.table-roomPage .header-table-dashboard2 .item--3 .nurseName {
-  grid-area: 1/3/2/4;
-}
-.table-roomPage .header-table-dashboard2 .item--3 .type {
-  grid-area: 1/4/2/5;
-}
-.table-roomPage .header-table-dashboard2 .item--3 .Status {
-  grid-area: 1/5/2/6;
-}
-.table-roomPage .header-table-dashboard2 .item--3 .update {
-  grid-area: 1/6/2/7;
-}
-.table-roomPage .table-dashboard2 {
-  width: 100%;
-  border-collapse: collapse;
-  height: 88%;
-  background-color: green;
-}
-.table-roomPage .table-dashboard2 th, .table-roomPage .table-dashboard2 td {
-  padding: 6px 0 3px 0;
-}
-.table-roomPage .table-dashboard2 td {
-  color: #646D82;
-  font-size: 0.8em;
-}
-.table-roomPage .table-dashboard2 .thead-table-dashboard2 {
-  border-bottom: 1px solid #C5C9CC;
-}
-.table-roomPage .table-dashboard2 .thead-table-dashboard2 th {
-  text-transform: capitalize;
-  color: #C5C9CC;
-  font-size: 1em;
-}
-.table-roomPage .table-dashboard2 .tbody-table-dashboard2 {
+  top: 11%;
+  left: 5%;
+  z-index: 1;
   text-align: center;
-}
-.table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr.row {
-  border-bottom: 1px solid #C5C9CC;
-}
-.table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr > td > i {
-  font-size: 10px;
-}
-.table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr > td > .examine-status {
-  color: #2ed573;
-}
-.table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr > td > .urgent-status {
-  color: #D24646;
-}
-.table-roomPage .table-dashboard2 .tbody-table-dashboard2 tr > td > .surgery-status {
-  color: #1e90ff;
-}
-.table-roomPage .table-dashboard2 .tbody-table-dashboard2 .patient-name:hover p {
+  color: white;
+  padding-top: 5px;
   display: none;
 }
-.table-roomPage .table-dashboard2 .tbody-table-dashboard2 .patient-name:hover:before {
-  content: "Dr.Lance Bogrol";
-  color: #70a1ff;
+.Patient-container .Patient-side #talkbubble-dash:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
 }
-.table-roomPage .table-dashboard2 .tbody-table-dashboard2 .nurse-name:hover {
-  color: #70a1ff;
+.Patient-container .Patient-side #talkbubble-room {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.Patient-container .Patient-side #talkbubble-room:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.Patient-container .Patient-side #talkbubble-nurse {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 24%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.Patient-container .Patient-side #talkbubble-nurse:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.Patient-container .Patient-side #talkbubble-patient {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 30.5%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.Patient-container .Patient-side #talkbubble-patient:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.Patient-container .Patient-side #talkbubble-surgery {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 37%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.Patient-container .Patient-side #talkbubble-surgery:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.Patient-container .Patient-side #talkbubble-signout {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 43%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.Patient-container .Patient-side #talkbubble-signout:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.Patient-container .Patient-side #talkbubble {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 49%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.Patient-container .Patient-side #talkbubble:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.Patient-container .Examination-patient {
+  grid-area: 2/2/3/3;
+}
+.Patient-container .Examination-patient .patient-header-card1 {
+  width: 225px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-flow: row nowrap;
+  border-radius: 15px;
+  box-shadow: 1px 4px 5px #57544585;
+}
+.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-h {
+  padding-right: 36px;
+  padding-top: 10px;
+}
+.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content {
+  position: relative;
+}
+.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-chart4 {
+  width: 194px;
+  height: 115px;
+}
+.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p {
+  padding-top: 15px;
+}
+.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p .patient-header-card1-p1 {
+  text-align: center;
+  padding-right: 80px;
+}
+.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p .patient-header-card1-p1::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 0%;
+  top: 76%;
+  background-color: #1428d6;
+}
+@media (min-width: 300px) and (max-width: 1700px) {
+  .Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p .patient-header-card1-p1::before {
+    top: 80%;
+  }
+}
+.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p .patient-header-card1-p2 {
+  text-align: center;
+}
+.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p .patient-header-card1-p2::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 0%;
+  top: 86%;
+  background-color: #8684ee;
+}
+@media (min-width: 300px) and (max-width: 1700px) {
+  .Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p .patient-header-card1-p2::before {
+    top: 91%;
+  }
+}
+.Patient-container .Consultant-patient {
+  grid-area: 2/3/3/4;
+}
+.Patient-container .Consultant-patient .patient-header-card2 {
+  width: 225px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-flow: row nowrap;
+  border-radius: 15px;
+  box-shadow: 1px 4px 5px #57544585;
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-h {
+  padding-right: 36px;
+  padding-top: 10px;
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content {
+  position: relative;
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-chart5 {
+  width: 194px;
+  height: 115px;
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p {
+  padding-top: 15px;
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p .patient-header-card2-p1 {
+  padding-right: 80px;
+  text-align: center;
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p .patient-header-card2-p1::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 0%;
+  top: 76%;
+  background-color: #fffb0d;
+}
+@media (min-width: 300px) and (max-width: 1700px) {
+  .Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p .patient-header-card2-p1::before {
+    top: 80%;
+  }
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p .patient-header-card2-p2 {
+  text-align: center;
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p .patient-header-card2-p2::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 0;
+  top: 86%;
+  background-color: #fff59d;
+}
+@media (min-width: 300px) and (max-width: 1700px) {
+  .Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p .patient-header-card2-p2::before {
+    top: 91%;
+  }
+}
+.Patient-container .Examination-date {
+  grid-area: 2/4/3/5;
+}
+.Patient-container .Examination-date .Examiation_card {
+  border-radius: 25px;
+  display: flex;
+  padding: 1rem 1rem;
+  line-height: 1rem;
+  border: 1px white solid;
+  box-shadow: 5px 2px 7px #88888866;
+  justify-content: space-between;
+  height: 100%;
+}
+.Patient-container .Examination-date .patient-order {
+  width: 20%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.Patient-container .Examination-date .the-number {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  color: #5e5e5e;
+  font-size: 4.5em;
+  text-shadow: 5px 2px 7px #88888866;
+}
+.Patient-container .Examination-date .patient-order:after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: #49494969;
+  position: absolute;
+  right: -25px;
+  top: 5px;
+}
+.Patient-container .Examination-date .patient-name {
+  width: 40%;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Patient-container .Examination-date .patient-name h4 {
+  text-transform: capitalize;
+  color: #5e5e5e;
+  font-size: 1rem;
+}
+.Patient-container .Examination-date .patient-name h5 {
+  margin: 1.2rem;
+  color: #2ed573;
+  font-size: 1.2rem;
+}
+.Patient-container .Examination-date .btn-prescription {
+  color: white;
+  background-color: #2ed573;
+  padding: 0.3rem 2.5rem;
+  font-size: 1rem;
+  border: #2ed573 1px solid;
+  border-radius: 13px;
+}
+.Patient-container .Examination-date .patient-next {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* text-align: center; */
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+}
+.Patient-container .Examination-date .patient-next > h4 {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #C5C9CC;
+  margin-bottom: 0.7rem;
+}
+.Patient-container .Examination-date .patient-next > h4 > span {
+  color: #D24646;
+  font-size: 1.1rem;
+}
+.Patient-container .Examination-date .patient-next > h5 {
+  color: #FBC576;
+  font-size: 1rem;
+  margin: 0;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+@media screen and (max-width: 425px) {
+  .Patient-container .Examination-date .the-number {
+    font-size: 2rem;
+  }
+  .Patient-container .Examination-date .patient-name {
+    line-height: 0.4rem;
+    width: 60%;
+  }
+  .Patient-container .Examination-date .patient-name > h4 {
+    font-size: 0.9rem;
+  }
+  .Patient-container .Examination-date .patient-name > h5 {
+    font-size: 0.9rem;
+  }
+  .Patient-container .Examination-date .btn-prescription {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+  .Patient-container .Examination-date .patient-next {
+    line-height: 1.4;
+  }
+  .Patient-container .Examination-date .patient-next > h4 > span {
+    font-size: 0.6rem;
+  }
+  .Patient-container .Examination-date .patient-next > h4 {
+    font-size: 3vw;
+    margin-bottom: 0.1rem;
+    word-break: break-word;
+    width: 80%;
+  }
+  .Patient-container .Examination-date .patient-next > h4 span {
+    font-size: 3vw;
+  }
+  .Patient-container .Examination-date .patient-next > h5 {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  .Patient-container .Examination-date .patient-name > h4 {
+    font-size: 1.3rem;
+  }
+  .Patient-container .Examination-date .patient-name > h5 {
+    font-size: 0.9rem;
+  }
+  .Patient-container .Examination-date .btn-prescription {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+  .Patient-container .Examination-date .patient-next > h4 > span {
+    font-size: 0.8rem;
+  }
+  .Patient-container .Examination-date .patient-next > h4 {
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+  }
+  .Patient-container .Examination-date .patient-next > h5 {
+    font-size: 0.8rem;
+  }
+}
+.Patient-container .patient-overview {
+  grid-area: 2/5/3/6;
+}
+.Patient-container .patient-overview .patient-header-card4 {
+  width: 456px;
+  box-shadow: 1px 4px 5px #57544585;
+  border-radius: 15px;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-h {
+  padding-top: 12px;
+  padding-left: 12px;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content {
+  display: flex;
+  flex-flow: row wrap;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-chart6 {
+  width: 200px;
+  height: 150px;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans1 {
+  position: relative;
+  padding-top: 134px;
+  width: 128px;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans1 .patient-header-card4-span1 {
+  font-size: 10px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans1 .patient-header-card4-span1::before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 5px;
+  border-radius: 37%;
+  right: 72%;
+  top: 82%;
+  background-color: #0400ff;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans1 .patient-header-card4-span2 {
+  font-size: 10px;
+  text-align: center;
+  padding-left: 17px;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans1 .patient-header-card4-span2::before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 5px;
+  border-radius: 37%;
+  right: 72%;
+  top: 95%;
+  background-color: #0400ff;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans2 {
+  position: relative;
+  width: 128px;
+  padding-top: 134px;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans2 .patient-header-card4-span3 {
+  padding-bottom: 10px;
+  font-size: 10px;
+  text-align: center;
+  padding-left: 21px;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans2::before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 5px;
+  border-radius: 37%;
+  left: 6%;
+  top: 82%;
+  background-color: #00ff22;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-span4 {
+  font-size: 10px;
+  text-align: center;
+  padding-left: 23px;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-span4::before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 5px;
+  border-radius: 37%;
+  left: 6%;
+  top: 95%;
+  background-color: #00ff22;
+}
+.Patient-container .filtersAndTable {
+  display: grid;
+  grid-area: 3/2/-1/-1;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 1vw;
+}
+.Patient-container .filtersAndTable .edit-filters {
+  grid-area: 1/1/2/2;
+}
+.Patient-container .filtersAndTable .patient-data {
+  grid-area: 1/2/2/-1;
 }
 
-@media all and (max-width: 926px) {
-  .table-roomPage .header-table-dashboard2 > .item--1 > .RoomData {
-    font-size: 2.5vw !important;
+@media only screen and (max-width: 600px) {
+  .Patient-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr repeat(3, 2fr) 6fr;
+    grid-gap: 1vw;
   }
-  .table-roomPage .header-table-dashboard2 > .item--2 > .search > .search-icon {
-    font-size: 10px !important;
-    margin: 5px 0 0 5px !important;
+  .Patient-container .Patient-nav {
+    grid-area: 1/1/2/-1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+    background-color: #fff;
+    z-index: 500;
   }
-  .table-roomPage .thead-table-dashboard2 th {
-    font-size: 12px !important;
+  .Patient-container .Patient-nav #showMyMenu {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    margin-left: 5px;
+    height: 100%;
+    align-items: center;
+    z-index: 1000;
+  }
+  .Patient-container .Patient-nav #showMyMenu .collapse-icon,
+.Patient-container .Patient-nav #showMyMenu .fas,
+.Patient-container .Patient-nav #showMyMenu .fa-chevron-circle-down,
+.Patient-container .Patient-nav #showMyMenu .fa-chevron-circle-up {
+    font-size: 30px;
+    color: aquamarine;
+    text-shadow: 1px 1px 3px #88a098;
+  }
+  .Patient-container .Patient-side {
+    display: none;
+    grid-area: 2/1/-1/-1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+    background-image: linear-gradient(to right, #eff5f5, aquamarine);
+    z-index: 1000;
+  }
+  .Patient-container .active {
+    display: block;
+  }
+  .Patient-container .Examination-patient {
+    grid-area: 2/1/3/2;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  .Patient-container .Consultant-patient {
+    grid-area: 2/2/3/3;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  .Patient-container .Examination-date {
+    grid-area: 3/1/4/-1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  .Patient-container .patient-overview {
+    grid-area: 4/1/5/-1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  .Patient-container .filtersAndTable {
+    display: grid;
+    grid-area: 5/1/-1/-1;
+    grid-template-columns: 1fr 4fr;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+    grid-gap: 1vw;
+  }
+  .Patient-container .filtersAndTable .edit-filters {
+    grid-area: 1/1/2/2;
+  }
+  .Patient-container .filtersAndTable .patient-data {
+    grid-area: 1/2/2/-1;
   }
 }

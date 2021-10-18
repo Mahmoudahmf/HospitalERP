@@ -11,13 +11,14 @@ html,body{
 }
 
 @import "_loginpage.module";
-
 @import "_master.module";
-@import "_clock.module";
+@import "./doctor_room_components/room_master.module";
 
-
-@import"./doctor_room_components/room_master.module";
-@import "./doctor_room_components/room_timeline.module";
 @import "./doctor_room_components/room_boxCharts.module";
-@import "./doctor_room_components/room_cards.module";
-@import "./doctor_room_components/room_table.module";
+@import "./doctor_room_components/room_timeline.module";
+@import "./doctor_patient_components/_patient_master.module";
+//@import "./doctor_patient_components/patient_examinationChart.module";
+//@import "./doctor_patient_components/patient_consultantChart.module";
+//@import "./doctor_patient_components/patient_nextPatient.module";
+//@import "./doctor_patient_components/patient_chart.module";
+//@import "./doctor_patient_components/patient_filterTable.module";

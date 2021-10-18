@@ -71,9 +71,8 @@
                 <p class="number">10</p>
                 <p class="today">Today</p>
             </div>
-
         </div>
 
-    </div>
+   </div>
 
     @show

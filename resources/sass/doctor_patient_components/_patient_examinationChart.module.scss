@@ -1,0 +1,69 @@
+
+.patient-header-card1 {
+    // width: 12.5%;
+    width: 225px;
+    //flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row nowrap;
+    border-radius: 15px;
+
+    // width: fit-content;
+    box-shadow: 1px 4px 5px #57544585;
+
+    .patient-header-card1-h {
+        padding-right: 36px;
+        padding-top: 10px;
+    }
+
+    .patient-header-card1-content {
+        position: relative;
+
+        .patient-header-card1-chart4 {
+            width: 194px;
+            height: 115px;
+        }
+
+        .patient-header-card1-p {
+            padding-top: 15px;
+
+            .patient-header-card1-p1 {
+                text-align: center;
+                padding-right: 80px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    left: 0%;
+                    top: 76%;
+                    background-color: rgb(20, 40, 214);
+                    @media (min-width: 300px) and (max-width: 1700px) {
+                        top: 80%;
+                    }
+                }
+            }
+
+            .patient-header-card1-p2 {
+                text-align: center;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    left: 0%;
+                    top: 86%;
+                    background-color: rgb(134, 132, 238);
+                    @media (min-width: 300px) and (max-width: 1700px) {
+                        top: 91%;
+                    }
+                }
+            }
+        }
+    }
+}

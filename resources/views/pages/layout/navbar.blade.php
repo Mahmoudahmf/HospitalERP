@@ -3,6 +3,7 @@
 
 @section('navbar')
 
+
         <nav class="navbar-component">
 
 

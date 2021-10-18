@@ -1,0 +1,155 @@
+.Examiation_card{
+    border-radius: 25px;
+    display: flex;
+    padding: 1rem 1rem;
+    line-height: 1rem;
+    border: 1px white solid;
+    box-shadow: 5px 2px 7px #88888866;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.patient-order{
+    width: 20%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.the-number{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    color: #5e5e5e;
+    font-size: 4.5em;
+    text-shadow:5px 2px 7px #88888866;
+;
+}
+.patient-order:after{
+    content: "";
+    width: 2px;
+    height: 100%;
+    background:#49494969;
+    position:absolute;
+    right:-25px ;
+    top:5px;
+}
+.patient-name{
+    width: 40%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.patient-name h4{
+    text-transform: capitalize;
+    color: #5e5e5e;
+    font-size: 1rem;
+}
+.patient-name h5{
+    margin: 1.2rem;
+    color: #2ed573;
+    font-size: 1.2rem;
+}
+.btn-prescription{
+    color: white;
+    background-color:#2ed573 ;
+    padding: 0.3rem 2.5rem;
+    font-size: 1rem;
+    border: #2ed573 1px solid;
+    border-radius: 13px;
+}
+.patient-next {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* text-align: center; */
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.patient-next > h4{
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #C5C9CC;
+    margin-bottom: .7rem;
+}
+.patient-next > h4 > span{
+    color: #D24646;
+    font-size: 1.1rem;
+}
+.patient-next >h5 {
+    color: #FBC576;
+    font-size: 1rem;
+    margin: 0;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 425px) {
+    .the-number {
+        font-size: 2rem;
+    }
+    .patient-name{
+        line-height: .4rem;
+        width: 60%;
+    }
+    .patient-name >h4{
+        font-size: .9rem;
+    }
+    .patient-name >h5{
+        font-size: .9rem;
+    }
+    .btn-prescription{
+        padding: .4rem 1rem;
+        font-size: .9rem;
+    }
+    .patient-next{
+        line-height:1.4;
+    }
+    .patient-next >h4>span{
+        font-size:.6rem ;
+    }
+    .patient-next >h4{
+        font-size: 3vw;
+        margin-bottom: .1rem;
+        word-break: break-word;
+        width:80%;
+
+    }
+    .patient-next > h4 span {
+        font-size:3vw;
+    }
+    .patient-next >h5{
+        font-size : .6rem ;
+    }
+}
+
+@media screen and (max-width: 768px )  and (min-width: 426px )  {
+    .patient-name >h4 {
+        font-size: 1.3rem;
+    }
+    .patient-name >h5{
+        font-size: .9rem;
+    }
+    .btn-prescription{
+        padding: .4rem 1rem;
+        font-size: .9rem;
+    }
+    .patient-next >h4>span{
+        font-size:.8rem ;
+    }
+    .patient-next >h4{
+        font-size: .8rem;
+        margin-bottom: .1rem;
+    }
+    .patient-next >h5{
+        font-size : .8rem ;
+    }
+}

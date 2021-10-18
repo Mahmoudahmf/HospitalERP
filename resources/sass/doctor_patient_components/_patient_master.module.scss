@@ -1,0 +1,218 @@
+.Patient-container
+{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: .7fr  repeat(2,1fr) 6fr 4fr ;
+    grid-template-rows: 1fr 1.5fr 6fr;
+    //grid-gap: 1vw;
+    background-color: #FBFCFC;
+
+    .Patient-nav
+    {
+        grid-area: 1 / 2 / 2 / -1;
+        //box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+        //0px 1px 2px rgba(0,0,0,0.24);
+        background-color: #fff;
+        z-index: 50 ;
+        @import"../_navbar.module";
+        #showMyMenu
+        {
+            display: none;
+        }
+
+    }
+    .Patient-side{
+        display: grid;
+        grid-area: 1 / 1 / -1 / 2;
+        //box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+        //0px 1px 2px rgba(0,0,0,0.24);
+        @import "../_side_menu.module";
+    }
+
+    //
+    //.patient-header-container {
+    //    //width: fit-content;
+    //    //width: 95%;
+    //    margin: 10px;
+    //    margin-left: 5%;
+    //
+    //    .patient-header {
+    //        //width: fit-content;
+    //        display: flex;
+    //        justify-content: space-evenly;
+    //        //flex-direction: row;
+    //        flex-flow: row wrap;
+    //        height: 23vh;
+    //        //height: auto;
+    //
+    //        //@at-root: 95%;
+            .Examination-patient {
+
+                grid-area: 2 / 2 / 3 / 3;
+                //box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+                //0px 1px 2px rgba(0,0,0,0.24);
+                @import "./_patient_examinationChart.module";
+            }
+
+            .Consultant-patient {
+
+                grid-area: 2 / 3 / 3 / 4;
+                //box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+                //0px 1px 2px rgba(0,0,0,0.24);
+                @import "./_patient_consultantChart.module";
+            }
+
+            .Examination-date {
+
+                grid-area: 2 / 4 / 3 / 5;
+                //box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+                //0px 1px 2px rgba(0,0,0,0.24);
+                @import "./_patient_nextPatient.module";
+            }
+
+            .patient-overview {
+
+                grid-area: 2 / 5 / 3 / 6;
+                //box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+                //0px 1px 2px rgba(0,0,0,0.24);
+                @import "./_patient_chart.module";
+            }
+
+
+
+    .filtersAndTable
+    {
+        display: grid;
+        grid-area: 3 / 2 / -1 / -1;
+        grid-template-columns: 1fr 4fr;
+        //box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+        //0px 1px 2px rgba(0,0,0,0.24);
+        grid-gap: 1vw;
+        @import "./patient_filterTable.module";
+
+        .edit-filters
+        {
+            grid-area: 1 / 1 / 2 / 2;
+            //box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+            //0px 1px 2px rgba(0,0,0,0.24);
+        }
+        .patient-data
+        {
+            grid-area: 1 / 2 / 2/ -1;
+            //box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+            //0px 1px 2px rgba(0,0,0,0.24);
+        }
+    }
+
+    // .edit-filters{
+    //     grid-area: 3 / 2 / 4 / 4;
+    //     box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+    //     0px 1px 2px rgba(0,0,0,0.24);}
+    // .patient-data{
+    //     grid-area: 3 / 4 / 4 / -1;
+    //     box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+    //     0px 1px 2px rgba(0,0,0,0.24);}
+}
+
+@media only screen and (max-width: 600px)
+{
+    .Patient-container
+    {
+        display: grid;
+        // grid-auto-flow: dense;
+        // grid-template-columns: .5fr 2fr 2fr;
+        grid-template-columns:  2fr 2fr  ;
+        grid-template-rows: 1fr repeat(3 , 2fr)  6fr;
+        grid-gap: 1vw;
+
+        .Patient-nav
+        {
+            grid-area: 1 / 1 / 2 / -1;
+            box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+            0px 1px 2px rgba(0,0,0,0.24);
+            background-color: #fff;
+            z-index: 500 ;
+            #showMyMenu
+            {
+                display:inline-block ;
+                border: none;
+                background-color: transparent;
+                margin-left:5px;
+                height: 100%;
+                align-items: center;
+                z-index: 1000;
+                .collapse-icon,
+                .fas,
+                .fa-chevron-circle-down,
+                .fa-chevron-circle-up
+                {
+                    font-size: 30px;
+                    color: aquamarine;
+                    text-shadow: 1px 1px 3px rgb(136, 160, 152);
+                }
+            }
+        }
+        .Patient-side
+        {
+            display: none;
+            // display: grid;
+            grid-area: 2 / 1 / -1 / -1;
+            // grid-area: 1/ 1 / -1 / 2;
+            box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+            0px 1px 2px rgba(0,0,0,0.24);
+            background-image: linear-gradient( to right ,rgb(239, 245, 245) , aquamarine) ;
+            // background-color: aquamarine;
+            z-index: 1000;
+        }
+        .active{
+            display: block;
+
+        }
+
+        .Examination-patient{
+            grid-area: 2 / 1 / 3 / 2;
+            // grid-area: 2 / 2 / 3 / 3;
+            box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+            0px 1px 2px rgba(0,0,0,0.24);
+        }
+        .Consultant-patient{
+
+            grid-area: 2 / 2 / 3 / 3;
+            box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+            0px 1px 2px rgba(0,0,0,0.24);
+        }
+        .Examination-date{
+
+            grid-area: 3 / 1 / 4 / -1;
+            box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+            0px 1px 2px rgba(0,0,0,0.24);
+        }
+        .patient-overview{
+
+            grid-area: 4 / 1 / 5 / -1;
+            box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+            0px 1px 2px rgba(0,0,0,0.24);
+        }
+        .filtersAndTable
+        {
+            display: grid;
+            grid-area: 5 / 1 / -1 / -1;
+            grid-template-columns: 1fr 4fr;
+            box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+            0px 1px 2px rgba(0,0,0,0.24);
+            grid-gap: 1vw;
+
+            .edit-filters
+            {
+                grid-area: 1 / 1 / 2 / 2;
+
+            }
+            .patient-data
+            {
+                grid-area: 1 / 2 / 2/ -1;
+
+            }
+        }
+    }
+}
