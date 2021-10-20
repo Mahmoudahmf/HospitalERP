@@ -1,0 +1,163 @@
+
+.SurgeryTablePage{
+    background-color: rgb(235, 234, 234);
+
+    .tableBox{
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        display: flex;
+        flex-flow:column wrap;
+        .tableBoxHeader{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            .leftTitle{
+                display: flex;
+                flex-flow: row wrap;
+                width: 200px;
+                color: #777;
+                font-weight: 500;
+            }
+            .searchInput{
+                width: 300px;
+                height: 100%;
+                .formInput{
+                    width: 100%;
+                    height: 25px;
+                    display: flex;
+                    position: relative;
+                    color: #999;
+                    align-self: center;
+                    .searchIcon{
+                        position: absolute;
+                        z-index: 100;
+                        //font-size: 12px;
+                        display: flex;
+                        align-self: center;
+                        padding: 5px;
+                        font-size: 10px;
+                    }
+                    .searchInput{
+                        width: 90%;
+                        position: absolute;
+                        outline: none;
+                        border: 1px solid #999;
+                        padding: 3px;
+                        border-radius: 100px;
+                    }
+                }
+            }
+            .selectionContainer{
+                .formSelect{
+                    display: flex;
+                    justify-content: end;
+                    select{
+                        background-color: #fff;
+                        outline:none;
+                        margin:0 5px;
+                        border :1px solid #999;
+                        border-radius: 5px;
+                        padding: 5px;
+                        font-size: 10px;
+                    }
+
+                }
+            }
+        }
+        .tableContain{
+            table{
+                width: 100%;
+                thead{
+                    tr{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        th{
+                            &:nth-child(2)
+                            {
+                                width: 170px;
+                                h4{padding-left: 35px;}
+                            }
+                            &:nth-child(3)
+                            {   width: 170px;
+                                h4{padding-left: 20px;}
+                            }
+                            &:nth-child(4){
+                                width: 170px;
+                                h4{padding-left: 20px;}
+                            }
+                            &:nth-child(5){
+                                width: 170px;
+                                h4{padding-left: 20px;}
+                            }
+                            &:nth-child(6){width: 170px;}
+                            &:nth-child(7){width: 170px;}
+                            h4{
+                                font-size: 15px;
+                                color: #999;
+                                font-weight: 600;
+                            }//
+                            &:nth-child(8){
+                                width: 70px;
+                                h4{padding-right: 20px;}
+                            }
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 1px solid rgb(177, 176, 176);
+                        padding: 5px;
+                        padding-top: 20px;
+                        td{
+                            // width: 90px;
+                            &:nth-child(2){width: 120px;}
+                            &:nth-child(3){width: 120px;}
+                            &:nth-child(4){width: 120px;}
+                            &:nth-child(5){width: 120px;}
+                            &:nth-child(6){width: 120px;}
+                            &:nth-child(7){width: 120px;}
+                            p{
+                                font-size: 13px;
+                                color: #999;
+                                font-weight: 400;
+                                text-align: center;
+                            }
+                            .status{
+                                font-size: 12px;
+                            }
+                            .addingBtn{
+                                outline: none;
+                                background: #fff;
+                                background: #fff;
+                                outline: none;
+                                border: none;
+                                .addNurse{
+                                    // background-color: #fff;
+                                    font-size:13px ;
+                                }
+                            }
+                        }
+                        .patient{
+                            &-1{color:green}
+                            &-2{color:gray}
+                            &-3{color:green}
+                            &-4{color:darkred}
+                            &-5{color:green}
+                            &-6{color:darkred}
+                            &-7{color:gray}
+                            &-8{color:green}
+                            &-9{color:green}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

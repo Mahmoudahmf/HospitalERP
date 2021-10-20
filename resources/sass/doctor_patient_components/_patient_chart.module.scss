@@ -1,43 +1,52 @@
 
 .patient-header-card4 {
-    //width: 25%;
     width: 456px;
-    //flex: 2;
-    box-shadow: 1px 4px 5px #57544585;
     border-radius: 15px;
+    height: 190px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding: 10px;
 
-    // width: fit-content;
+    .patient-header-card4-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: space-between;
+        height: 100%;
 
-    .patient-header-card4-h {
-        padding-top: 12px;
-        padding-left: 12px;
+
+
+    .patient-header-card4-h-container{
+        width: 100%;
     }
+
     .patient-header-card4-content {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
+        justify-content: start;
+        align-items: start;
 
-        .patient-header-card4-chart6 {
-            width: 200px;
-            height: 150px;
-        }
+
 
         .patient-header-card4-spans1 {
             position: relative;
-            padding-top: 134px;
             width: 128px;
+
             .patient-header-card4-span1 {
                 font-size: 10px;
                 text-align: center;
-                padding-bottom: 10px;
 
                 &::before {
                     content: "";
                     position: absolute;
-                    width: 27px;
-                    height: 5px;
+                    width: 8px;
+                    height: 8px;
                     border-radius: 37%;
                     right: 72%;
-                    top: 82%;
+                    top: 12%;
                     background-color: #0400ff;
                     @media (min-width: 300px) and (max-width: 1700px) {
                     }
@@ -48,14 +57,15 @@
                 font-size: 10px;
                 text-align: center;
                 padding-left: 17px;
+
                 &::before {
                     content: "";
                     position: absolute;
-                    width: 27px;
-                    height: 5px;
+                    width: 8px;
+                    height: 8px;
                     border-radius: 37%;
                     right: 72%;
-                    top: 95%;
+                    top: 72%;
                     background-color: #0400ff;
                 }
             }
@@ -63,29 +73,27 @@
 
         .patient-header-card4-spans2 {
             position: relative;
-            width: 128px;
-
-            padding-top: 134px;
 
             .patient-header-card4-span3 {
-                padding-bottom: 10px;
                 font-size: 10px;
                 text-align: center;
                 padding-left: 21px;
             }
+
             &::before {
                 content: "";
                 position: absolute;
-                width: 27px;
-                height: 5px;
+                width: 8px;
+                height: 8px;
                 border-radius: 37%;
-                left: 6%;
-                top: 82%;
+                left: 9%;
+                top: 12%;
                 background-color: #00ff22;
                 @media (min-width: 300px) and (max-width: 1700px) {
                 }
             }
         }
+    }
         .patient-header-card4-span4 {
             font-size: 10px;
             text-align: center;
@@ -93,15 +101,31 @@
             &::before {
                 content: "";
                 position: absolute;
-                width: 27px;
-                height: 5px;
+                width: 8px;
+                height: 8px;
                 border-radius: 37%;
-                left: 6%;
-                top: 95%;
+                left: 9%;
+                top: 72%;
                 background-color: #00ff22;
                 @media (min-width: 300px) and (max-width: 1700px) {
                 }
             }
+        }
+
+
+
+    }
+
+    .patient-header-card4-chart6-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        .patient-header-card4-chart6 {
+            width: 200px;
+            height: 150px;
         }
     }
 }

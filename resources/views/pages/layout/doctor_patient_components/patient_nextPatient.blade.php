@@ -10,7 +10,7 @@
     <div class="patient-name" >
         <h4>Asmaa Ashraf Ahmed Youssef</h4>
         <h5>Examination</h5>
-        <button class="btn-prescription">Prescription</button>
+        <button class="btn-prescription" id="Prescription_btn">Prescription</button>
     </div>
     <!-- the left side of the div -->
     <div class="patient-next" >

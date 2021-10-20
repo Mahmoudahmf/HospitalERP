@@ -124,5 +124,9 @@ switch(month){
 
 let dayIn = `${dayInNom}  ${stringDay}`
 let monthYear = ` , ${month} ${year}` ;
-document.querySelector("#historyDay").innerHTML = dayIn ;
-document.querySelector("#historyMonYear").innerHTML= monthYear;
+if (document.body.contains(document.querySelector("#historyDay"))){
+    document.querySelector("#historyDay").innerHTML = dayIn ;
+    document.querySelector("#historyMonYear").innerHTML= monthYear;
+
+
+}

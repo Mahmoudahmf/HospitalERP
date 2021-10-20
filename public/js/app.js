@@ -2060,24 +2060,25 @@ module.exports = {
   \***************************************/
 /***/ (() => {
 
-var secondHand = document.querySelector("#sec");
-var minHand = document.querySelector("#min");
-var hourHand = document.querySelector("#hr");
-setInterval(clockRotating, 1000);
+if (document.body.contains(document.querySelector("#sec"))) {
+  var clockRotating = function clockRotating() {
+    var date = new Date();
+    var getSeconds = date.getSeconds() / 60;
+    var getMinutes = date.getMinutes() / 60;
+    var getHours = date.getHours() / 12;
+    secondHand.style.transform = "rotate(" + getSeconds * 360 + "deg)";
+    minHand.style.transform = "rotate(" + getMinutes * 360 + "deg)";
+    hourHand.style.transform = "rotate(" + getHours * 360 + "deg)";
+    document.querySelector(".current-day").innerHTML = date.toDateString();
+    document.querySelector(".current-seconds").innerHTML = date.getSeconds();
+  };
 
-function clockRotating() {
-  var date = new Date();
-  var getSeconds = date.getSeconds() / 60;
-  var getMinutes = date.getMinutes() / 60;
-  var getHours = date.getHours() / 12;
-  secondHand.style.transform = "rotate(" + getSeconds * 360 + "deg)";
-  minHand.style.transform = "rotate(" + getMinutes * 360 + "deg)";
-  hourHand.style.transform = "rotate(" + getHours * 360 + "deg)";
-  document.querySelector(".current-day").innerHTML = date.toDateString();
-  document.querySelector(".current-seconds").innerHTML = date.getSeconds();
+  var secondHand = document.querySelector("#sec"),
+      minHand = document.querySelector("#min"),
+      hourHand = document.querySelector("#hr");
+  setInterval(clockRotating, 1000);
+  document.getElementById('clock');
 }
-
-document.getElementById('clock');
 
 /***/ }),
 
@@ -2180,6 +2181,23 @@ var Digital = /*#__PURE__*/function (_React$Component) {
 
 if (document.getElementById('dclock')) {
   react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Digital, {}), document.getElementById('dclock'));
+}
+
+/***/ }),
+
+/***/ "./resources/components/doctor_patient_components/patient_popup.js":
+/*!*************************************************************************!*\
+  !*** ./resources/components/doctor_patient_components/patient_popup.js ***!
+  \*************************************************************************/
+/***/ (() => {
+
+if (document.body.contains(document.getElementById("Prescription_btn"))) {
+  document.getElementById("Prescription_btn").addEventListener("click", function () {
+    document.querySelector(".examination_description_main").style.display = "flex";
+  });
+  document.getElementById("popup_close").addEventListener("click", function () {
+    document.querySelector(".examination_description_main").style.display = "none";
+  });
 }
 
 /***/ }),
@@ -2367,239 +2385,206 @@ var myChartCircle3 = new Chart("chartProgress-3", {
   \*******************************************************************/
 /***/ (() => {
 
-var ctx = document.getElementById("myChart").getContext("2d");
-var gradientBg = ctx.createLinearGradient(0, 0, 0, 200);
-gradientBg.addColorStop(0, "#2ED573");
-gradientBg.addColorStop(0.2, "white"); // gradientBg.addColorStop(1, "black");
+if (document.body.contains(document.getElementById("myChart"))) {
+  var ctx = document.getElementById("myChart").getContext("2d");
+  var gradientBg = ctx.createLinearGradient(0, 0, 0, 200);
+  gradientBg.addColorStop(0, "#2ED573");
+  gradientBg.addColorStop(0.2, "white"); // gradientBg.addColorStop(1, "black");
 
-ctx.setLineDash([5, 15]);
-var myChart = new Chart(ctx, {
-  type: "line",
-  data: {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-    hidden: true,
-    datasets: [{
-      pointRadius: 0,
-      label: " ",
-      data: [12, 15, 10, 0, 15, 4],
-      borderDash: [3, 3],
-      borderCapStyle: "5",
-      color: "#2ED573",
-      backgroundColor: gradientBg,
-      fill: true,
-      borderColor: ["#2ED573"],
-      borderWidth: 2
-    }]
-  },
-  options: {
-    plugins: {
-      legend: {
-        display: false,
-        labels: {
-          color: 'rgb(255, 99, 132)'
+  ctx.setLineDash([5, 15]);
+  var myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      hidden: true,
+      datasets: [{
+        pointRadius: 0,
+        label: " ",
+        data: [12, 15, 10, 0, 15, 4],
+        borderDash: [3, 3],
+        borderCapStyle: "5",
+        color: "#2ED573",
+        backgroundColor: gradientBg,
+        fill: true,
+        borderColor: ["#2ED573"],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+          labels: {
+            color: 'rgb(255, 99, 132)'
+          }
+        }
+      },
+      elements: {},
+      bezierCurve: true,
+      lineTension: 1,
+      responsive: true,
+      scales: {
+        y: {
+          display: false,
+          beginAtZero: true
+        },
+        x: {
+          display: false,
+          beginAtZero: true
         }
       }
+    }
+  }); //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  var ctx1 = document.getElementById("myChart1").getContext("2d");
+  var gradientBg1 = ctx1.createLinearGradient(0, 0, 0, 200);
+  gradientBg1.addColorStop(0, "#70A1FF");
+  gradientBg1.addColorStop(0.2, "white"); // gradientBg.addColorStop(1, "black");
+
+  ctx1.setLineDash([5, 15]);
+  var myChart1 = new Chart(ctx1, {
+    type: "line",
+    data: {
+      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      hidden: true,
+      datasets: [{
+        pointRadius: 0,
+        label: " ",
+        data: [10, 5, 20, 8, 0, 4],
+        borderDash: [3, 3],
+        borderCapStyle: "5",
+        color: "#70A1FF",
+        backgroundColor: gradientBg1,
+        fill: true,
+        borderColor: ["#70A1FF"],
+        borderWidth: 2
+      }]
     },
-    elments: {},
-    bezierCurve: true,
-    lineTension: 1,
-    responsive: true,
-    scales: {
-      y: {
-        display: false,
-        beginAtZero: true
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+          labels: {
+            color: 'rgb(255, 99, 132)'
+          }
+        }
       },
-      x: {
-        display: false,
-        beginAtZero: true
+      elments: {},
+      bezierCurve: true,
+      lineTension: 1,
+      responsive: true,
+      scales: {
+        y: {
+          display: false,
+          beginAtZero: true
+        },
+        x: {
+          display: false,
+          beginAtZero: true
+        }
       }
     }
-  }
-}); // //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// let ctx1 = document.getElementById("myChart1").getContext("2d");
-//
-// const gradientBg1 = ctx1.createLinearGradient(0, 0, 0, 200);
-// gradientBg1.addColorStop(0, "#70A1FF");
-// gradientBg1.addColorStop(0.2, "white");
-// // gradientBg.addColorStop(1, "black");
-//
-//
-//
-// ctx1.setLineDash([5, 15]);
-//
-//
-// let myChart1 = new Chart(ctx1, {
-//     type: "line",
-//     data: {
-//         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-//         hidden: true,
-//         datasets: [
-//             {
-//                 pointRadius: 0,
-//                 label: " ",
-//                 data: [10, 5, 20, 8, 0, 4],
-//                 borderDash: [3, 3],
-//                 borderCapStyle: "5",
-//                 color: "#70A1FF",
-//                 backgroundColor: gradientBg1,
-//                 fill: true,
-//                 borderColor: ["#70A1FF"],
-//                 borderWidth: 2,
-//             },
-//
-//         ],
-//     },
-//     options: {
-//         plugins: {
-//             legend: {
-//                 display: false,
-//                 labels: {
-//                     color: 'rgb(255, 99, 132)'
-//                 }
-//             }
-//         },
-//         elments: {},
-//         bezierCurve: true,
-//         lineTension: 1,
-//
-//         responsive: true,
-//         scales: {
-//             y: {
-//                 display: false,
-//                 beginAtZero: true,
-//             },
-//             x: {
-//                 display: false,
-//                 beginAtZero: true,
-//             },
-//         },
-//     },
-//
-// });
-// // //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
-// let ctx2 = document.getElementById("myChart2").getContext("2d");
-//
-// const gradientBg2 = ctx2.createLinearGradient(0, 0, 0, 200);
-// gradientBg2.addColorStop(0, "#FECD54");
-// gradientBg2.addColorStop(0.2, "white");
-// // gradientBg.addColorStop(1, "black");
-//
-//
-//
-// ctx2.setLineDash([5, 15]);
-//
-//
-// let myChart2 = new Chart(ctx2, {
-//     type: "line",
-//     data: {
-//         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-//         hidden: true,
-//         datasets: [
-//             {
-//                 pointRadius: 0,
-//                 label: " ",
-//                 data: [0, 20, 0, 8, 0, 4],
-//                 borderDash: [3, 3],
-//                 borderCapStyle: "5",
-//                 color: "#FECD54",
-//                 backgroundColor: gradientBg2,
-//                 fill: true,
-//                 borderColor: ["#FECD54"],
-//                 borderWidth: 2,
-//             },
-//
-//         ],
-//     },
-//     options: {
-//         plugins: {
-//             legend: {
-//                 display: false,
-//                 labels: {
-//                     color: 'rgb(255, 99, 132)'
-//                 }
-//             }
-//         },
-//         elments: {},
-//         bezierCurve: true,
-//         lineTension: 1,
-//
-//         responsive: true,
-//         scales: {
-//             y: {
-//                 display: false,
-//                 beginAtZero: true,
-//             },
-//             x: {
-//                 display: false,
-//                 beginAtZero: true,
-//             },
-//         },
-//     },
-//
-// });
-//
-// // //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
-// let ctx3 = document.getElementById("myChart3").getContext("2d");
-//
-// const gradientBg3 = ctx3.createLinearGradient(0, 0, 0, 200);
-// gradientBg3.addColorStop(0, "#D24646");
-// gradientBg3.addColorStop(0.2, "white");
-//
-//
-//
-// ctx3.setLineDash([5, 15]);
-//
-//
-// let myChart3 = new Chart(ctx3, {
-//     type: "line",
-//     data: {
-//         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-//         hidden: true,
-//         datasets: [
-//             {
-//                 pointRadius: 0,
-//                 label: " ",
-//                 data: [20, 20, 0, 8, 20, 20],
-//                 borderDash: [3, 3],
-//                 borderCapStyle: "5",
-//                 color: "#D24646",
-//                 backgroundColor: gradientBg3,
-//                 fill: true,
-//                 borderColor: ["#D24646"],
-//                 borderWidth: 2,
-//             },
-//
-//         ],
-//     },
-//     options: {
-//         plugins: {
-//             legend: {
-//                 display: false,
-//                 labels: {
-//                     color: 'rgb(255, 99, 132)'
-//                 }
-//             }
-//         },
-//         elments: {},
-//         bezierCurve: true,
-//         lineTension: 1,
-//
-//         responsive: true,
-//         scales: {
-//             y: {
-//                 display: false,
-//                 beginAtZero: true,
-//             },
-//             x: {
-//                 display: false,
-//                 beginAtZero: true,
-//             },
-//         },
-//     },
-//
-// });
+  }); // //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  var ctx2 = document.getElementById("myChart2").getContext("2d");
+  var gradientBg2 = ctx2.createLinearGradient(0, 0, 0, 200);
+  gradientBg2.addColorStop(0, "#FECD54");
+  gradientBg2.addColorStop(0.2, "white"); // gradientBg.addColorStop(1, "black");
+
+  ctx2.setLineDash([5, 15]);
+  var myChart2 = new Chart(ctx2, {
+    type: "line",
+    data: {
+      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      hidden: true,
+      datasets: [{
+        pointRadius: 0,
+        label: " ",
+        data: [0, 20, 0, 8, 0, 4],
+        borderDash: [3, 3],
+        borderCapStyle: "5",
+        color: "#FECD54",
+        backgroundColor: gradientBg2,
+        fill: true,
+        borderColor: ["#FECD54"],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+          labels: {
+            color: 'rgb(255, 99, 132)'
+          }
+        }
+      },
+      elments: {},
+      bezierCurve: true,
+      lineTension: 1,
+      responsive: true,
+      scales: {
+        y: {
+          display: false,
+          beginAtZero: true
+        },
+        x: {
+          display: false,
+          beginAtZero: true
+        }
+      }
+    }
+  }); // //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  var ctx3 = document.getElementById("myChart3").getContext("2d");
+  var gradientBg3 = ctx3.createLinearGradient(0, 0, 0, 200);
+  gradientBg3.addColorStop(0, "#D24646");
+  gradientBg3.addColorStop(0.2, "white");
+  ctx3.setLineDash([5, 15]);
+  var myChart3 = new Chart(ctx3, {
+    type: "line",
+    data: {
+      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      hidden: true,
+      datasets: [{
+        pointRadius: 0,
+        label: " ",
+        data: [20, 20, 0, 8, 20, 20],
+        borderDash: [3, 3],
+        borderCapStyle: "5",
+        color: "#D24646",
+        backgroundColor: gradientBg3,
+        fill: true,
+        borderColor: ["#D24646"],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+          labels: {
+            color: 'rgb(255, 99, 132)'
+          }
+        }
+      },
+      elments: {},
+      bezierCurve: true,
+      lineTension: 1,
+      responsive: true,
+      scales: {
+        y: {
+          display: false,
+          beginAtZero: true
+        },
+        x: {
+          display: false,
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
 
 /***/ }),
 
@@ -2609,34 +2594,36 @@ var myChart = new Chart(ctx, {
   \***************************************************/
 /***/ (() => {
 
-(function () {
-  var start = new Date();
-  start.setHours(16, 0, 0); // 11pm
+if (document.body.contains(document.getElementById('countdown-hour'))) {
+  (function () {
+    var start = new Date();
+    start.setHours(16, 0, 0); // 11pm
 
-  function pad(num) {
-    return ("0" + parseInt(num)).substr(-2);
-  }
-
-  function tick() {
-    var now = new Date();
-
-    if (now > start) {
-      // too late, go to tomorrow
-      start.setDate(start.getDate() + 1);
+    function pad(num) {
+      return ("0" + parseInt(num)).substr(-2);
     }
 
-    var remain = (start - now) / 1000;
-    var hh = pad(remain / 60 / 60 % 60);
-    var mm = pad(remain / 60 % 60);
-    var ss = pad(remain % 60);
-    document.getElementById('countdown-hour').innerHTML = hh;
-    document.getElementById('countdown-min').innerHTML = ":" + mm;
-    document.getElementById('countdown-sec').innerHTML = ":" + ss;
-    setTimeout(tick, 1000);
-  }
+    function tick() {
+      var now = new Date();
 
-  document.addEventListener('DOMContentLoaded', tick);
-})();
+      if (now > start) {
+        // too late, go to tomorrow
+        start.setDate(start.getDate() + 1);
+      }
+
+      var remain = (start - now) / 1000;
+      var hh = pad(remain / 60 / 60 % 60);
+      var mm = pad(remain / 60 % 60);
+      var ss = pad(remain % 60);
+      document.getElementById('countdown-hour').innerHTML = hh;
+      document.getElementById('countdown-min').innerHTML = ":" + mm;
+      document.getElementById('countdown-sec').innerHTML = ":" + ss;
+      setTimeout(tick, 1000);
+    }
+
+    document.addEventListener('DOMContentLoaded', tick);
+  })();
+}
 
 /***/ }),
 
@@ -2749,8 +2736,11 @@ switch (month) {
 
 var dayIn = "".concat(dayInNom, "  ").concat(stringDay);
 var monthYear = " , ".concat(month, " ").concat(year);
-document.querySelector("#historyDay").innerHTML = dayIn;
-document.querySelector("#historyMonYear").innerHTML = monthYear;
+
+if (document.body.contains(document.querySelector("#historyDay"))) {
+  document.querySelector("#historyDay").innerHTML = dayIn;
+  document.querySelector("#historyMonYear").innerHTML = monthYear;
+}
 
 /***/ }),
 
@@ -2784,6 +2774,8 @@ __webpack_require__(/*! ../components/history */ "./resources/components/history
 __webpack_require__(/*! ../components/doctor_room_components/room_cards */ "./resources/components/doctor_room_components/room_cards.js");
 
 __webpack_require__(/*! ../components/doctor_room_components/room_boxCharts */ "./resources/components/doctor_room_components/room_boxCharts.js");
+
+__webpack_require__(/*! ../components/doctor_patient_components/patient_popup */ "./resources/components/doctor_patient_components/patient_popup.js");
 
 /***/ }),
 

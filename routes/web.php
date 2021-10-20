@@ -34,6 +34,10 @@ Route::group(
            			return view('pages.layout.doctor_patient_components.patient_master');
            		})->name('patient');
 
+           Route::get('/surgery', function () {
+                    return view('pages.layout.doctor_surgery_components.doctor_surgery_master');
+                })->name('surgery');
+
 	});
 
 

@@ -2466,7 +2466,6 @@ html, body {
   }
 }
 .Patient-container {
-  width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-columns: 0.7fr repeat(2, 1fr) 6fr 4fr;
@@ -2477,6 +2476,7 @@ html, body {
   grid-area: 1/2/2/-1;
   background-color: #fff;
   z-index: 50;
+  margin-bottom: 25px;
 }
 .Patient-container .Patient-nav .navbar-component {
   height: 10vh;
@@ -2801,142 +2801,158 @@ html, body {
 }
 .Patient-container .Examination-patient {
   grid-area: 2/2/3/3;
+  margin-right: 15px;
+  margin-left: 25px;
 }
 .Patient-container .Examination-patient .patient-header-card1 {
   width: 225px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  flex-flow: row nowrap;
   border-radius: 15px;
-  box-shadow: 1px 4px 5px #57544585;
-}
-.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-h {
-  padding-right: 36px;
-  padding-top: 10px;
+  height: 190px;
+  background-color: white;
+  padding: 10px;
 }
 .Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-chart4 {
-  width: 194px;
+  width: 200px;
   height: 115px;
 }
-.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p {
-  padding-top: 15px;
-}
-.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p .patient-header-card1-p1 {
-  text-align: center;
-  padding-right: 80px;
-}
-.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p .patient-header-card1-p1::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  left: 0%;
-  top: 76%;
-  background-color: #1428d6;
-}
-@media (min-width: 300px) and (max-width: 1700px) {
-  .Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p .patient-header-card1-p1::before {
-    top: 80%;
-  }
-}
-.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p .patient-header-card1-p2 {
-  text-align: center;
-}
-.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p .patient-header-card1-p2::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  left: 0%;
-  top: 86%;
-  background-color: #8684ee;
-}
-@media (min-width: 300px) and (max-width: 1700px) {
-  .Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-content .patient-header-card1-p .patient-header-card1-p2::before {
-    top: 91%;
-  }
-}
-.Patient-container .Consultant-patient {
-  grid-area: 2/3/3/4;
-}
-.Patient-container .Consultant-patient .patient-header-card2 {
-  width: 225px;
+.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-p {
+  font-size: 0.7rem;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-flow: row nowrap;
-  border-radius: 15px;
-  box-shadow: 1px 4px 5px #57544585;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
 }
-.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-h {
-  padding-right: 36px;
-  padding-top: 10px;
-}
-.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content {
+.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-p .patient-header-card1-p1 {
+  text-align: center;
   position: relative;
+  padding-left: 15px;
 }
-.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-chart5 {
-  width: 194px;
-  height: 115px;
-}
-.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p {
-  padding-top: 15px;
-}
-.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p .patient-header-card2-p1 {
-  padding-right: 80px;
-  text-align: center;
-}
-.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p .patient-header-card2-p1::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  left: 0%;
-  top: 76%;
-  background-color: #fffb0d;
-}
-@media (min-width: 300px) and (max-width: 1700px) {
-  .Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p .patient-header-card2-p1::before {
-    top: 80%;
-  }
-}
-.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p .patient-header-card2-p2 {
-  text-align: center;
-}
-.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p .patient-header-card2-p2::before {
+.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-p .patient-header-card1-p1::before {
   content: "";
   position: absolute;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   left: 0;
-  top: 86%;
+  top: 5px;
+  background-color: #1428d6;
+}
+@media (min-width: 300px) and (max-width: 1700px) {
+  .Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-p .patient-header-card1-p1::before {
+    top: 80%;
+  }
+}
+.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-p .patient-header-card1-p2 {
+  text-align: center;
+  position: relative;
+  padding-left: 15px;
+}
+.Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-p .patient-header-card1-p2::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 0;
+  top: 5px;
+  background-color: #8684ee;
+}
+@media (min-width: 300px) and (max-width: 1700px) {
+  .Patient-container .Examination-patient .patient-header-card1 .patient-header-card1-p .patient-header-card1-p2::before {
+    top: 91%;
+  }
+}
+.Patient-container .Consultant-patient {
+  grid-area: 2/3/3/4;
+  margin-right: 15px;
+}
+.Patient-container .Consultant-patient .patient-header-card2 {
+  width: 225px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  height: 190px;
+  background-color: white;
+  padding: 10px;
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-h {
+  padding-right: 36px;
+  padding-top: 10px;
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-chart5 {
+  width: 200px;
+  height: 115px;
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-p {
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding-bottom: 10px;
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-p .patient-header-card2-p1 {
+  text-align: center;
+  position: relative;
+  padding-left: 15px;
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-p .patient-header-card2-p1::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 0;
+  top: 5px;
+  background-color: #fffb0d;
+}
+@media (min-width: 300px) and (max-width: 1700px) {
+  .Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-p .patient-header-card2-p1::before {
+    top: 80%;
+  }
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-p .patient-header-card2-p2 {
+  position: relative;
+  text-align: center;
+  padding-left: 15px;
+}
+.Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-p .patient-header-card2-p2::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 0;
+  top: 5px;
   background-color: #fff59d;
 }
 @media (min-width: 300px) and (max-width: 1700px) {
-  .Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-content .patient-header-card2-p .patient-header-card2-p2::before {
+  .Patient-container .Consultant-patient .patient-header-card2 .patient-header-card2-p .patient-header-card2-p2::before {
     top: 91%;
   }
 }
 .Patient-container .Examination-date {
   grid-area: 2/4/3/5;
+  margin-right: 15px;
 }
 .Patient-container .Examination-date .Examiation_card {
-  border-radius: 25px;
+  border-radius: 15px;
   display: flex;
   padding: 1rem 1rem;
   line-height: 1rem;
   border: 1px white solid;
-  box-shadow: 5px 2px 7px #88888866;
   justify-content: space-between;
-  height: 100%;
+  height: 190px;
+  background-color: white;
 }
 .Patient-container .Examination-date .patient-order {
   width: 20%;
@@ -2950,7 +2966,7 @@ html, body {
   transform: translateY(-50%);
   top: 50%;
   color: #5e5e5e;
-  font-size: 4.5em;
+  font-size: 4em;
   text-shadow: 5px 2px 7px #88888866;
 }
 .Patient-container .Examination-date .patient-order:after {
@@ -2963,31 +2979,32 @@ html, body {
   top: 5px;
 }
 .Patient-container .Examination-date .patient-name {
-  width: 40%;
+  width: 50%;
   text-align: center;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left: 45px;
 }
 .Patient-container .Examination-date .patient-name h4 {
   text-transform: capitalize;
   color: #5e5e5e;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .Patient-container .Examination-date .patient-name h5 {
-  margin: 1.2rem;
+  margin: 1rem;
   color: #2ed573;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .Patient-container .Examination-date .btn-prescription {
   color: white;
   background-color: #2ed573;
-  padding: 0.3rem 2.5rem;
+  padding: 0.2rem 2rem;
   font-size: 1rem;
   border: #2ed573 1px solid;
-  border-radius: 13px;
+  border-radius: 5px;
 }
 .Patient-container .Examination-date .patient-next {
   display: flex;
@@ -2999,18 +3016,18 @@ html, body {
   text-align: center;
 }
 .Patient-container .Examination-date .patient-next > h4 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-transform: capitalize;
   color: #C5C9CC;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.2rem;
 }
 .Patient-container .Examination-date .patient-next > h4 > span {
   color: #D24646;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 .Patient-container .Examination-date .patient-next > h5 {
   color: #FBC576;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 0;
   text-transform: capitalize;
   display: flex;
@@ -3078,106 +3095,315 @@ html, body {
 }
 .Patient-container .patient-overview {
   grid-area: 2/5/3/6;
+  margin-right: 25px;
 }
 .Patient-container .patient-overview .patient-header-card4 {
   width: 456px;
-  box-shadow: 1px 4px 5px #57544585;
   border-radius: 15px;
-}
-.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-h {
-  padding-top: 12px;
-  padding-left: 12px;
-}
-.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content {
+  height: 190px;
+  background-color: white;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 10px;
 }
-.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-chart6 {
-  width: 200px;
-  height: 150px;
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 100%;
 }
-.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans1 {
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-container .patient-header-card4-h-container {
+  width: 100%;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-container .patient-header-card4-content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: start;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-container .patient-header-card4-content .patient-header-card4-spans1 {
   position: relative;
-  padding-top: 134px;
   width: 128px;
 }
-.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans1 .patient-header-card4-span1 {
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-container .patient-header-card4-content .patient-header-card4-spans1 .patient-header-card4-span1 {
   font-size: 10px;
   text-align: center;
-  padding-bottom: 10px;
 }
-.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans1 .patient-header-card4-span1::before {
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-container .patient-header-card4-content .patient-header-card4-spans1 .patient-header-card4-span1::before {
   content: "";
   position: absolute;
-  width: 27px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
   border-radius: 37%;
   right: 72%;
-  top: 82%;
+  top: 12%;
   background-color: #0400ff;
 }
-.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans1 .patient-header-card4-span2 {
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-container .patient-header-card4-content .patient-header-card4-spans1 .patient-header-card4-span2 {
   font-size: 10px;
   text-align: center;
   padding-left: 17px;
 }
-.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans1 .patient-header-card4-span2::before {
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-container .patient-header-card4-content .patient-header-card4-spans1 .patient-header-card4-span2::before {
   content: "";
   position: absolute;
-  width: 27px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
   border-radius: 37%;
   right: 72%;
-  top: 95%;
+  top: 72%;
   background-color: #0400ff;
 }
-.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans2 {
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-container .patient-header-card4-content .patient-header-card4-spans2 {
   position: relative;
-  width: 128px;
-  padding-top: 134px;
 }
-.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans2 .patient-header-card4-span3 {
-  padding-bottom: 10px;
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-container .patient-header-card4-content .patient-header-card4-spans2 .patient-header-card4-span3 {
   font-size: 10px;
   text-align: center;
   padding-left: 21px;
 }
-.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-spans2::before {
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-container .patient-header-card4-content .patient-header-card4-spans2::before {
   content: "";
   position: absolute;
-  width: 27px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
   border-radius: 37%;
-  left: 6%;
-  top: 82%;
+  left: 9%;
+  top: 12%;
   background-color: #00ff22;
 }
-.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-span4 {
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-container .patient-header-card4-span4 {
   font-size: 10px;
   text-align: center;
   padding-left: 23px;
 }
-.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-content .patient-header-card4-span4::before {
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-container .patient-header-card4-span4::before {
   content: "";
   position: absolute;
-  width: 27px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
   border-radius: 37%;
-  left: 6%;
-  top: 95%;
+  left: 9%;
+  top: 72%;
   background-color: #00ff22;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-chart6-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.Patient-container .patient-overview .patient-header-card4 .patient-header-card4-chart6-container .patient-header-card4-chart6 {
+  width: 200px;
+  height: 150px;
 }
 .Patient-container .filtersAndTable {
   display: grid;
   grid-area: 3/2/-1/-1;
   grid-template-columns: 1fr 4fr;
   grid-gap: 1vw;
+  margin: 25px 25px 25px 25px;
+  background-color: white;
+  border-radius: 15px;
 }
 .Patient-container .filtersAndTable .edit-filters {
   grid-area: 1/1/2/2;
 }
 .Patient-container .filtersAndTable .patient-data {
   grid-area: 1/2/2/-1;
+}
+.Patient-container .filtersAndTable .patient-operation {
+  padding: 0.5vw;
+  display: grid;
+  grid-area: 1/1/-1/-1;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 15px;
+  height: 100%;
+  width: 100%;
+}
+.Patient-container .filtersAndTable .patient-operation a {
+  text-decoration: none;
+  color: #1e90ff;
+}
+.Patient-container .filtersAndTable .patient-operation .operations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 15px 0px 15px;
+}
+.Patient-container .filtersAndTable .patient-operation .operations h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.Patient-container .filtersAndTable .patient-operation .operations .filter-operation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Patient-container .filtersAndTable .patient-operation .operations .filter-operation .edit-p {
+  font-size: 25px;
+}
+.Patient-container .filtersAndTable .patient-operation .operations .types-operations {
+  display: flex;
+  justify-content: space-between;
+}
+.Patient-container .filtersAndTable .patient-operation .operations .types-operations .types ul > li {
+  list-style: none;
+}
+.Patient-container .filtersAndTable .patient-operation .operations .types-operations .types ul > li span {
+  margin-left: 7px;
+  color: #333333;
+  font-size: 14px;
+}
+.Patient-container .filtersAndTable .patient-operation .operations .date-patient {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #757575;
+  width: 80%;
+  border-radius: 3px;
+}
+.Patient-container .filtersAndTable .patient-operation .operations .button-pause {
+  outline: none;
+  border: none;
+  background-color: #2ed573;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage {
+  height: 100%;
+  width: 100%;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1.5fr 3fr repeat(3, 4fr) 3fr 2fr;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item {
+  color: #757575;
+  font-weight: 400;
+  text-align: center;
+  font-size: 0.7vw;
+  display: grid;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item--1 {
+  grid-column: 1/3;
+  display: grid;
+  justify-content: start;
+  align-content: end;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item--1 .patientData {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.5vw;
+  justify-content: start;
+  align-content: end;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item--2 {
+  grid-column: 3/4;
+  grid-template-rows: auto;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item--2 .search .search-input {
+  border-radius: 100px;
+  position: relative;
+  outline: none;
+  border: 1px solid gray;
+  padding: 0.1vw 2vw;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item--2 .search .search-input:focus {
+  outline: none;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item--2 .search .search-icon {
+  position: absolute;
+  align-items: center;
+  z-index: 100;
+  font-size: 18px;
+  padding: 6px 0 0 6px;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item--3 {
+  grid-column: 4/-1;
+  display: grid;
+  grid-template-columns: 5vw auto auto auto auto auto;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item--3 .select {
+  background-color: #fff;
+  margin-left: 0.4vw;
+  padding: 0.2vw;
+  border: 1px solid #757575;
+  border-radius: 5px;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item--3 .patientName {
+  grid-area: 1/2/2/3;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item--3 .nurseName {
+  grid-area: 1/3/2/4;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item--3 .type {
+  grid-area: 1/4/2/5;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item--3 .Status {
+  grid-area: 1/5/2/6;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .header-table-dashboard3 .item--3 .update {
+  grid-area: 1/6/2/7;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 {
+  width: 100%;
+  border-collapse: collapse;
+  height: 90%;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 th, .Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 td {
+  padding: 6px 0 3px 0;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 td {
+  color: #646D82;
+  font-size: 0.8em;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 .thead-table-dashboard3 {
+  border-bottom: 1px solid #C5C9CC;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 .thead-table-dashboard3 th {
+  text-transform: capitalize;
+  color: #C5C9CC;
+  font-size: 1em;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 .tbody-table-dashboard3 {
+  text-align: center;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 .tbody-table-dashboard3 tr.row {
+  border-bottom: 1px solid #C5C9CC;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 .tbody-table-dashboard3 .consultation {
+  color: #FFCD54;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 .tbody-table-dashboard3 tr > td > i {
+  font-size: 10px;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 .tbody-table-dashboard3 tr > td > .examine-type {
+  color: #34B53A;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 .tbody-table-dashboard3 tr > td > .radiology-type {
+  color: #2ed573;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 .tbody-table-dashboard3 tr > td > .emergery-type {
+  color: #D24646;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 .tbody-table-dashboard3 tr > td > .surgery-type {
+  color: #1e90ff;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 .tbody-table-dashboard3 .patient-name:hover p {
+  display: none;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 .tbody-table-dashboard3 .patient-name:hover:before {
+  content: "Dr.Lance Bogrol";
+  color: #70a1ff;
+}
+.Patient-container .filtersAndTable .patient-operation .table-patientPage .table-dashboard3 .tbody-table-dashboard3 .nurse-name:hover {
+  color: #70a1ff;
 }
 
 @media only screen and (max-width: 600px) {
@@ -3249,4 +3475,785 @@ html, body {
   .Patient-container .filtersAndTable .patient-data {
     grid-area: 1/2/2/-1;
   }
+}
+.examination_description_main {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.examination_description_main .examination_description_container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  background-color: white;
+}
+.examination_description_main .examination_description_container .examination_description_nav {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.examination_description_main .examination_description_container .examination_description_nav .examination_description_nav_left {
+  width: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.examination_description_main .examination_description_container .examination_description_nav .examination_description_nav_left .examination_description_nav_left_image img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+}
+.examination_description_main .examination_description_container .examination_description_nav .examination_description_nav_right {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  flex-flow: row-reverse wrap;
+  justify-content: space-around;
+}
+.examination_description_main .examination_description_container .examination_description_nav .examination_description_nav_right .examination_description_nav_right_sign {
+  color: red;
+  font-size: 25px;
+}
+.examination_description_main .examination_description_container .examination_description_nav .examination_description_nav_right .examination_description_nav_right_p .examination_description_nav_right_p1 {
+  color: #a6b1c2;
+}
+.examination_description_main .examination_description_container .examination_description_nav .examination_description_nav_right .examination_description_nav_right_p .examination_description_nav_right_p2 {
+  color: #a6b1c2;
+}
+.examination_description_main .examination_description_container .examination_description_inputs {
+  width: 95%;
+}
+.examination_description_main .examination_description_container .examination_description_inputs .examination_description_input1_content .examination_description_input1 {
+  width: 100%;
+  border-radius: 15px;
+  outline: none;
+  padding: 10px 10px;
+  overflow: hidden;
+  resize: none;
+  border: 1px solid gray;
+  height: 120px;
+}
+.examination_description_main .examination_description_container .examination_description_inputs .examination_description_input2_content .examination_description_input2 {
+  width: 100%;
+  border-radius: 15px;
+  outline: none;
+  padding: 10px 10px;
+  overflow: hidden;
+  resize: none;
+  border: 1px solid gray;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container {
+  width: 95%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 350px;
+  margin-top: 10px;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 48.5%;
+  background-color: #fffbf0;
+  border-radius: 10px;
+  padding: 0 15px;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card1 .card1_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card1 .card1_content .right_content1 {
+  display: flex;
+  align-items: center;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card1 .card1_content .right_content1 .right_content1_span {
+  color: #a6b1c2;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card1 .card1_content .left_content1 .left_content1_p {
+  color: #a6b1c2;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card1 .chart1 {
+  width: 340px;
+  height: 50px;
+  align-self: center;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 48.5%;
+  background-color: #f0faf8;
+  border-radius: 10px;
+  padding: 0 15px;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card2 .card2_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card2 .card2_content .right_content2 {
+  display: flex;
+  align-items: center;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card2 .card2_content .right_content2 .right_content2_span {
+  color: #a6b1c2;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card2 .card2_content .right_content2 .right_content2_h {
+  color: #2cd889;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card2 .card2_content .left_content2 .left_content2_p {
+  color: #a6b1c2;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card2 .chart2 {
+  width: 340px;
+  height: 50px;
+  align-self: center;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 48.5%;
+  background-color: #fff7f8;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 0 15px;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card3 .card3_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card3 .card3_content .right_content3 {
+  display: flex;
+  align-items: center;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card3 .card3_content .right_content3 .right_content3_span {
+  color: #a6b1c2;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card3 .card3_content .right_content3 .right_content3_h {
+  color: #f46363;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card3 .card3_content .left_content3 .left_content3_p {
+  color: #f46363;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card3 .chart3 {
+  width: 340px;
+  height: 50px;
+  align-self: center;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 48.5%;
+  background-color: #f0faf8;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 0 15px;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card4 .card4_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card4 .card4_content .right_content4 {
+  display: flex;
+  align-items: center;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card4 .card4_content .right_content4 .right_content4_span {
+  color: #a6b1c2;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card4 .card4_content .right_content4 .right_content4_h {
+  color: #2cd889;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card4 .card4_content .left_content4 .left_content4_p {
+  color: #a6b1c2;
+}
+.examination_description_main .examination_description_container .examination_description_cards_container .examination_description_cards_container_card4 .chart4 {
+  width: 340px;
+  height: 50px;
+  align-self: center;
+}
+.examination_description_main .examination_description_upload_icon {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  width: 95%;
+  margin-top: 10px;
+}
+.examination_description_main .examination_description_upload_icon span {
+  color: red;
+}
+.examination_description_main .examination_description_upload_icon .examination_description_upload_icon_p {
+  font-size: 18px;
+}
+.examination_description_main .examination_description_date {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  width: 95%;
+}
+.examination_description_main .examination_description_date .next_consolution {
+  width: 210px;
+}
+.examination_description_main .examination_description_date .next_consolution h5 {
+  color: #a6b1c2;
+}
+.examination_description_main .examination_description_date .next_date {
+  display: flex;
+  height: 30px;
+  width: 210px;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid gray;
+}
+
+.SurgeryContainer {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 2fr 7fr;
+  grid-template-columns: 0.5fr 4.5fr 4.5fr;
+  background-color: #FBFCFC;
+}
+.SurgeryContainer .SurgeryNav {
+  grid-area: 1/2/2/-1;
+  background-color: white;
+  margin-bottom: 25px;
+}
+.SurgeryContainer .SurgeryNav .navbar-component {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+.SurgeryContainer .SurgeryNav .navbar-component .nav_left {
+  width: 25%;
+  display: flex;
+}
+.SurgeryContainer .SurgeryNav .navbar-component .nav_left .doctor_info .doctor-name {
+  font-size: 18px;
+}
+.SurgeryContainer .SurgeryNav .navbar-component .nav_left .doctor_info .department {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.SurgeryContainer .SurgeryNav .navbar-component .doctor_status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+.SurgeryContainer .SurgeryNav .navbar-component .doctor_status .line {
+  background-color: #C5C9CC;
+  width: 2px;
+  height: 45px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.SurgeryContainer .SurgeryNav .navbar-component .doctor_status .circle {
+  background-color: #7bed9f;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+}
+.SurgeryContainer .SurgeryNav .navbar-component .doctor_status .Work_status {
+  margin-bottom: 0;
+}
+.SurgeryContainer .SurgeryNav .navbar-component #dclock {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+}
+.SurgeryContainer .SurgeryNav .navbar-component #dclock p {
+  font-size: 40px;
+  margin-top: 10px;
+}
+.SurgeryContainer .SurgeryNav .navbar-component #dclock p span {
+  font-size: 30px;
+  font-weight: bold;
+}
+.SurgeryContainer .SurgeryNav .navbar-component .nav_icons {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 25%;
+  color: #20d573;
+}
+.SurgeryContainer .SurgeryNav .navbar-component .nav_icons a {
+  font-size: 20px;
+  margin-right: 25px;
+  color: #7BED9F;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+.SurgeryContainer .SurgeryNav .navbar-component .nav_icons a .fa-cog {
+  color: #1e90ff;
+}
+.SurgeryContainer .SurgeryNav .navbar-component .nav-notification {
+  border-radius: 50%;
+  background-color: white;
+  color: red;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  right: 9.2%;
+  top: 50%;
+  font-size: 8px;
+  box-shadow: 0 3px 3px gray;
+  display: none;
+}
+.SurgeryContainer .SurgeryNav .navbar-component .nav-message {
+  border-radius: 50%;
+  background-color: white;
+  color: red;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  right: 6%;
+  top: 50%;
+  font-size: 8px;
+  box-shadow: 0 3px 3px gray;
+  display: none;
+}
+.SurgeryContainer .SurgerySide {
+  grid-area: 1/1/-1/2;
+  background-color: white;
+}
+.SurgeryContainer .SurgerySide .side_menu {
+  background-color: white;
+  height: 100vh;
+  padding: 0 10px;
+}
+.SurgeryContainer .SurgerySide .side_menu .side-menu-img-container {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.SurgeryContainer .SurgerySide .side_menu .side-menu-img-container .side-menu-img {
+  width: 100%;
+  border-radius: 50%;
+}
+.SurgeryContainer .SurgerySide .side_menu .side-menu-icons {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.SurgeryContainer .SurgerySide .side_menu .side-menu-icons .icons-container {
+  margin-top: 10px;
+}
+.SurgeryContainer .SurgerySide .side_menu .side-menu-icons .side-menu-icon {
+  margin-bottom: 20px;
+}
+.SurgeryContainer .SurgerySide .side_menu .side-menu-icons .side-menu-icon:hover {
+  color: #7BED9F;
+}
+.SurgeryContainer .SurgerySide .icons-container:hover + #talkbubble-dash {
+  display: block;
+  background-color: #856404;
+}
+.SurgeryContainer .SurgerySide #talkbubble-dash {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 11%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.SurgeryContainer .SurgerySide #talkbubble-dash:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.SurgeryContainer .SurgerySide #talkbubble-room {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.SurgeryContainer .SurgerySide #talkbubble-room:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.SurgeryContainer .SurgerySide #talkbubble-nurse {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 24%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.SurgeryContainer .SurgerySide #talkbubble-nurse:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.SurgeryContainer .SurgerySide #talkbubble-patient {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 30.5%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.SurgeryContainer .SurgerySide #talkbubble-patient:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.SurgeryContainer .SurgerySide #talkbubble-surgery {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 37%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.SurgeryContainer .SurgerySide #talkbubble-surgery:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.SurgeryContainer .SurgerySide #talkbubble-signout {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 43%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.SurgeryContainer .SurgerySide #talkbubble-signout:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.SurgeryContainer .SurgerySide #talkbubble {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 49%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.SurgeryContainer .SurgerySide #talkbubble:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.SurgeryContainer .leftComponent {
+  grid-area: 2/2/3/3;
+  background-color: white;
+  margin-left: 25px;
+  border-radius: 15px;
+}
+.SurgeryContainer .rightComponent {
+  grid-area: 2/3/3/-1;
+  background-color: white;
+  border-radius: 15px;
+  margin-right: 25px;
+}
+.SurgeryContainer .SurgeryTable {
+  grid-area: 3/2/-1/-1;
+  background: white;
+  border-radius: 15px;
+  margin: 25px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage {
+  background-color: #ebeaea;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column wrap;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableBoxHeader {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableBoxHeader .leftTitle {
+  display: flex;
+  flex-flow: row wrap;
+  width: 200px;
+  color: #777;
+  font-weight: 500;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableBoxHeader .searchInput {
+  width: 300px;
+  height: 100%;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableBoxHeader .searchInput .formInput {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  position: relative;
+  color: #999;
+  align-self: center;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableBoxHeader .searchInput .formInput .searchIcon {
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  align-self: center;
+  padding: 5px;
+  font-size: 10px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableBoxHeader .searchInput .formInput .searchInput {
+  width: 90%;
+  position: absolute;
+  outline: none;
+  border: 1px solid #999;
+  padding: 3px;
+  border-radius: 100px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableBoxHeader .selectionContainer .formSelect {
+  display: flex;
+  justify-content: end;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableBoxHeader .selectionContainer .formSelect select {
+  background-color: #fff;
+  outline: none;
+  margin: 0 5px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 10px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table {
+  width: 100%;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr th:nth-child(2) {
+  width: 170px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr th:nth-child(2) h4 {
+  padding-left: 35px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr th:nth-child(3) {
+  width: 170px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr th:nth-child(3) h4 {
+  padding-left: 20px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr th:nth-child(4) {
+  width: 170px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr th:nth-child(4) h4 {
+  padding-left: 20px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr th:nth-child(5) {
+  width: 170px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr th:nth-child(5) h4 {
+  padding-left: 20px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr th:nth-child(6) {
+  width: 170px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr th:nth-child(7) {
+  width: 170px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr th h4 {
+  font-size: 15px;
+  color: #999;
+  font-weight: 600;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr th:nth-child(8) {
+  width: 70px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table thead tr th:nth-child(8) h4 {
+  padding-right: 20px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #b1b0b0;
+  padding: 5px;
+  padding-top: 20px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr td:nth-child(2) {
+  width: 120px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr td:nth-child(3) {
+  width: 120px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr td:nth-child(4) {
+  width: 120px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr td:nth-child(5) {
+  width: 120px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr td:nth-child(6) {
+  width: 120px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr td:nth-child(7) {
+  width: 120px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr td p {
+  font-size: 13px;
+  color: #999;
+  font-weight: 400;
+  text-align: center;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr td .status {
+  font-size: 12px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr td .addingBtn {
+  outline: none;
+  background: #fff;
+  background: #fff;
+  outline: none;
+  border: none;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr td .addingBtn .addNurse {
+  font-size: 13px;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr .patient-1 {
+  color: green;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr .patient-2 {
+  color: gray;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr .patient-3 {
+  color: green;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr .patient-4 {
+  color: darkred;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr .patient-5 {
+  color: green;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr .patient-6 {
+  color: darkred;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr .patient-7 {
+  color: gray;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr .patient-8 {
+  color: green;
+}
+.SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr .patient-9 {
+  color: green;
 }

@@ -1,4 +1,6 @@
-(function() {
+if(document.body.contains(document.getElementById('countdown-hour'))) {
+
+    (function() {
     let start = new Date;
     start.setHours(16, 0, 0); // 11pm
 
@@ -26,3 +28,4 @@
 
     document.addEventListener('DOMContentLoaded', tick);
 })();
+}

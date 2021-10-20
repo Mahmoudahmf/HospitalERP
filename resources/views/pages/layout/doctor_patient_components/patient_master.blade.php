@@ -63,4 +63,6 @@
 
     </div>
 
-    @include('pages.layout.footer')
+    @include('pages.layout.doctor_patient_components.patient_popup')
+
+@include('pages.layout.footer')
