@@ -14,7 +14,7 @@ class EmployesController extends Controller
     public function index()
     {
         $employes=H_employees::get();
-        return view('pages.backend.h_employes.index',compact('employes'));
+        return view('pages.backend.admins.h_employes.index',compact('employes'));
     }
 
     
@@ -45,7 +45,7 @@ class EmployesController extends Controller
     public function edit($id)
     {
         $employes = H_employees::findorfail($id);
-        return view('pages.backend.h_employes.edit', compact('employes'));
+        return view('pages.backend.admins.h_employes.edit', compact('employes'));
     }
 
     public function store(Request $request)

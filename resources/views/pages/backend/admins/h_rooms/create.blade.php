@@ -22,27 +22,17 @@
                  </td>
              
                  <td>
-                 <label>الفترة - المسائية</label>
+                 <label>الممرضات </label>
                  <br/>
-                    <select class="form-control"  multiple=""  name="m_nurseId[]" >
+                    <select class="form-control"   name="nurseId" >
                         <option selected  disabled>Choosed</option>
                         @foreach($h_nurses as $h_nurse)
-                            <option value="{{$h_nurse->id}}">{{$h_nurse->name}}</option>
+                            <option value="{{$h_nurse->id}}">{{$h_nurse->name}} ({{$h_nurse->from_date}} To {{$h_nurse->to_date}})</option>
                         @endforeach;
                     </select> 
                             
                  </td>
-                 <td>
-                 <label>الفترة الصباحية</label>
-                 <br/>
-                 <select  multiple="multiple" required name="n_nurseId[]">
-                        <option selected  disabled>Choosed</option>
-                        @foreach($h_nurses as $h_nurse)
-                            <option value="{{$h_nurse->id}}">{{$h_nurse->name}}</option>
-                        @endforeach;
-                    </select>  
-                   
-                 </td>
+                
                </tr>
              </table>
              <br/>

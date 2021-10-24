@@ -20,6 +20,7 @@
         <th>القسم التابع لها</th>
         <th>الحالة</th>
         <th>الصلاحية</th>
+        <th>ميعاد العمل</th>
         <th>العمليات</th>
       </tr>
    </thead>
@@ -34,6 +35,9 @@
          <td>{{$nurses->department->name}}</td>
          <td>{{$nurses->status==1?'نشط':'غير نشط'}}</td>
          <td>{{$nurses->role==3?'ممرض':'غير ذلك'}}</td>
+         <td>from :{{$nurses->from_date}}
+             To: {{$nurses->to_date}}
+         </td>
          <td>
           <a href="{{route('editnurses',$nurses->id)}}">تعديل </a>
           <a href="{{route('deletenurses',$nurses->id)}}">حذف </a>
@@ -43,5 +47,5 @@
    </tbody>
 </table>
 <hr/>
-@include('pages.backend.h_nurses.create')
+@include('pages.backend.admins.h_nurses.create')
 <hr><hr>

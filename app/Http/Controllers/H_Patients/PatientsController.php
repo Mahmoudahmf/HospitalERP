@@ -4,82 +4,62 @@ namespace App\Http\Controllers\H_Patients;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\H_patients;
 class PatientsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function index()
     {
-        //
+        $patients=H_patients::get();
+        return view('pages.backend.h_patients.index',compact('patients'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        // return $request;
+        $validated = $request->validate([
+            'name' => 'required',
+            'nationality_id'=>'required|string|min:14|max:14',
+            'phone'=>'required|string',
+         ]);
+        H_patients::create([
+            'name'=>$request->name,
+            'nationality_id'=>$request->nationality_id,
+            'phone'=>$request->phone,
+            'title'=>$request->title,
+            'address'=>$request->address,
+            'bloodtype'=>$request->bloodtype,
+            'description'=>$request->description,
+        ]);
+        return redirect()->route('patients');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $patient=H_patients::findorfail($id);
+        return view('pages.backend.h_patients.edit',compact('patient'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function store(Request $request)
     {
-        //
+        // return $request;
+        H_patients::findorfail($request->id)->update([
+            'name'=>$request->name,
+            'nationality_id'=>$request->nationality_id,
+            'phone'=>$request->phone,
+            'title'=>$request->title,
+            'address'=>$request->address,
+            'bloodtype'=>$request->bloodtype,
+            'description'=>$request->description,
+            'status'=>$request->status,
+        ]);
+        return redirect()->route('patients');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy($id)
     {
-        //
+        H_patients::findorfail($id)->delete();
+        return redirect()->route('patients');
     }
 }

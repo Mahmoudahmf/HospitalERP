@@ -6,12 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class H_patients extends Model
-{
-    use HasFactory;
+class H_rays extends Model
+{    
+    
     use SoftDeletes;
-
-    protected $fillable=['name','nationality_id','phone','attachment','title'
-    ,'status','address','bloodtype','description'
-     ];
+    use HasFactory;
+    // protected $table=['h_rays'];
+    protected $fillable=['name','cost','type'];
 }

@@ -13,7 +13,7 @@ class DepartmentsController extends Controller
     public function index()
     {
         $departments=H_Departments::all();  
-        return view('pages.backend.h_departments.index',compact('departments'));
+        return view('pages.backend.admins.h_departments.index',compact('departments'));
     }
 
    
@@ -31,7 +31,7 @@ class DepartmentsController extends Controller
     public function edit($id)
     {
         $depart=H_Departments::findorfail($id);
-        return view('pages.backend.h_departments.edit',compact('depart'));
+        return view('pages.backend.admins.h_departments.edit',compact('depart'));
     }
 
 
@@ -54,5 +54,7 @@ class DepartmentsController extends Controller
       H_Departments::findorfail($id)->delete();
       return redirect()->route('showdepartments');
     }
+
+    
 
 }

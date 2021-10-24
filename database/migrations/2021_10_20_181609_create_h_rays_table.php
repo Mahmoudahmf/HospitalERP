@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHRoomsTable extends Migration
+class CreateHRaysTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateHRoomsTable extends Migration
      */
     public function up()
     {
-        Schema::create('h_rooms', function (Blueprint $table) {
+        Schema::create('h_rays', function (Blueprint $table) {
             $table->id();
-            $table->string('room_number');
-            $table->string('floor_no');
-            $table->boolean('status')->default(1);
-            $table->string('duration')->default(0);
-            $table->foreignId('nurseId')->references('id')->nullable()->on('h_nurses')->onDelete('cascade');
+            $table->string('name');
+            $table->double('cost');
+            $table->integer('type');
             $table->timestamps();
             $table->softDeletes();
+
         });
     }
 
@@ -32,6 +31,6 @@ class CreateHRoomsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('h_rooms');
+        Schema::dropIfExists('h_rays');
     }
 }

@@ -15,7 +15,7 @@ class CreateHOperationsTable extends Migration
     {
         Schema::create('h_operations', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            // $table->string('name');
             $table->string('type');
             $table->integer('cost');
             $table->foreignId('patien_id')->references('id')->on('h_patients')->onDelete('cascade');
@@ -24,6 +24,7 @@ class CreateHOperationsTable extends Migration
             $table->foreignId('room_id')->references('id')->on('h_rooms')->onDelete('cascade');
             //Emp register Data
             $table->foreignId('emp_id')->references('id')->on('h_employees');
+            $table->string('reversation_num',6);
             $table->string('description');
             $table->timestamps();
             $table->softDeletes();

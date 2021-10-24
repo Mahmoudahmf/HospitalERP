@@ -22,6 +22,9 @@
         <td>
             <a href="{{route('showedoctors')}}">تسجيل الأطباء</a>
         </td>
-        
+        <td>
+            <a href="{{route('showerays')}}">تسجيل الأشعة والتحاليل</a>
+        </td>
+       
     </tr>
 </table>

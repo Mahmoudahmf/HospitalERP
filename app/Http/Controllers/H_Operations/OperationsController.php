@@ -3,81 +3,73 @@
 namespace App\Http\Controllers\H_Operations;
 
 use App\Http\Controllers\Controller;
+use App\Models\H_departments;
+use App\Models\H_operations;
+use App\Models\H_patients;
+use App\Models\H_rays;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+// Use Carbon\Carbon;
 class OperationsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    
+    public function index($id)
     {
-        //
+        // $examid=H_operations::
+        $data['patient']=H_patients::findorfail($id);
+        // return $data['patient'];
+        $data['departments']=H_departments::get();
+        $data['rays']=H_rays::where('type',1)->get();
+        $data['Analytics']=H_rays::where('type',2)->get();
+        return view('pages.backend.h_operations.create',$data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function create(Request $request)
     {
-        //
+     return $request;
+        $examid=H_operations::where('type',1)->where('doctor_id',$request->doctor_id)->where('created_at','LIKE',date('Y-m-d').'%')->get()->count()+1;
+        H_operations::create([
+          'type'=>$request->type,
+          'cost'=>$request->cost,
+          'patien_id'=>$request->patienid,
+          'doctor_id'=>$request->doctor_id,
+          'dept_id'=>$request->depart_id,
+          'room_id'=>DB::table('h_rooms')->where('room_number', $request->room_no)->first()->id,
+          'description'=>$request->description,
+          'reversation_num'=>$examid,
+          'emp_id'=>Auth::user()->id,
+        ]);
+        return redirect('/reservations')->with('msg','Success Add');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
+    
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    
+    public function show()
     {
-        //
+        $Operations=H_operations::all();
+        // return $Operations;
+        return view('pages.backend.h_operations.reservation',compact('Operations'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //

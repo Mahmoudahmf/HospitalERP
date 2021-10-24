@@ -13,48 +13,53 @@ class RoomsController extends Controller
     {
         $h_rooms=H_rooms::all();
         $h_nurses=H_nurse::all();
-        return view('pages.backend.h_rooms.index',compact('h_rooms','h_nurses'));
+        return view('pages.backend.admins.h_rooms.index',compact('h_rooms','h_nurses'));
     }
 
     public function create(Request $request)
     {
-        //return $request;
-        // $m_nurseId=implode(',',$request->m_nurseId);
-        //  return $m_nurseId;
-        H_rooms::create([
+        $validated = $request->validate([
+            'RoomId' => 'required|unique:h_rooms,room_number,',
+            'FloorNumber'=>'required|string',
+            'nurseId'=>'required|string',
+         ]);
+                 H_rooms::create([
             'room_number'=>$request->RoomId,
             'floor_no'=>$request->FloorNumber,
-            // 'm_nurseId'=>implode(',',$request->m_nurseId),
-            // 'm_nurseId'=>attach($request->teacher_id),
-
-            'n_nurseId'=>$request->n_nurseId,
+            'nurseId'=>$request->nurseId,
         ]);
 
         return redirect()->route('showerooms');
     }
 
-    public function store(Request $request)
-    {
-        //
-    }
-
-    public function show($id)
-    {
-        //
-    }
-
     public function edit($id)
     {
-        //
+        // return $id;
+        $rooms=H_rooms::findorfail($id);
+        // return $rooms;
+        $nurses=H_nurse::all();
+        return view('pages.backend.admins.h_rooms.edit',compact('rooms','nurses'));
     }
-
-    public function update(Request $request, $id)
+    public function store(Request $request)
     {
+        // return $request;
+        $validated = $request->validate([
+            'RoomId' => 'required|unique:h_rooms,room_number,'.$request->RoId,
+            'FloorNumber'=>'required|string',
+            'nurseId'=>'required|string',
+         ]);
+        H_rooms::findorfail($request->RoId)->update([
+        'room_number'=>$request->RoomId,
+        'floor_no'=>$request->FloorNumber,
+        'nurseId'=>$request->nurseId,
+       ]);
+       return redirect()->route('showerooms');
 
     }
 
     public function destroy($id)
     {
-
+         H_rooms::findorfail($id)->delete();
+         return redirect()->route('showerooms');
     }
 }

@@ -20,9 +20,9 @@ class H_EmployesTableSeeder extends Seeder
            'username'=>'em_ahmedali',
            'password'=>Hash::make('11111111'),
            'name'=>'ahmedali',
-           'role'=>'1',
+           'role'=>'4',
            'phone'=>'3631373',
-           'title'=>'مسئول امن',
+           'title'=>'استقبال',
            'status'=>'1',
            'salary'=>'1000',
        ]);

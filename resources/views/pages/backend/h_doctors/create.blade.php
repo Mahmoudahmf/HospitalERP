@@ -49,13 +49,32 @@
                  <td>
                 <select name="room_id">
                    <option value="" selected disabled>أختر الغرفة</option>
-                   @foreach($rooms as $room)
+                   @foreach($h_rooms as $room)
                     <option value="{{$room->id}}">{{$room->room_number}}/{{$room->floor_no}}</option>
                    @endforeach;
                 </select>
                 </td>
                </tr>
+               <tr>
+                 <td>
+                    <label>من</label>
+                     <input  type="text"  value="" name="from_date" />
+                 </td>
+                 <td>
+                    <label>إلي</label>
+                    <input type="text" value="" name="to_date" />
+                 </td>
+               </tr>
+               <tr>
+                <td>
+                  <label>سعر الكشف</label>
+                  <input type="text" value="" placeholder="Enter Cost" name="cost"
+                  oninput="this.value = this.value.replace(/[^0-9.]/, '.').replace(/(\..*)\./g, '$1',);" />
+                </td>
+               </tr>
              </table>
+             <hr>
               <input type="submit" value="حفظ" >
+
         </form>
 </div>

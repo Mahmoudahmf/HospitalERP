@@ -23,10 +23,14 @@ class CreateHDoctorsTable extends Migration
             $table->string('phone');
             $table->string('attachment')->nullable();
             $table->string('salary');
+            $table->double('cost');
             $table->foreignId('dept_id')->references('id')->on('h_departments')->onDelete('cascade');
             $table->foreignId('room_id')->references('id')->on('h_rooms')->onDelete('cascade');
-          //status means active or disactive
+            $table->string('from_date')->nullable();
+            $table->string('to_date')->nullable();
+            //status means active or disactive
             $table->boolean('status')->default(1);
+            // $table->string('shift');
             $table->timestamps();
             $table->softDeletes();
 

@@ -49,6 +49,16 @@
                  </td>
                 
                </tr>
+               <tr>
+                 <td>
+                    <label>من</label>
+                     <input  type="text"  value="" name="from_date" />
+                 </td>
+                 <td>
+                    <label>إلي</label>
+                    <input type="text" value="" name="to_date" />
+                 </td>
+               </tr>
              </table>
               <input type="submit" value="حفظ" >
         </form>

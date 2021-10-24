@@ -42,4 +42,4 @@
 </table>
 <hr/>
 <hr><hr>
-@include('pages.backend.h_employes.create')
+@include('pages.backend.admins.h_employes.create')

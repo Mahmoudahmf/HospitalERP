@@ -16,8 +16,7 @@
         <th>الطابق</th>
         <th>حالة الغرفة</th>
         <th>المدة</th>
-        <th>ممرضات  - صباحا</th>
-        <th>ممرضات - مساءً</th>
+        <th>ممرضات</th>
         <th>العمليات</th>
       </tr>
    </thead>
@@ -28,11 +27,10 @@
          <td>{{$rooms->floor_no}}</td>
          <td>{{$rooms->status==1?'Avilabel':'Busy'}}</td>
          <td>{{$rooms->duration}}</td>
-         <td></td>
-         <td></td>
+         <td>{{$rooms->nurses->name}}</td>
          <td>
-          <a href="{{route('editnurses',$rooms->id)}}">تعديل </a>
-          <a href="{{route('deletenurses',$rooms->id)}}">حذف </a>
+          <a href="{{route('editrooms',$rooms->id)}}">تعديل </a>
+          <a href="{{route('deleterooms',$rooms->id)}}">حذف </a>
          </td>
       </tr>
       @endforeach;
@@ -41,5 +39,5 @@
 <hr/>
 
 <br/>
-@include('pages.backend.h_rooms.create')
+@include('pages.backend.admins.h_rooms.create')
 

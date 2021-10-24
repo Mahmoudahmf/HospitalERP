@@ -40,6 +40,7 @@ class AuthenticatedSessionController extends Controller
     public function store(Request $request)
     {
        
+        // return $request;
         $logAccess=substr($request->username,0,3);
         // return $logAccess;
         $this->validate($request, [
@@ -90,6 +91,7 @@ class AuthenticatedSessionController extends Controller
                             if(auth()->guard('employes')->attempt([
                                 'username' => $request->username,
                                 'password' => $request->password,
+                                'role'=>'4',
                             ])) 
                             {
                                 return redirect(RouteServiceProvider::H_employes);

@@ -66,6 +66,16 @@
                     </select>
                  </td>
                </tr>
+               <tr>
+                 <td>
+                    <label>من</label>
+                     <input  type="text"  value="{{$nuress->from_date}}" name="from_date" />
+                 </td>
+                 <td>
+                    <label>إلي</label>
+                    <input type="text" value="{{$nuress->to_date}}" name="to_date" />
+                 </td>
+               </tr>
              </table>
               <br>   
                 <input type="submit" value="حفظ" >

@@ -39,7 +39,7 @@
                             <i class="fal fa-lock-alt"></i>
                         </div>
                         <div>
-                            <input type="text" name="password" placeholder="Please Enter Your Password" required>
+                            <input  name="password" type="password" placeholder="Please Enter Your Password" required>
                         </div>
                     </div>
 

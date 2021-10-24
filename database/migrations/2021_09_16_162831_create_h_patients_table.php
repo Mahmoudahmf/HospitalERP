@@ -18,12 +18,12 @@ class CreateHPatientsTable extends Migration
             $table->string('name');
             $table->string('nationality_id',14);
             $table->string('phone');
-            $table->string('attachment');
-            $table->string('title');
+            $table->string('attachment')->nullable();
+            $table->string('title')->nullable();
             $table->boolean('status')->default(1);
-            $table->string('address');
-            $table->string('bloodtype');
-            $table->string('description');
+            $table->string('address')->nullable();
+            $table->string('bloodtype')->nullable();
+            $table->string('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

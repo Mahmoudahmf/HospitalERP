@@ -19,8 +19,7 @@ class RoomTableSeeder extends Seeder
             'floor_no'=>'1',
             'status'=>'1',
             'duration'=>'0',
-            'm_nurseId'=>'1',
-            'n_nurseId'=>'1',
+            'nurseId'=>'1',
         ]);
     }
 }

@@ -17,7 +17,7 @@ class H_nurse  extends Authenticatable
 
     protected $fillable=[
       'username','password','name','role','phone',
-                      'attachment','title','salary','dept_id','status'];
+                      'attachment','title','salary','dept_id','status','from_date','to_date'];
     protected $hidden = [
         'password',
         'remember_token',
@@ -30,5 +30,7 @@ class H_nurse  extends Authenticatable
      return $this->belongsto('App\Models\H_departments','dept_id');
   }
    
+
+  
 
 }

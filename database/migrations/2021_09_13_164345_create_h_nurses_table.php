@@ -24,6 +24,8 @@ class CreateHNursesTable extends Migration
             $table->string('title');
             $table->string('salary');
             $table->foreignId('dept_id')->references('id')->on('h_departments')->onDelete('cascade');
+            $table->string('from_date')->nullable();
+            $table->string('to_date')->nullable();
             $table->boolean('status')->default(1);
             $table->timestamps();
             $table->softDeletes();

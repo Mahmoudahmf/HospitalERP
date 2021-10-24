@@ -27,7 +27,7 @@ class H_doctorsTableSeeder extends Seeder
            'dept_id'=>'1',
            'room_id'=>'1',
            'status'=>'1',
-
+           'cost'=>100,
        ]);
     }
 }

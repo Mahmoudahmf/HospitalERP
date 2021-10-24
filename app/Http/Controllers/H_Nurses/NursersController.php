@@ -18,13 +18,15 @@ class NursersController extends Controller
     public function index()
     {
         $nurses = H_nurse::get();
+       // return $nurses;
         $departments = H_Departments::all();
-        return view('pages.backend.h_nurses.index', compact('departments', 'nurses'));
+        return view('pages.backend.admins.h_nurses.index', compact('departments', 'nurses'));
     }
 
 
     public function create(Request $request)
     {
+    // return $request;
         $validated = $request->validate([
             'name' => 'required',
             'username' => 'required|starts_with:nr_|unique:h_nurses,username,',
@@ -34,13 +36,15 @@ class NursersController extends Controller
          ]);
         H_nurse::create([
             'username' => $request->username,
-            'password'=> $request->password,
+            'password'=> Hash::make($request->password),
             'name'=>$request->name,
             'role' => 3,
             'phone' => $request->phone,
             'title' =>$request->title,
             'salary' => $request->salary,
             'dept_id' => $request->department,
+            'from_date'=>$request->from_date,
+            'to_date'=>$request->to_date,
         ]);
         return redirect()->back();
 
@@ -51,7 +55,7 @@ class NursersController extends Controller
     {
         $data['nuress'] = H_nurse::findorfail($id);
         $data['departments'] = H_Departments::all();
-        return view('pages.backend.h_nurses.edit', $data);
+        return view('pages.backend.admins.h_nurses.edit', $data);
     }
 
     public function store(Request $request)
@@ -73,6 +77,8 @@ class NursersController extends Controller
             'salary' => $request->salary,
             'dept_id' => $request->department,
             'status'=>$request->status_id,
+            'from_date'=>$request->from_date,
+            'to_date'=>$request->to_date,
         ]);
         return redirect()->route('showNurses');
     }

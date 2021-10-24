@@ -58,8 +58,8 @@
                  <td>
                  <label>الصلاحية</label>
                     <select class="form-control" name="role">
-                        <option value="3" {{$employes->role == '3' ? 'selected':''}}>استقبال</option>
-                        <option value="4" {{$employes->role == '4' ? 'selected':''}}>امن</option>
+                        <option value="4" {{$employes->role == '4' ? 'selected':''}}>استقبال</option>
+                        <option value="5" {{$employes->role == '5' ? 'selected':''}}>امن</option>
                     </select>
                  </td>
                </tr>
