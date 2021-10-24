@@ -27,7 +27,7 @@ class OperationsController extends Controller
 
     public function create(Request $request)
     {
-     return $request;
+    //  return $request;
         $examid=H_operations::where('type',1)->where('doctor_id',$request->doctor_id)->where('created_at','LIKE',date('Y-m-d').'%')->get()->count()+1;
         H_operations::create([
           'type'=>$request->type,
