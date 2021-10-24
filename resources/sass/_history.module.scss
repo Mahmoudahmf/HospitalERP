@@ -50,7 +50,6 @@
         grid-column: 2 / 3;
         display: grid;
         grid-template-rows: 1fr;
-        grid-template-columns: 1fr 5vw 5vw 1fr;
         justify-items: center;
         &-day{
             font-size:20px;

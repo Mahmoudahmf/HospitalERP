@@ -47,7 +47,7 @@ switch(stringDay){
 
     case("6"):
 
-        stringDay="Saterday";
+        stringDay="Saturday";
         break;
 
     default:
@@ -122,7 +122,11 @@ switch(month){
         "there is no day";
 }
 
-let dayIn = `${dayInNom} ${stringDay}`
+let dayIn = `${dayInNom}  ${stringDay}`
 let monthYear = ` , ${month} ${year}` ;
-document.querySelector("#historyDay").innerHTML = dayIn ;
-document.querySelector("#historyMonYear").innerHTML= monthYear;
+if (document.body.contains(document.querySelector("#historyDay"))){
+    document.querySelector("#historyDay").innerHTML = dayIn ;
+    document.querySelector("#historyMonYear").innerHTML= monthYear;
+
+
+}

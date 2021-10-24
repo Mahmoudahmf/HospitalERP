@@ -1,0 +1,302 @@
+.patient-operation{
+    padding: .5vw;
+    display: grid;
+    grid-area : 1 / 1 / -1/ -1;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 15px;
+    height: 100%;
+    width: 100%;
+    a{
+        text-decoration: none;
+        color: #1e90ff;
+    }
+
+    .operations{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        //align-items: center;
+        padding: 0 15px 0px 15px;
+        h3{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .filter-operation{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .edit-p{
+                font-size: 25px;
+            }
+
+        }
+
+        .types-operations{
+            display: flex;
+            justify-content: space-between;
+
+            .types{
+
+                ul>li{
+                    list-style: none;
+
+                    span{
+                        margin-left: 7px;
+                        color: #333333;
+                        font-size: 14px;
+                    }
+                }
+            }
+            //.container-arrow{
+            //    display: flex;
+            //    align-items: center;
+            //    justify-content: center;
+            //
+            //
+            //    .arrow{
+            //
+            //        width: 5rem;
+            //        height: 5rem;
+            //        border: 0.5rem solid;
+            //        border-bottom: 0;
+            //        border-left: 0;
+            //        border-radius: 1px;
+            //        text-indent: -9999 rem;
+            //        transform: rotate(45deg);
+            //        box-shadow: 0 2px 6px -3px yellow;
+
+                    //clip-path: polygon(0 0, 43% 53%, 43% 53%, 0 100%, 0% 50%);
+                    // box-shadow: 0 1px 3px rgba(0 , 0 , 0 , 0.12),
+                    // 0px 1px 2px rgba(0,0,0,0.24) ;
+
+
+
+
+
+        }
+        .date-patient{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border: 1px solid #757575;
+            width: 80%;
+            border-radius: 3px;
+        }
+
+
+        .button-pause{
+            outline: none;
+            border: none;
+            background-color:#2ed573 ;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+
+        }
+
+
+        //.button-pause:hover p {
+        //    display: none;
+        //}
+
+        //.button-pause:hover{
+        //    background-color: #fff;
+        //    color:#2ed573 ;
+        //    outline: 1px solid #7bed9f;
+        //    width: 100%;
+        //}
+
+    }
+
+
+    .table-patientPage{
+        height: 100%;
+        width: 100%;
+
+
+
+        .header-table-dashboard3{
+
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1.5fr 3fr repeat(3, 4fr) 3fr 2fr ;
+
+
+            .item{
+                color: #757575;
+                font-weight: 400;
+                text-align: center;
+                font-size: .7vw;
+                display: grid;
+                &--1{
+                    grid-column: 1 / 3  ;
+                    display: grid;
+                    justify-content: start;
+                    align-content: end;
+
+                    .patientData{
+                        color: rgba(0, 0, 0, 0.6);
+                        font-size: 1.5vw;
+                        //align-content: flex-end;
+                        justify-content: start;
+                        align-content: end;
+                    }
+                }
+
+                &--2{
+                    grid-column: 3 / 4 ;
+                    grid-template-rows: auto;
+                    .search{
+                        .search-input{
+                            border-radius: 100px;
+                            position: relative;
+                            outline: none;
+                            //border:none;
+                            border: 1px solid gray;
+                            padding: .1vw 2vw;
+                            &:focus{
+                                outline: none;
+                            }
+                        }
+                        .search-icon{
+                            position: absolute;
+                            align-items:center;
+                            //margin-top : .5vw ;
+                            //margin-left :.3vw ;
+                            z-index: 100;
+                            font-size: 18px;
+                            padding:6px 0 0 6px;
+                        }
+
+                    }
+                }
+
+
+                &--3{
+                    grid-column: 4 / -1  ;
+                    display: grid;
+                    grid-template-columns: 5vw auto auto auto auto auto;
+
+                    .select{
+                        background-color: #fff;
+                        margin-left: .4vw;
+                        padding : .2vw;
+                        border : 1px solid #757575;
+                        border-radius: 5px;
+                    }
+                    .patientName{
+                        grid-area: 1 / 2 / 2 / 3 ;
+                    }
+                    .nurseName{
+                        grid-area: 1 / 3 / 2 / 4 ;
+                    }
+                    .type{
+                        grid-area: 1 / 4 / 2 / 5 ;
+                    }
+                    .Status{
+                        grid-area: 1 / 5 / 2 / 6 ;
+                    }
+                    .update{
+                        grid-area: 1 / 6 / 2 / 7 ;
+                    }
+
+                }
+
+
+            }
+
+
+        }
+
+
+        .table-dashboard3{
+            width: 100%;
+            border-collapse: collapse;
+            height: 90%;
+            //border-left: 1px solid #48bb78;
+
+
+
+            th , td{
+                padding:6px 0 3px 0;
+            }
+
+            td{
+                color: #646D82;
+                font-size: .8em;
+            }
+            .thead-table-dashboard3{
+                border-bottom: 1px solid #C5C9CC;
+
+                th{
+                    text-transform: capitalize;
+                    color: #C5C9CC;
+                    font-size: 1em;
+
+                }
+            }
+
+
+            .tbody-table-dashboard3{
+                text-align: center;
+
+                tr.row{
+                    border-bottom: 1px solid #C5C9CC;
+                }
+
+
+
+
+                .consultation{
+                    color: #FFCD54;
+                }
+
+                tr>td>i{
+                    font-size: 10px;
+                }
+
+                tr>td>.examine-type{
+                    color:#34B53A;
+                }
+                tr>td>.radiology-type{
+                    color:   #2ed573
+                }
+
+
+                tr>td>.emergery-type{
+                    color: #D24646;
+                }
+
+                tr>td>.surgery-type{
+                    color:#1e90ff;
+                }
+
+
+
+                .patient-name:hover p {
+                    display: none;
+                }
+
+                .patient-name:hover:before {
+                    content: "Dr.Lance Bogrol";
+                    color: #70a1ff;
+                }
+
+                .nurse-name:hover {
+                    color: #70a1ff;
+                }
+
+            }
+
+
+
+
+
+
+
+        }
+
+
+
+    }
+}

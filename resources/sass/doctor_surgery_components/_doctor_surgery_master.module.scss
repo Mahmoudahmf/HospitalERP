@@ -1,0 +1,44 @@
+.SurgeryContainer{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 2fr 7fr;
+    grid-template-columns: .5fr 4.5fr 4.5fr;
+    //grid-gap: 1vw;
+    background-color: #FBFCFC;
+;
+    .SurgeryNav{
+        grid-area: 1 / 2 / 2/ -1;
+        background-color: white;
+        margin-bottom:25px;
+        @import'../navbar.module';
+    }
+    .SurgerySide{
+        grid-area: 1 / 1 / -1/ 2;
+        background-color: white;
+        @import "../side_menu.module";
+    }
+    .leftComponent{
+        grid-area: 2 / 2 / 3 / 3;
+        background-color: white;
+        margin-left:25px;
+        border-radius: 15px;
+
+
+    }
+    .rightComponent{
+        grid-area: 2 / 3 / 3 / -1;
+        background-color: white;
+        border-radius: 15px;
+        margin-right: 25px;
+
+    }
+    .SurgeryTable{
+        grid-area: 3 / 2 / -1 / -1;
+        background: white;
+        border-radius: 15px;
+        margin: 25px;
+
+        @import "doctor_surgery_table.module";
+    }
+
+}

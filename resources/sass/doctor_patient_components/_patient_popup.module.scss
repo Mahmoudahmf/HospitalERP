@@ -1,0 +1,346 @@
+
+
+.examination_description_main {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+
+
+    .examination_description_container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        background-color: white;
+        //overflow: scroll;
+        .examination_description_nav {
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+            width: 100%;
+            //margin-bottom: 15px;
+
+            .examination_description_nav_left {
+                width: 200px;
+                display: flex;
+                justify-content: space-evenly;
+                //padding-top: 5px;
+                align-items: center;
+                flex-flow: row wrap;
+
+                .examination_description_nav_left_image img {
+                    height: 48px;
+                    width: 48px;
+                    border-radius: 50%;
+                }
+
+                // .examination_description_nav_left_name {
+                // }
+            }
+
+            .examination_description_nav_right {
+                width: 130px;
+                display: flex;
+                flex-direction: column;
+                flex-flow: row-reverse wrap;
+                justify-content: space-around;
+
+                .examination_description_nav_right_sign {
+                    color: red;
+                    font-size: 25px;
+                }
+
+                .examination_description_nav_right_p {
+                    //padding-top: 15px;
+                    .examination_description_nav_right_p1 {
+                        color: #a6b1c2;
+                    }
+
+                    .examination_description_nav_right_p2 {
+                        color: #a6b1c2;
+                        //padding-top: 6px;
+                    }
+                }
+            }
+        }
+
+
+
+            .examination_description_inputs {
+                width: 95%;
+                .examination_description_input1_content {
+                    // .examination_description_h1 {
+                    // }
+                    .examination_description_input1 {
+                        //margin-top: 10px;
+                    }
+
+                    .examination_description_input1 {
+                        width: 100%;
+                        //height: 120px;
+                        border-radius: 15px;
+                        outline: none;
+                        padding: 10px 10px;
+                        overflow: hidden;
+                        resize: none;
+                        border: 1px solid gray;
+                        height: 120px;
+
+                    }
+                }
+
+                .examination_description_input2_content {
+                    .examination_description_h2 {
+                        //margin-top: 13px;
+                    }
+
+                    .examination_description_input2 {
+                        //margin-top: 8px;
+                    }
+
+                    .examination_description_input2 {
+                        width: 100%;
+                        //height: 76px;
+                        border-radius: 15px;
+                        outline: none;
+                        padding: 10px 10px;
+                        overflow: hidden;
+                        resize: none;
+                        border: 1px solid gray;
+                    }
+                }
+            }
+
+            .examination_description_cards_container {
+                width: 95%;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                height: 350px;
+                margin-top: 10px;
+
+                .examination_description_cards_container_card1 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    width: 48.5%;
+                    //height: 50%;
+                    background-color: #fffbf0;
+                    border-radius: 10px;
+                    padding: 0 15px;
+
+                    .card1_content {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .right_content1 {
+                            display: flex;
+                            //padding-right: 8%;
+                            align-items: center;
+
+                            .right_content1_span {
+                                color: #a6b1c2;
+                            }
+                        }
+
+                        .left_content1 {
+                            //padding-left: 8%;
+                            .left_content1_p {
+                                color: #a6b1c2;
+                            }
+                        }
+                    }
+
+                    .chart1 {
+                        width: 340px;
+                        height: 50px;
+                        align-self: center;
+                    }
+                }
+
+                .examination_description_cards_container_card2 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    width: 48.5%;
+                    //height: 200px;
+                    background-color: #f0faf8;
+                    border-radius: 10px;
+                    padding: 0 15px;
+
+                    .card2_content {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .right_content2 {
+                            display: flex;
+                            //padding-right: 8%;
+                            align-items: center;
+
+                            .right_content2_span {
+                                color: #a6b1c2;
+                            }
+
+                            .right_content2_h {
+                                color: #2cd889;
+                            }
+                        }
+
+                        .left_content2 {
+                            //padding-left: 8%;
+                            .left_content2_p {
+                                color: #a6b1c2;
+                            }
+                        }
+                    }
+
+                    .chart2 {
+                        width: 340px;
+                        height: 50px;
+                        align-self: center;
+                    }
+                }
+
+                .examination_description_cards_container_card3 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    width: 48.5%;
+                    background-color: #fff7f8;
+                    border-radius: 10px;
+                    margin-top: 15px;
+                    padding: 0 15px;
+
+                    .card3_content {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .right_content3 {
+                            display: flex;
+                            //padding-right: 8%;
+                            align-items: center;
+
+                            .right_content3_span {
+                                color: #a6b1c2;
+                            }
+
+                            .right_content3_h {
+                                color: #f46363;
+                            }
+                        }
+
+                        .left_content3 {
+                            //padding-left: 8%;
+                            .left_content3_p {
+                                color: #f46363;
+                            }
+                        }
+                    }
+
+                    .chart3 {
+                        width: 340px;
+                        height: 50px;
+                        align-self: center;
+                    }
+                }
+
+                .examination_description_cards_container_card4 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    width: 48.5%;
+                    background-color: #f0faf8;
+                    border-radius: 10px;
+                    margin-top: 10px;
+                    padding: 0 15px;
+
+                    .card4_content {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .right_content4 {
+                            display: flex;
+                            //padding-right: 8%;
+                            align-items: center;
+
+                            .right_content4_span {
+                                color: #a6b1c2;
+                            }
+
+                            .right_content4_h {
+                                color: #2cd889;
+                            }
+                        }
+
+                        .left_content4 {
+                            //padding-left: 8%;
+
+                            .left_content4_p {
+                                color: #a6b1c2;
+                            }
+                        }
+                    }
+
+                    .chart4 {
+                        width: 340px;
+                        height: 50px;
+                        align-self: center;
+                    }
+                }
+            }
+        }
+
+        .examination_description_upload_icon {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            width: 95%;
+            margin-top: 10px;
+
+            span {
+                color: red;
+            }
+
+            .examination_description_upload_icon_p {
+                font-size: 18px;
+            }
+        }
+
+        .examination_description_date {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: end;
+            width: 95%;
+
+            .next_consolution {
+                width: 210px;
+
+                h5 {
+                    color: #a6b1c2;
+                }
+            }
+
+            .next_date {
+                display: flex;
+                height: 30px;
+                width: 210px;
+                align-items: center;
+                justify-content: space-around;
+                border: 1px solid gray;
+            }
+        }
+    }
+

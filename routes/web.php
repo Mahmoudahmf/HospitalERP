@@ -26,7 +26,24 @@ Route::group(
 		})->name('dashboard.doctors');
        Route::resource('doctors',DoctorController::class);
 
+//        <!-- eng asmaaa -->
+       Route::get('/rooms', function () {
+       			return view('pages.layout.doctor_room_components.room_master');
+       		})->name('rooms');
+
+
+
+	       Route::get('/patient', function () {
+           			return view('pages.layout.doctor_patient_components.patient_master');
+           		})->name('patient');
+
+           Route::get('/surgery', function () {
+                    return view('pages.layout.doctor_surgery_components.doctor_surgery_master');
+                })->name('surgery');
+
 	});
+
+
 
 ###############################NursesRoute##############################
 Route::group(
@@ -40,7 +57,7 @@ Route::group(
 		Route::resource('nurses',NursersController::class);
 
 	});
-	
+
 ###############################EmployesRoute##############################
 Route::group(
 	[
@@ -72,7 +89,7 @@ Route::group(
 
 
 	});
-	
+
 ###############################AdminsRoute##############################
 Route::group(
 	[
@@ -83,7 +100,7 @@ Route::group(
 			return view('pages.backend.admins.dashboard');
 		})->name('dashboard.admins');
         Route::resource('admins',AdminsController::class);
-		
+
 		###################################Depatments################################
 		Route::group(['namespace'=>'H_Departments'],function(){
 			Route::get('showdepartments',[DepartmentsController::class,'index'])->name('showdepartments');
@@ -92,7 +109,7 @@ Route::group(
 			Route::patch('updatedepatment',[DepartmentsController::class,'store'])->name('updatedepatment');
 			Route::get('deletedepatment/{id}',[DepartmentsController::class,'destroy'])->name('deletedepatment');
 
-			
+
 		});
 	###################################Nurses################################
 	Route::group(['namespace'=>'H_Nurses'],function(){
@@ -111,7 +128,7 @@ Route::group(
 		Route::get('editemployes/{id}',[EmployesController::class,'edit'])->name('editemployes');
 		Route::patch('updateemployes',[EmployesController::class,'store'])->name('updateemployes');
 		Route::get('deleteemployes/{id}',[EmployesController::class,'destroy'])->name('deleteemployes');
-		
+
 	});
 
 
@@ -146,7 +163,14 @@ Route::group(['namespace'=>'H_Doctors'],function(){
 	  }
 	);
 	
+
 	});
 	#######################################EndAdminRoutes############################
 
+
+
+
 require __DIR__.'/auth.php';
+
+
+

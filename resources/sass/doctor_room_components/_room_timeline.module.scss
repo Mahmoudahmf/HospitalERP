@@ -1,0 +1,377 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+
+
+
+.rooms-timeline{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    position: relative;
+    width: 400px;
+    padding: 10px 0 0 0 !important;
+    border-radius: 15px;
+}
+
+.rooms-timeline:before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: ' ';
+    width: 2px;
+    height: 100%;
+    z-index: 5;
+    background-color: #D9DCE6;
+}
+
+
+.rooms-timeline-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+
+}
+
+
+.rooms-timeline-content:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.rooms-timeline-content-left
+{
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.rooms-timeline-direction-r{
+    width: 50%;
+}
+
+
+
+.timeline-flag {
+    position: relative;
+    display: inline;
+    background: rgb(248,248,248);
+    padding: 6px !important;
+    border-radius: 5px;
+    font-weight: bolder;
+    box-shadow: 0 0 3px #34B53A !important;
+    font-size: 12px !important;
+    margin-left: 22px;
+    /* margin-top: 5px; */
+
+}
+
+.boxshadow-blue{
+    box-shadow: 0 0 3px #4339F2 !important;
+    margin-left: 0 !important;
+
+}
+
+.rooms-timeline-direction-r .timeline-flag {
+    -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.rooms-timeline-direction-l .timeline-flag {
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+
+
+.rooms-timeline-direction-r .timeline-flag:before {
+    position: absolute;
+    content: '\f12a';
+    width: 28px;
+    height: 28px;
+    background:#D24646;
+    color:#fff;
+    z-index: 10;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    border-radius: 50%;
+    left: -36px;
+    box-shadow: 0 0 5px #D9DCE6;
+    font-size: 16px;
+    top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.rooms-timeline-direction-r .after:before {
+    position: absolute;
+    content: '\f12a';
+    width: 28px;
+    height: 28px;
+    background:#D24646;
+    color:#fff;
+    z-index: 10;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    border-radius: 50%;
+    left: -39px;
+    box-shadow: 0 0 5px #D9DCE6;
+    font-size: 16px;
+    top: 3px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+}
+
+
+.rooms-timeline-direction-l .timeline-flag:before{
+    position: absolute;
+    top: 3px;
+    right: -40px;
+    content: '\f12a';
+    width: 28px;
+    height: 28px;
+    background: #fff;
+    color:#D24646;
+    box-shadow: 0 0 5px #D9DCE6 !important;
+    z-index: 10;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+
+.rooms-timeline-direction-l .timeline-flag:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 53%;
+    height: 0;
+    width: 0;
+    margin-top: -8px;
+    border: solid transparent;
+    border-left-color: #D9DCE6;
+    border-width: 8px;
+    pointer-events: none;
+    z-index: -1;
+
+}
+
+.rooms-timeline-direction-r .timeline-flag:after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    height: 0;
+    width: 0;
+    margin-top: -8px;
+    border: solid transparent;
+    border-right-color: #D9DCE6;
+    border-width: 8px;
+    pointer-events: none;
+    z-index: -1;
+
+}
+
+.rooms-timeline-direction-l{
+    width: 50%;
+}
+
+
+.rooms-timeline-flag-wrapper{
+    /* position: relative; */
+    display: flex !important;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.timeline-room-wrapper {
+    display: inline;
+    line-height: 1em;
+    font-size: 0.7em;
+    color: #D24646;
+    vertical-align: middle;
+    font-weight: bolder;
+
+}
+
+.timeline-room-wrapper .time {
+    display: inline-block;
+    padding: 4px 6px;
+    background: rgb(248,248,248);
+}
+
+
+.rooms-timeline-desc {
+    margin: 0.3em 0 0 2em;
+    font-size: 0.77777em;
+    line-height: 1.5em;
+    font-weight: lighter;
+}
+
+
+
+
+/* ================ Timeline Media Queries ================ */
+
+@media screen and (max-width: 660px) {
+
+    .rooms-timeline {
+        width: 100%;
+        padding: 4em 0 1em 0;
+    }
+
+    .rooms-timeline-content {
+        padding: 2em 0;
+    }
+
+    .rooms-timeline-direction-r,
+    .rooms-timeline-direction-l {
+        float: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rooms-timeline-flag-wrapper{
+        text-align: center;
+    }
+
+    .timeline-flag {
+        background: rgb(255,255,255);
+        z-index: 15;
+    }
+
+
+    .rooms-timeline-direction-l .timeline-flag:before {
+        content: "\f12a";
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        font-weight: 900;
+        width: 20px;
+        height: 20px;
+        margin-left: -9px;
+        background:#fff;
+        font-weight: 900;
+        font-family: "Font Awesome 5 Free";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        z-index: 10;
+        font-size: 16px;
+        color: #D24646;
+        box-shadow: 0 0 5px #D9DCE6 !important;
+
+    }
+
+
+    .rooms-timeline-direction-r .timeline-flag:before{
+        content: "\f12a";
+        position: absolute;
+        top: -30px;
+        left: 25%;
+        font-weight: 900;
+        width: 20px;
+        height: 20px;
+        margin-left: -1px;
+        background:#D24646;
+        font-weight: 900;
+        font-family: "Font Awesome 5 Free";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        z-index: 10;
+        font-size: 15px;
+        color: #fff;
+        box-shadow: 0 0 5px #D9DCE6 !important;
+
+    }
+
+    .rooms-timeline-direction-r .timeline-flag:after,
+    .rooms-timeline-direction-l .timeline-flag:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -8px;
+        height: 0;
+        width: 0;
+        /* margin-left: -8px; */
+        border: solid transparent;
+        border-bottom-color: rgb(255,255,255);
+        border-width: 8px;
+        pointer-events: none;
+    }
+
+    .rooms-timeline-flag-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 4px 0 0 0;
+        z-index: 14;
+    }
+
+    .rooms-timeline-direction-l .rooms-timeline-flag-wrapper {
+        float: none;
+    }
+
+    .rooms-timeline-direction-r .rooms-timeline-flag-wrapper {
+        float: none;
+    }
+
+    .rooms-timeline-desc {
+        position: relative;
+        margin: 1em 0 0 0;
+        padding: 1em;
+        background: rgb(245,245,245);
+        -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+        -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+        box-shadow: 0 0 1px rgba(0,0,0,0.20);
+
+        z-index: 15;
+    }
+
+    .rooms-timeline-direction-r .rooms-timeline-desc,
+    .rooms-timeline-direction-l .rooms-timeline-desc {
+        position: relative;
+        margin: 1em 1em 0 1em;
+        padding: 1em;
+
+        z-index: 15;
+    }
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 660px) {
+
+    .rooms-timeline-direction-r .rooms-timeline-desc,
+    .rooms-timeline-direction-l .rooms-timeline-desc {
+        margin: 1em 4em 0 4em;
+    }
+
+}

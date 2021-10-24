@@ -21,3 +21,9 @@ require('../components/doctors/countdown')
 
 require('../components/history')
 
+require('../components/doctor_room_components/room_cards')
+
+require('../components/doctor_room_components/room_boxCharts')
+
+require('../components/doctor_patient_components/patient_popup')
+

@@ -10,9 +10,11 @@ html,body{
     font-family: Cairo, sans-serif;
 }
 
-
-@import "_master.module";
-@import "_clock.module";
-
 @import "_loginpage.module";
+@import "_master.module";
+@import "./doctor_room_components/room_master.module";
+@import "./doctor_room_components/room_boxCharts.module";
+@import "./doctor_room_components/room_timeline.module";
+@import "./doctor_patient_components/_patient_master.module";
+@import"./doctor_surgery_components/doctor_surgery_master.module";
 

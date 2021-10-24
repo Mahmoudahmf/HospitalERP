@@ -1,0 +1,73 @@
+
+.patient-header-card2 {
+        width: 225px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 15px;
+        height: 190px;
+        background-color: white;
+        padding: 10px;
+
+        .patient-header-card2-h {
+            padding-right: 36px;
+            padding-top: 10px;
+        }
+
+        .patient-header-card2-content {
+            //position: relative;
+
+            .patient-header-card2-chart5 {
+                width: 200px;
+                height: 115px;
+            }
+        }
+
+        .patient-header-card2-p {
+            //padding-top: 15px;
+            font-size: 0.7rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            padding-bottom: 10px;
+            .patient-header-card2-p1 {
+                //padding-right: 80px;
+                text-align: center;
+                position: relative;
+                padding-left:15px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    left: 0;
+                    top: 5px;
+                    background-color: rgb(255, 251, 13);
+                    @media (min-width: 300px) and (max-width: 1700px) {
+                        top: 80%;
+                    }
+                }
+            }
+            .patient-header-card2-p2 {
+                position: relative;
+                text-align: center;
+                padding-left: 15px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    left: 0;
+                    top: 5px;
+                    background-color: rgb(255, 245, 157);
+                    @media (min-width: 300px) and (max-width: 1700px) {
+                        top: 91%;
+                    }
+                }
+            }
+        }
+    }
+
