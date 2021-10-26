@@ -4257,3 +4257,626 @@ html, body {
 .SurgeryContainer .SurgeryTable .SurgeryTablePage .tableBox .tableContain table tbody tr .patient-9 {
   color: green;
 }
+
+.adminRoomPage {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 5fr;
+  grid-template-rows: 0.5fr 9fr;
+  justify-content: center;
+  background-color: #FBFCFC;
+}
+.adminRoomPage .adminRoomSideMenu {
+  grid-area: 1/1/-1/2;
+}
+.adminRoomPage .adminRoomSideMenu .side_menu {
+  background-color: white;
+  height: 100vh;
+  padding: 0 10px;
+}
+.adminRoomPage .adminRoomSideMenu .side_menu .side-menu-img-container {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.adminRoomPage .adminRoomSideMenu .side_menu .side-menu-img-container .side-menu-img {
+  width: 100%;
+  border-radius: 50%;
+}
+.adminRoomPage .adminRoomSideMenu .side_menu .side-menu-icons {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.adminRoomPage .adminRoomSideMenu .side_menu .side-menu-icons .icons-container {
+  margin-top: 10px;
+}
+.adminRoomPage .adminRoomSideMenu .side_menu .side-menu-icons .side-menu-icon {
+  margin-bottom: 20px;
+}
+.adminRoomPage .adminRoomSideMenu .side_menu .side-menu-icons .side-menu-icon:hover {
+  color: #7BED9F;
+}
+.adminRoomPage .adminRoomSideMenu .icons-container:hover + #talkbubble-dash {
+  display: block;
+  background-color: #856404;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble-dash {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 11%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble-dash:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble-room {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble-room:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble-nurse {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 24%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble-nurse:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble-patient {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 30.5%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble-patient:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble-surgery {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 37%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble-surgery:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble-signout {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 43%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble-signout:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble {
+  width: 110px;
+  height: 33px;
+  background: #707070;
+  border-radius: 10px;
+  position: absolute;
+  top: 49%;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  display: none;
+}
+.adminRoomPage .adminRoomSideMenu #talkbubble:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 19.1px solid #707070;
+  border-bottom: 8px solid transparent;
+}
+.adminRoomPage .adminRoomNavbar {
+  grid-area: 1/2/2/-1;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component .nav_left {
+  width: 25%;
+  display: flex;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component .nav_left .doctor_info .doctor-name {
+  font-size: 18px;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component .nav_left .doctor_info .department {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component .doctor_status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component .doctor_status .line {
+  background-color: #C5C9CC;
+  width: 2px;
+  height: 45px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component .doctor_status .circle {
+  background-color: #7bed9f;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component .doctor_status .Work_status {
+  margin-bottom: 0;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component #dclock {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component #dclock p {
+  font-size: 40px;
+  margin-top: 10px;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component #dclock p span {
+  font-size: 30px;
+  font-weight: bold;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component .nav_icons {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 25%;
+  color: #20d573;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component .nav_icons a {
+  font-size: 20px;
+  margin-right: 25px;
+  color: #7BED9F;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component .nav_icons a .fa-cog {
+  color: #1e90ff;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component .nav-notification {
+  border-radius: 50%;
+  background-color: white;
+  color: red;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  right: 9.2%;
+  top: 50%;
+  font-size: 8px;
+  box-shadow: 0 3px 3px gray;
+  display: none;
+}
+.adminRoomPage .adminRoomNavbar .navbar-component .nav-message {
+  border-radius: 50%;
+  background-color: white;
+  color: red;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  right: 6%;
+  top: 50%;
+  font-size: 8px;
+  box-shadow: 0 3px 3px gray;
+  display: none;
+}
+.adminRoomPage .adminRoomForm {
+  grid-area: 2/2/-1/3;
+  display: grid;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer {
+  display: flex;
+  flex-direction: column;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer .adminRoomFormHeader {
+  font-size: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 3px solid #48bb78;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms form {
+  background-color: #ffffff;
+  display: block;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 3em 1.5em 3.5em 1.5em;
+  transition: 250ms box-shadow ease-out, 250ms transform ease-out;
+  border-radius: 15px;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms form:focus-within {
+  box-shadow: 0 0.2em 2em #c4c4c4;
+  transform: scale(1.025);
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table {
+  border: none;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table input[type=email],
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table input[type=text],
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table input[type=number],
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #e0e0e0;
+  border-bottom-color: #444444;
+  border-radius: 5px;
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.8em;
+  padding: 0.85em 0.75em 0.75em 0.75em;
+  transition: 125ms border-color ease-out;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table input[type=email]:hover,
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table input[type=text]:hover,
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table input[type=number]:hover,
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table textarea:hover {
+  border-color: #444444;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table input[type=email]:focus,
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table input[type=text]:focus,
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table input[type=number]:focus,
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table textarea:focus {
+  border-color: #48bb78;
+  outline: 1px solid #48bb78;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms table input[type=text]:focus {
+  outline: #7bed9f;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms .adminTableTr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms .adminTableTr label {
+  color: #2a2a2a;
+  font-weight: lighter;
+  font-size: 20px;
+  cursor: pointer;
+  display: block;
+  transition: 125ms color ease-out;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms .adminTableTr label:focus-within {
+  color: #2491eb;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms .adminTableTr .adminTableTd {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: brown;
+  width: 100%;
+  border: none;
+  margin-bottom: 20px;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms .adminTableTr .adminTableTdChoose {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms .adminTableTr .adminTableTdChoose .form-control {
+  width: 40%;
+  padding: 5px;
+  background-color: #FBFCFC;
+  color: #2a2a2a;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 15px;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms .adminFormButton {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 25px;
+}
+.adminRoomPage .adminRoomForm .adminRoomFormContainer #rooms .adminFormButton input {
+  width: 100%;
+  padding: 7px 0;
+  border-radius: 5px;
+  background: #7bed9f;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+}
+.adminRoomPage .adminRoomTable {
+  grid-area: 2/3/-1/-1;
+  background: white;
+  border-radius: 15px;
+  margin-bottom: 21px;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+.adminRoomPage .adminRoomTable .tableBox {
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column wrap;
+}
+.adminRoomPage .adminRoomTable .tableBox .tableBoxHeader {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.adminRoomPage .adminRoomTable .tableBox .tableBoxHeader .leftTitle {
+  display: flex;
+  flex-flow: row wrap;
+  width: 200px;
+  color: #777;
+  font-weight: 500;
+}
+.adminRoomPage .adminRoomTable .tableBox .tableBoxHeader .selectionContainer .formSelect {
+  display: flex;
+  justify-content: end;
+}
+.adminRoomPage .adminRoomTable .tableBox .tableBoxHeader .selectionContainer .formSelect select {
+  font-size: 12px;
+  display: block;
+  line-height: 1;
+  margin: 0 0.8em;
+  border: none;
+  padding: 0.85em 0.75em 0.75em 0.75em;
+  transition: 250ms border-color ease-out;
+}
+.adminRoomPage .adminRoomTable .tableBox .tableBoxHeader .selectionContainer .formSelect select option {
+  transition: all 0.5s ease;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent {
+  border: none;
+  border-collapse: collapse;
+  padding: 15px;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent thead {
+  border: none;
+  border-collapse: collapse;
+  border-bottom: solid 1px #CBD1D9;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent thead .adminRoomTableTheadTr {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent thead .adminRoomTableTheadTr th {
+  border: none;
+  color: #CBD1D9;
+  padding-bottom: 5px;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  text-align: center;
+  margin-top: 15px;
+  color: #2a2a2a;
+  border-bottom: solid 1px #CBD1D9;
+  padding-bottom: 10px;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr .adminRoomTableStatus {
+  position: relative;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr .adminRoomTableStatus .adminRoomTableStatus:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  left: 0;
+  border-radius: 50%;
+  background: #48bb78;
+  width: 10px;
+  height: 10px;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr td:nth-child(1) {
+  width: 10%;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr td:nth-child(2) {
+  width: 14%;
+  margin-left: 41px;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr td:nth-child(3) {
+  width: 15%;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr td:nth-child(4) {
+  width: 14%;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr td:nth-child(5) {
+  width: 10%;
+  margin-right: 10px;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr td:nth-child(6) {
+  width: 8%;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr td:nth-child(7) {
+  width: 8%;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr .adminRoomEditBtn {
+  background: #FFCD54;
+  border: none;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin-left: 7px;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr .adminRoomEditBtn a {
+  text-decoration: none;
+  color: white;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr .adminRoomDeleteBtn {
+  background: #D24646;
+  border: none;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin-left: 20px;
+}
+.adminRoomPage .adminRoomTable .adminRoomTableContent tbody .adminRoomTableTbodyTr .adminRoomDeleteBtn a {
+  text-decoration: none;
+  color: white;
+}
+.adminRoomPage .adminRoomTable table, .adminRoomPage .adminRoomTable tr, .adminRoomPage .adminRoomTable td {
+  border: none;
+}
+.adminRoomPage .adminRoomTable form {
+  display: inline-block;
+  margin: 0 auto;
+}
+.adminRoomPage .adminRoomTable .pseudo-search {
+  display: inline;
+  border: 2px solid #ccc;
+  border-radius: 100px;
+  padding: 0 15px;
+  transition: background-color 0.5 ease-in-out;
+}
+.adminRoomPage .adminRoomTable .pseudo-search input {
+  border: 0;
+  background-color: transparent;
+}
+.adminRoomPage .adminRoomTable .pseudo-search input:focus {
+  outline: none;
+}
+.adminRoomPage .adminRoomTable .pseudo-search button, .adminRoomPage .adminRoomTable .pseudo-search i {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.adminRoomPage .adminRoomTable .pseudo-search select {
+  border: none;
+}

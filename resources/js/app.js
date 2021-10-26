@@ -27,3 +27,5 @@ require('../components/doctor_room_components/room_boxCharts')
 
 require('../components/doctor_patient_components/patient_popup')
 
+require('../components/admin_room_page/admin_room_components/admin_room_form')
+

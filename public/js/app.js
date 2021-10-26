@@ -2054,6 +2054,20 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./resources/components/admin_room_page/admin_room_components/admin_room_form.js":
+/*!***************************************************************************************!*\
+  !*** ./resources/components/admin_room_page/admin_room_components/admin_room_form.js ***!
+  \***************************************************************************************/
+/***/ (() => {
+
+$(document).ready(function () {
+  $('select').selectize({
+    sortField: 'text'
+  });
+});
+
+/***/ }),
+
 /***/ "./resources/components/clock.js":
 /*!***************************************!*\
   !*** ./resources/components/clock.js ***!
@@ -2776,6 +2790,8 @@ __webpack_require__(/*! ../components/doctor_room_components/room_cards */ "./re
 __webpack_require__(/*! ../components/doctor_room_components/room_boxCharts */ "./resources/components/doctor_room_components/room_boxCharts.js");
 
 __webpack_require__(/*! ../components/doctor_patient_components/patient_popup */ "./resources/components/doctor_patient_components/patient_popup.js");
+
+__webpack_require__(/*! ../components/admin_room_page/admin_room_components/admin_room_form */ "./resources/components/admin_room_page/admin_room_components/admin_room_form.js");
 
 /***/ }),
 

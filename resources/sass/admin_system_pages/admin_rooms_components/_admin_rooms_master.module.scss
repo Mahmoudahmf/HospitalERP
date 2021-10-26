@@ -1,0 +1,43 @@
+.adminRoomPage {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 5fr;
+    grid-template-rows: 0.5fr 9fr;
+    justify-content: center;
+    background-color: #FBFCFC;
+    //grid-column-gap: 1vw;
+    //grid-row-gap: 1vw;
+
+
+    .adminRoomSideMenu {
+     grid-area: 1/1/-1/2;
+        @import"../../_side_menu.module";
+    }
+
+    .adminRoomNavbar {
+    grid-area: 1/2/2/-1;
+        @import "../../_navbar.module";
+
+    }
+
+    .adminRoomForm {
+        grid-area: 2/ 2/-1/3;
+        display: grid;
+        margin-left: 25px;
+        margin-top:25px;
+        @import "./_admin_rooms_form.module";
+    }
+
+    .adminRoomTable {
+        grid-area: 2/ 3/-1/-1;
+        background: white;
+        border-radius: 15px;
+        margin-bottom: 21px;
+        margin-right: 25px;
+        margin-left:25px;
+        margin-top:25px;
+        @import "./_admin_rooms_table.module";
+
+    }
+
+}

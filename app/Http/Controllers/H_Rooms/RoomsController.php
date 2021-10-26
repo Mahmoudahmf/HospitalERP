@@ -8,7 +8,7 @@ use App\Models\H_nurse;
 use Illuminate\Http\Request;
 class RoomsController extends Controller
 {
-    
+
     public function index()
     {
         $h_rooms=H_rooms::all();

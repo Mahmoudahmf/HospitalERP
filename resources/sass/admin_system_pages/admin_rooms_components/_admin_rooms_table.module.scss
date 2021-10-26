@@ -1,0 +1,240 @@
+
+$border: (
+    radius: 0.25em,
+    thickness: 1px
+);
+
+$color: (
+    blue: #2491eb,
+    gray-light: #f8f8f8,
+    gray-medium: #e0e0e0,
+    gray-dark: #444444,
+    white: #ffffff
+);
+
+$font: (
+    weight-light: 300
+);
+
+$transition: (
+    easing: ease-out,
+    speed-slow: 250ms,
+    speed-fast: 125ms
+);
+
+
+
+
+.tableBox {
+       padding: 15px;
+       border-radius: 10px;
+       display: flex;
+       flex-flow: column wrap;
+
+       .tableBoxHeader {
+           display: flex;
+           flex-flow: row wrap;
+           justify-content: space-between;
+           align-items: center;
+           padding: 10px 0;
+
+           .leftTitle {
+               display: flex;
+               flex-flow: row wrap;
+               width: 200px;
+               color: #777;
+               font-weight: 500;
+           }
+
+           .selectionContainer {
+               .formSelect {
+                   display: flex;
+                   justify-content: end;
+
+                   select {
+                       font-size: 12px;
+                       display: block;
+                       line-height: 1;
+                       margin: 0 0.8em;
+                       border: none;
+                       padding: 0.85em 0.75em 0.75em 0.75em;
+                       transition: map-get($transition, speed-slow) border-color map-get($transition, easing);
+                        option{
+                            transition: all .5s ease;
+
+                        }
+                   }
+
+               }
+
+           }
+       }
+   }
+
+
+
+   .adminRoomTableContent {
+       border: none;
+       border-collapse: collapse;
+       padding: 15px;
+
+       thead {
+           border: none;
+           border-collapse: collapse;
+           border-bottom: solid 1px #CBD1D9;
+
+           .adminRoomTableTheadTr {
+               display: flex;
+               justify-content: space-between;
+               padding: 0 20px;
+
+               th {
+                   border: none;
+                   color: #CBD1D9;
+                   padding-bottom: 5px;
+               }
+           }
+
+       }
+
+       tbody {
+           .adminRoomTableTbodyTr {
+               display: flex;
+               justify-content: space-between;
+               padding: 0 20px;
+               text-align: center;
+               margin-top: 15px;
+               color: #2a2a2a;
+               border-bottom: solid 1px #CBD1D9;
+               padding-bottom: 10px;
+                .adminRoomTableStatus {
+                    position: relative;
+
+
+                    .adminRoomTableStatus:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 50%;
+                        left: 0;
+                        border-radius: 50%;
+                        background: #48bb78;
+                        width: 10px;
+                        height: 10px;
+
+                    }
+                }
+                               td:nth-child(1) {
+                   width: 10%;
+               }
+
+
+               td:nth-child(2) {
+                   width: 14%;
+                   margin-left: 41px;
+               }
+
+               td:nth-child(3) {
+                   width: 15%;
+               }
+
+               td:nth-child(4) {
+                   width: 14%;
+               }
+
+               td:nth-child(5) {
+                   width: 10%;
+                   margin-right: 10px;
+               }
+
+               td:nth-child(6) {
+                   width: 8%;
+               }
+
+               td:nth-child(7) {
+                   width: 8%;
+               }
+
+               .adminRoomEditBtn {
+                   background: #FFCD54;
+                   border: none;
+                   border-radius: 5px;
+                   padding: 0 15px;
+                   margin-left: 7px;
+
+                   a {
+                       text-decoration: none;
+                       color: white;
+
+                   }
+               }
+
+               .adminRoomDeleteBtn {
+                   background: #D24646;
+                   border: none;
+                   border-radius: 5px;
+                   padding: 0 15px;
+                   margin-left: 20px;
+
+                   a {
+                       text-decoration: none;
+                       color: white;
+
+                   }
+
+               }
+
+
+           }
+
+       }
+   }
+
+
+   table, tr, td {
+       border: none;
+   }
+
+
+   form {
+       display: inline-block;
+       margin: 0 auto;
+   }
+
+   .pseudo-search {
+       display: inline;
+       border: 2px solid #ccc;
+       border-radius: 100px;
+       padding: 0 15px;
+       transition: background-color 0.5 ease-in-out;
+
+       input {
+           border: 0;
+           background-color: transparent;
+           &:focus {
+               // Unsure how to fix this...
+               outline: none;
+           }
+       }
+
+       button, i {
+           border: none;
+           background: none;
+           cursor: pointer;
+       }
+
+       select {
+           border: none;
+       }
+
+   }
+
+
+
+
+
+
+
+
+
+
